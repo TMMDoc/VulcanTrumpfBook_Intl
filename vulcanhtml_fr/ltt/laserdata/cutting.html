@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/flux-icon.png">
+  <title>Découpe</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Bienvenue dans Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../intro/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../intro/home.html">Interface utilisateur</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/workflow.html">Flux de travail</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/jog.html">Utilisation de la machine</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/controlpanel.html">Tableau de commande</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../workflow/index.html">Flux de production</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../workflow/preparation.html">Préparation</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/create.html">Créer</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/filemanager.html">Gestion de fichiers</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/programs.html">Sélection du programme</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/edit.html">Modifier le programme CN</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/laserfunct.html">Editer la technologie laser</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/layout.html">Modifier le layout</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/simulation.html">Course de simulation</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/offset.html">Décalages de travail</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/run.html">Exécuter</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/reentry.html">Reprise</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Tableau technologique laser (LTT)</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../general.html">Terminologie</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Éléments de paramètres laser</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="piercing.html">Perçage</a></li>
+      <li><button class="tree blank"></button><a href="multistage.html">Perçage en plusieurs étapes</a></li>
+      <li><button class="tree blank"></button><a class="active" href="cutting.html">Découpe</a></li>
+      <li><button class="tree blank"></button><a href="special.html">Processus spéciaux</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../selection.html">Modification des paramètres laser</a></li>
+    <li><button class="tree blank"></button><a href="../export.html">Gestion de TTL</a></li>
+    <li><button class="tree blank"></button><a href="../rampcycles.html">Rampes de puissance</a></li>
+    <li><button class="tree blank"></button><a href="../flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../dca.html">Commande d'accélération (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../technology/index.html">Fonctions de technologie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../technology/vaporize.html">Vaporiser la tôle</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/nano.html">Nanojonctions</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/pierceline.html">Capteur PierceLine</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/frog.html">Saut de grenouille</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/cuttingtools.html">Outils de coupe</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../controls/index.html">Commandes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../controls/lubricationcycle.html">Cycle de lubrification</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/protective.html">Surveillance du verre de protection</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/scrapcut.html">Coupe de chutes</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/sheetorigin.html">Aller à l'origine de la tôle</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/heightsensorcal.html">Etalonnage du capteur de hauteur</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/nozzlecentre.html">Centre de buse</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/targetshot.html">Tir cible</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/gaspurge.html">Balayage au gaz</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/hcmanualset.html">Commande de hauteur Valeur de consigne manuelle</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/parkposition.html">Aller à la position parking</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/nozzleclean.html">Nettoyage des buses et étalonnage du capteur de hauteur</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/edgedetection.html">Détection des arêtes</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/focuscomb.html">Peigne de focalisation</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/focaldistance.html">Position focale</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/pilotdiodepos.html">Positionnement de diode pilote</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../productionplan/index.html">Plan de production</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../productionplan/pp_activation.html">Activation/Désactivation</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/pp_buttons.html">Modification</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/pp_stoponsheet.html">Arrêt sur la tôle</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/pp_machinesettings.html">Réglages machine</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/pp_materialstatusacknowledgement.html">Validation du statut article</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/pp_generalworkflow.html">Flux de travail</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../troubleshooting/index.html">Dépannage</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../troubleshooting/collisions.html">Collisions fréquentes</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshooting/workoffset.html">Décalage de travail</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshooting/extreme.html">Petits contours extrêmes</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Tableau technologique laser (LTT)</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Éléments de paramètres laser</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="cutting.html">Découpe</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Découpe</h1>
+<div class="sect1">
+<h2 id="_stratégies_dapproche">Stratégies d&#8217;approche<a id="h000109"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Afin d&#8217;éviter d&#8217;endommager le contour à cause du perçage, la matière est percée à quelques millimètres d&#8217;un côté du contour. Le contour est ensuite approché à l&#8217;aide de diverses stratégies en fonction de la matière, de son épaisseur et de la taille du contour.</p>
+</div>
+<div class="sect2">
+<h3 id="_approche_normale">Approche normale<a id="h000110"></a></h3>
+<div class="paragraph">
+<p>Avec une approche normale, la découpe a lieu directement à partir du trou initial avec les paramètres du tableau de coupe approprié.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_approche_réduite">Approche réduite<a id="h000111"></a></h3>
+<div class="paragraph">
+<p>Le contour est abordé à vitesse réduite. Puissance, fréquence, distance buse/pièce.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/app1.png" alt="app1"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_approche_avec_précoupe">Approche avec précoupe<a id="h000112"></a></h3>
+<div class="paragraph">
+<p>Après le perçage, une coupe de quelques millimètres est effectuée à vitesse réduite, en fonction de l&#8217;épaisseur de la matière. La tête de coupe retourne ensuite au trou initial à la dernière vitesse de positionnement active et le contour est ensuite approché et découpé avec les paramètres du tableau de coupe approprié.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_refroidissement_après_approche">Refroidissement après approche<a id="h000113"></a></h3>
+<div class="paragraph">
+<p>Pour le refroidissement après approche, le faisceau laser est éteint brièvement après l&#8217;approche et avant que le contour réel ne soit découpé. Le gaz de coupe, cependant, continue de circuler et refroidit le point d&#8217;usinage.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_marquage_et_marquage_au_pointeau">Marquage et marquage au pointeau<a id="h000114"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les pièces matérielles sont marquées par un changement de couleur sur la surface de la matière. Le marquage ne peut normalement plus être senti après l&#8217;émaillage ou la peinture, car seule une infime quantité de matière est retirée.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_procédé_de_découpe">Procédé de découpe<a id="h000115"></a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_découpe_de_grands_moyens_et_petits_contours">Découpe de grands, moyens et petits contours<a id="h000116"></a></h3>
+<div class="paragraph">
+<p>Dans le contexte de la programmation CNC TRUMPF et de la découpe laser, les concepts de <strong>grands, moyens et petits contours</strong> se rapportent à la taille et à la complexité de différentes caractéristiques géométriques dans un processus de coupe ou d&#8217;usinage. Ces distinctions aident à optimiser le mouvement de l&#8217;outil, les stratégies de découpe et la vitesse d&#8217;usinage.</p>
+</div>
+<div class="sect3">
+<h4 id="_1_grands_contours">1. Grands contours<a id="h000117"></a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Les grands contours désignent des <strong>découpes longues et continues</strong> ou les <strong>profils extérieurs</strong> d&#8217;une pièce.</p>
+</li>
+<li>
+<p>Il s&#8217;agit généralement de trajectoires de coupe <strong>primaires</strong> qui définissent la forme extérieure.</p>
+</li>
+</ul>
+</div>
+<div id="h000118" class="paragraph">
+<p><strong>Caractéristiques :</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Droits ou légèrement courbés.</p>
+</li>
+<li>
+<p>Moins d&#8217;interruptions.</p>
+</li>
+<li>
+<p>Peuvent être découpés à des <strong>vitesses plus élevées</strong> car il y a moins de risque d&#8217;accumulation thermique ou de perte de précision.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_moyens_contours">2. Moyens contours<a id="h000119"></a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Les contours de taille moyenne comprennent des découpes à l&#8217;intérieur ou le long de la pièce, telles que <a id="h000120"></a> <strong>de grands évidements, des trous ou des rainures</strong>.</p>
+</li>
+<li>
+<p>Ceux-ci sont plus compliqués que les grands contours, mais pas aussi complexes que les petits contours.</p>
+</li>
+</ul>
+</div>
+<div id="h000121" class="paragraph">
+<p><strong>Caractéristiques :</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Peuvent nécessiter des ajustements de la vitesse de coupe en raison de détails modérés.</p>
+</li>
+<li>
+<p>Besoin d&#8217;un certain niveau de contrôle de <strong>précision</strong> pour maintenir la précision.</p>
+</li>
+<li>
+<p>Peuvent influencer la dissipation de la chaleur et le comportement de la matière.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_petits_contours">3. Petits contours<a id="h000122"></a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Il s&#8217;agit de coupes <strong>détaillées et complexes</strong> telles que
+<a id="h000123"></a> <strong>des petits trous, des motifs fins ou des angles vifs</strong>.</p>
+</li>
+<li>
+<p>La découpe de petits contours nécessite une <strong>plus grande précision</strong> et
+<a id="h000124"></a> <strong>des vitesses plus lentes</strong> pour maintenir la précision et éviter les défauts.</p>
+</li>
+</ul>
+</div>
+<div id="h000125" class="paragraph">
+<p><strong>Caractéristiques :</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Impliquent souvent des <strong>rayons serrés, des formes complexes ou des zones de coupe densément remplies</strong>.</p>
+</li>
+<li>
+<p>Sujets aux <strong>effets thermiques</strong> (fonte, bavures, distorsion de la matière).</p>
+</li>
+<li>
+<p>Peuvent nécessiter des <strong>stratégies adaptatives</strong> telles qu&#8217;une puissance réduite, une commande précise des buses ou des techniques de microjonction.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_courbes_détalonnage_analogique">Courbes d&#8217;étalonnage analogique<a id="h000126"></a></h3>
+<div class="paragraph">
+<p>TRUMPF utilise une courbe d&#8217;étalonnage à 3 points pour la commande laser analogique.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/3ptltt.png" alt="3ptLTT"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_flyline">FlyLine<a id="h000127"></a></h3>
+<div class="paragraph">
+<p>FlyLine est une stratégie d&#8217;usinage qui peut aider à gagner un temps considérable lors de l&#8217;usinage de certains types de tôles. FlyLine est particulièrement efficace pour les grilles de trous.</p>
+</div>
+<div id="h000128" class="ulist">
+<ul>
+<li>
+<p>Le faisceau laser est allumé et éteint à la volée avec un haut degré de précision de positionnement.
+Les axes ne sont pas arrêtés lorsque le faisceau laser est allumé et éteint.</p>
+</li>
+</ul>
+</div>
+<div id="h000129" class="ulist">
+<ul>
+<li>
+<p>Les contours individuels qui ne se trouvent pas sur une ligne sont divisés en parties de contour parallèles aux axes. Cela permet d&#8217;éviter l&#8217;usinage des angles.
+La vitesse n&#8217;est réduite que pour les quelques changements de direction.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_stratégies_dapproche">Stratégies d&#8217;approche</a>
+  </li>
+  <li level="2">
+   <a href="#_approche_normale">Approche normale</a>
+  </li>
+  <li level="2">
+   <a href="#_approche_réduite">Approche réduite</a>
+  </li>
+  <li level="2">
+   <a href="#_approche_avec_précoupe">Approche avec précoupe</a>
+  </li>
+  <li level="2">
+   <a href="#_refroidissement_après_approche">Refroidissement après approche</a>
+  </li>
+  <li level="1">
+   <a href="#_marquage_et_marquage_au_pointeau">Marquage et marquage au pointeau</a>
+  </li>
+  <li level="1">
+   <a href="#_procédé_de_découpe">Procédé de découpe</a>
+  </li>
+  <li level="2">
+   <a href="#_découpe_de_grands_moyens_et_petits_contours">Découpe de grands, moyens et petits contours</a>
+  </li>
+  <li level="2">
+   <a href="#_courbes_détalonnage_analogique">Courbes d&#8217;étalonnage analogique</a>
+  </li>
+  <li level="2">
+   <a href="#_flyline">FlyLine</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="multistage.html">Perçage en plusieurs étapes</a></span>
+ <span class="next"><a href="special.html">Processus spéciaux</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

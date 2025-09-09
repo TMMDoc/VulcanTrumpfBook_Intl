@@ -1,0 +1,351 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Décalages de travail</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Bienvenue dans Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">Interface utilisateur</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Flux de travail</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Utilisation de la machine</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Tableau de commande</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Flux de production</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="preparation.html">Préparation</a></li>
+    <li><button class="tree blank"></button><a href="create.html">Créer</a></li>
+    <li><button class="tree blank"></button><a href="filemanager.html">Gestion de fichiers</a></li>
+    <li><button class="tree blank"></button><a href="programs.html">Sélection du programme</a></li>
+    <li><button class="tree blank"></button><a href="edit.html">Modifier le programme CN</a></li>
+    <li><button class="tree blank"></button><a href="laserfunct.html">Editer la technologie laser</a></li>
+    <li><button class="tree blank"></button><a href="layout.html">Modifier le layout</a></li>
+    <li><button class="tree blank"></button><a href="simulation.html">Course de simulation</a></li>
+    <li><button class="tree blank"></button><a class="active" href="offset.html">Décalages de travail</a></li>
+    <li><button class="tree blank"></button><a href="run.html">Exécuter</a></li>
+    <li><button class="tree blank"></button><a href="reentry.html">Reprise</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Tableau technologique laser (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminologie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Éléments de paramètres laser</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Perçage</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Perçage en plusieurs étapes</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Découpe</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Processus spéciaux</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Modification des paramètres laser</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">Gestion de TTL</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Rampes de puissance</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Commande d'accélération (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Fonctions de technologie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Vaporiser la tôle</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojonctions</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">Capteur PierceLine</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Saut de grenouille</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Outils de coupe</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Commandes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Cycle de lubrification</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Surveillance du verre de protection</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Coupe de chutes</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Aller à l'origine de la tôle</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">Etalonnage du capteur de hauteur</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Centre de buse</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Tir cible</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Balayage au gaz</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">Commande de hauteur Valeur de consigne manuelle</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">Aller à la position parking</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">Nettoyage des buses et étalonnage du capteur de hauteur</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Détection des arêtes</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Peigne de focalisation</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Position focale</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Positionnement de diode pilote</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Plan de production</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Activation/Désactivation</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Modification</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">Arrêt sur la tôle</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">Réglages machine</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Validation du statut article</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Flux de travail</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Dépannage</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Collisions fréquentes</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Décalage de travail</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Petits contours extrêmes</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Flux de production</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="offset.html">Décalages de travail</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Décalages de travail</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>La machine peut déterminer le décalage de travail de plusieurs façons.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/wo.png" alt="WO"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_diode_de_position">Diode de position<a id="h000316"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La façon la plus courante consiste à déplacer le pointeur laser vert à la position souhaitée, puis à appuyer sur le bouton <strong>Régler</strong>. La machine utilise ce point comme décalage de travail.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_centre_de_la_buse">Centre de la buse<a id="h000317"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cette option peut être particulièrement utile lorsque la machine a déjà positionné la buse au point zéro. La machine utilise le centre de la buse comme décalage de travail.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_manuel">Manuel<a id="h000318"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dans les opérations spéciales ou si vous travaillez avec des gabarits, cette option vous offre la possibilité de régler le décalage de travail manuellement.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_détection_des_arêtes_2points">Détection des arêtes 2 points<a id="h000319"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cette option est utile lorsque vous devez définir le décalage de travail sur le bord de la matière. La machine vous demandera de déplacer la buse jusqu&#8217;au premier point, puis détermine automatiquement le coin de la tôle. Cette fonction est rapide et permet de placer des petites pièces dans un coin de la tôle.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+La précision de la stratégie en 2 points est limitée par la précision de la machine et ne doit donc pas être utilisée sur une tôle à découper entièrement.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>La logique fonctionne comme suit :</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/2pt.svg" alt="2pt" width="650"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Vous sélectionnez avec le laser une position proche de la position nulle souhaitée.</p>
+</li>
+<li>
+<p>La machine effectue une recherche de coin dans la direction X à partir de la position où vous avez démarré.</p>
+</li>
+<li>
+<p>La machine effectue une recherche de coin au <strong>centre le plus proche entre deux barres supports</strong>.
+Cela maximisera la précision de la mesure de coin.</p>
+</li>
+<li>
+<p>La machine va au coin qu&#8217;elle a trouvé et coupe la pièce après confirmation.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="test">Détection des arêtes 3 points</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La méthode à 3 points est beaucoup plus précise et prend 3 points de mesure sur une tôle complète. Elle suppose qu&#8217;une tôle entière (&gt;1000x2000) se trouve sur la table et effectue trois recherches d&#8217;angle à x300, x1500 et y300 pour trouver l&#8217;origine. Il s&#8217;agit de la méthode préférée pour couper une tôle complète.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/3pt.png" alt="3pt" width="650"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Si la détection des arêtes est effectuée par-dessus une barre support, elle produira des résultats inexacts. Par conséquent, la machine choisit automatiquement une position entre deux barres supports.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Avant d&#8217;appliquer la détection des arêtes à trois points dans la machine laser, le format de tôle doit être spécifié dans le logiciel Flux. Assurez-vous que le format de tôle spécifié dans le programme correspond à la tôle actuellement chargée dans la machine. Assurez-vous que la diode pilote est placée dans le coin de la tôle
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/3point.png" alt="3point" width="650">
+</div>
+</div>
+<div class="paragraph">
+<p>En sélectionnant la détection des arêtes 3 points dans le menu de décalage de travail, les opérations suivantes sont effectuées :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Tout d&#8217;abord, la tête de coupe se déplace vers la diode pilote à la position (0,0) sur le bord de la tôle.</p>
+</li>
+<li>
+<p>La tête de coupe se déplace vers cette position pour trouver le premier bord de la tôle.</p>
+</li>
+<li>
+<p>Après avoir détecté le premier bord, la tête de coupe se déplace ensuite vers la seconde position pour trouver le deuxième bord de la tôle.</p>
+</li>
+<li>
+<p>Après avoir détecté le deuxième bord, la tête de coupe trouve le troisième bord de la tôle (pour trouver la cote de pente ascendante de la tôle).</p>
+</li>
+<li>
+<p>Lors de la confirmation, la position de la tête se déplace automatiquement à la position de départ et exécute le processus de coupe.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_diode_de_position">Diode de position</a>
+  </li>
+  <li level="1">
+   <a href="#_centre_de_la_buse">Centre de la buse</a>
+  </li>
+  <li level="1">
+   <a href="#_manuel">Manuel</a>
+  </li>
+  <li level="1">
+   <a href="#_détection_des_arêtes_2points">Détection des arêtes 2 points</a>
+  </li>
+  <li level="1">
+   <a href="#test">Détection des arêtes 3 points</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="simulation.html">Course de simulation</a></span>
+ <span class="next"><a href="run.html">Exécuter</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

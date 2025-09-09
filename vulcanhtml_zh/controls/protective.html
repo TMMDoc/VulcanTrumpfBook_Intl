@@ -1,0 +1,383 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>玻璃保护片监控</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">欢迎来到 Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">介绍</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">用户界面</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">工作流程</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">机床操作</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">控制面板</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../workflow/index.html">生产工作流程</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../workflow/preparation.html">准备</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/create.html">创建</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/filemanager.html">文件管理</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/programs.html">选择程序</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/edit.html">编辑NC代码</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/laserfunct.html">编辑激光工艺</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/layout.html">编辑布局</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/simulation.html">模拟运行</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/offset.html">工作偏移</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/run.html">运行</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/reentry.html">重入</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">激光工艺表（LTT）</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">术语</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">激光数据项目</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">穿刺</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">多级穿刺</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">切割</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">特殊流程</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">修改激光数据</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">LTT管理</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">斜坡循环</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">加速度控制（DCA）</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">工艺功能</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">蒸发板材</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">纳米连接</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine探针</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">蛙跳</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">切割工具</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">控制</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="lubricationcycle.html">润滑循环</a></li>
+    <li><button class="tree blank"></button><a class="active" href="protective.html">玻璃保护片监控</a></li>
+    <li><button class="tree blank"></button><a href="scrapcut.html">废料切割</a></li>
+    <li><button class="tree blank"></button><a href="sheetorigin.html">转到板材原点</a></li>
+    <li><button class="tree blank"></button><a href="heightsensorcal.html">高度探针校准</a></li>
+    <li><button class="tree blank"></button><a href="nozzlecentre.html">喷嘴中心</a></li>
+    <li><button class="tree blank"></button><a href="targetshot.html">目标射击</a></li>
+    <li><button class="tree blank"></button><a href="gaspurge.html">冲刷气体</a></li>
+    <li><button class="tree blank"></button><a href="hcmanualset.html">HC手动设定点</a></li>
+    <li><button class="tree blank"></button><a href="parkposition.html">转到停机位置</a></li>
+    <li><button class="tree blank"></button><a href="nozzleclean.html">喷嘴清洁和高度探针校准</a></li>
+    <li><button class="tree blank"></button><a href="edgedetection.html">边缘检测</a></li>
+    <li><button class="tree blank"></button><a href="focuscomb.html">焦点梳</a></li>
+    <li><button class="tree blank"></button><a href="focaldistance.html">焦距</a></li>
+    <li><button class="tree blank"></button><a href="pilotdiodepos.html">引导二极管定位</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">生产计划</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">激活/停用</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">修改</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">停止在板材上</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">机床设置</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">材料状态确认</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">工作流程</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">故障排除</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">频繁碰撞</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">工作偏移</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">极小轮廓</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">版本说明</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">控制</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="protective.html">玻璃保护片监控</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>玻璃保护片监控</h1>
+<div class="sect1">
+<h2 id="_参数化">参数化<a id="h000048"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>玻璃保护片监控是一个系统，用于监控玻璃保护片。它可能会阻止您生产低质量的零件，甚至
+机床损坏。
+行为定义如下：</p>
+</div>
+<div id="h000049" class="ulist">
+<ul>
+<li>
+<p>当切割过程中玻璃保护片的质量值低于错误级别时：机床将停止加工，光束将关闭，
+窗口将弹出在HMI的正面。</p>
+</li>
+</ul>
+</div>
+<div id="h000050" class="ulist">
+<ul>
+<li>
+<p>如果单击窗口上的 <strong>关闭</strong> 按钮，机床将继续
+切割当前板材。在加工下一板材之前，它将执行
+玻璃保护片测量。如果质量仍低于错误级别，
+窗口将再次弹出。单击“关闭”将允许机床继续
+加工，窗口将再次出现在板材的末尾。</p>
+</li>
+</ul>
+</div>
+<div id="h000051" class="ulist">
+<ul>
+<li>
+<p>如果玻璃从一开始——在切割第一个轮廓后——就被污染，机床将停止并执行玻璃保护片测量。如果
+质量低于错误级别，将弹出一个窗口。单击 <strong>关闭</strong> 按钮将允许机床继续切割当前板材。
+可以进行离线测量和在线测量：</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">离线测量</th>
+<th class="tableblock halign-left valign-top">在线监控</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>测量类型</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">固定测量条件</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">原位测量</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>触发</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">清洁参考值的相对限值</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">清洁参考值的相对限值</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>作用</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">以百分比表示的结果</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">在轮廓末端的反应</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>目的</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">防止产生材料废料</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">触发离线测量</p></td>
+</tr>
+</tbody>
+</table>
+<div id="h000052" class="paragraph">
+<p><strong>离线测量</strong>：离线测量用于检查在稳定条件下的玻璃质量。在离线测量期间，将发射三个不同级别的激光功率，每个激光功率持续特定的时间段——通常为500毫秒。
+在每个功率级别上测量玻璃的反射光，
+计算标准化反射光度，并与使用相同方法获得的参考值进行比较。此计算也包含离线损坏系数，以确定玻璃质量。对于相同的
+反射光度值，较高的损坏系数表示更好的玻璃质量。因此，只有当玻璃严重脏污时，才会发出警告或触发错误。</p>
+</div>
+<div id="h000053" class="paragraph">
+<p><strong>在线监控</strong>：在线测量用于检查切割过程中的玻璃质量。每当有激光输出时，
+将计算一段时间内的反射光，低通滤波器被应用于此值。然后考虑在线损坏系数以确定
+最终的玻璃质量。由于激光输出的不稳定性和来自切割板材的背反射光，
+在线损坏系数将显著高于离线。</p>
+</div>
+<div class="paragraph">
+<p>参数化在设置页面中完成：</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/protective.png" alt="protective" width="500"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_亮度测量">亮度测量<a id="h000054"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>保护窗口测量基于光度测量。 如果
+条件为 <strong>清洁</strong>，则保护窗口状态良好，可以继续进行切割获得良好的切割结果。如果条件为 <strong>被污染</strong>，则保护窗口状态较差，建议更改保护窗口以
+体验良好的切割结果。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/lumi0.png" alt="lumi0" width="650"></span></p>
+</div>
+<div class="paragraph">
+<p>根据质量值百分比的结果，清洁或更换玻璃保护片。</p>
+</div>
+<div id="h000055" class="ulist">
+<ul>
+<li>
+<p>80%-90% &#8594; 清洁<br></p>
+</li>
+<li>
+<p>&lt; 80% &#8594; 更换</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/lumimeasure.png" alt="LumiMeasure" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p>通过上述条目，X和Y轴向定位值移动。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/lumierror.png" alt="LumiError" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p>运行程序将根据用户要求使用频率和占空比数据。功率参数预定义为500W、1000W和
+1500W。</p>
+</div>
+<div class="paragraph">
+<p>焦点直径、焦点距离和停留时间也已根据用户要求完成修改。程序运行时，可以监控输入的值。
+指定的停留时间将保留程序，直到配置的停留时间耗尽
+然后中止。</p>
+</div>
+<div class="paragraph">
+<p>测量模式具有离线和参考数据。在离线选择中，用户可以运行程序
+并检查保护窗口的状态。在参考选择中，
+用户可以交叉验证质量和线性的数据和值，它可以使用保存选项保存。一般来说，当保护窗口较新、可提供精细的结果时，将选择使用参考选择。</p>
+</div>
+<div class="paragraph">
+<p>当lumi测量程序运行时，它获取数据的日志，并可以
+在*LumiMeasurelog.txt*通过路径
+`C:\ProgramData\Metamation{APPNAME}\Log\Currentyear\Currentmonth\Currentday`或在用户界面中读取。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/lumi1.png" alt="t" width="300"></span>
+<span class="image"><img src="img/lumi2.png" alt="lumi2" width="550"></span></p>
+</div>
+<div class="paragraph">
+<p>参考上述计算，将在MK文件中添加以下参数以
+优化监控功能：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>离线损坏系数</p>
+</li>
+<li>
+<p>在线损坏系数</p>
+</li>
+<li>
+<p>警告限制（百分比）</p>
+</li>
+<li>
+<p>错误限制（百分比）</p>
+</li>
+<li>
+<p>报告警告的延迟时间（以秒为单位）</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/lumi3.png" alt="lumi3" width="750"></span></p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_参数化">参数化</a>
+  </li>
+  <li level="1">
+   <a href="#_亮度测量">亮度测量</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="lubricationcycle.html">润滑循环</a></span>
+ <span class="next"><a href="scrapcut.html">废料切割</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

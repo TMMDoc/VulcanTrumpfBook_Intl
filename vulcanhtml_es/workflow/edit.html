@@ -1,0 +1,277 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Editar código CN</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Bienvenido a Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Introducción</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">Interfaz de usuario</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Flujo de trabajo</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Funcionamiento de la máquina</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Panel de control</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Flujo de trabajo de producción</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="preparation.html">Preparación</a></li>
+    <li><button class="tree blank"></button><a href="create.html">Crear</a></li>
+    <li><button class="tree blank"></button><a href="filemanager.html">Gestión de archivos</a></li>
+    <li><button class="tree blank"></button><a href="programs.html">Seleccionar programa</a></li>
+    <li><button class="tree blank"></button><a class="active" href="edit.html">Editar código CN</a></li>
+    <li><button class="tree blank"></button><a href="laserfunct.html">Editar tecnología láser</a></li>
+    <li><button class="tree blank"></button><a href="layout.html">Editar diseño</a></li>
+    <li><button class="tree blank"></button><a href="simulation.html">Ejecución de la simulación</a></li>
+    <li><button class="tree blank"></button><a href="offset.html">Offsets de trabajo</a></li>
+    <li><button class="tree blank"></button><a href="run.html">Ejecutar</a></li>
+    <li><button class="tree blank"></button><a href="reentry.html">Reentrada</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Tablas de tecnología láser (TTL)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminología</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Elementos de datos láser</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Penetración</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Penetración multietapa</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Corte</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Procesos especiales</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Modificación de los datos del láser</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">Gestión de TTL</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Ciclos de rampa</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Control de aceleración (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Funciones tecnológicas</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Evaporar chapa</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">Sensor PierceLine</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Frog Jumping</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Útiles de corte</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Controles</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Ciclo de lubricación</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Control del cristal de protección</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Corte de desperdicios</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Ir al origen de la chapa</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">Calibración del sensor de altura</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Centro de boquilla</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Disparo al objetivo</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Purga con gas</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">Punto de ajuste manual HC</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">Ir a la posición de aparcamiento</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">Calibración del sensor de altura y limpieza de boquilla</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Detección de bordes</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Peine de foco</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Posición focal</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Posicionamiento del diodo piloto</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Plan de producción</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Activación/Desactivación</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Modificación</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">StopOnSheet</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">Ajustes de máquina</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Confirmación del estado del material</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Flujo de trabajo</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Solución de problemas</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Colisiones frecuentes</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Offset de trabajo</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Contornos pequeños extremos</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Aviso legal</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Flujo de trabajo de producción</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="edit.html">Editar código CN</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Editar código CN</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Con Vulcan Control usted tiene control total sobre su código CN, ya sea mediante los botones del menú o editando el texto directamente. Seleccione el programa que desea editar y, a continuación, pulse el botón <strong>Editar.</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="h000187">Editar página<a id="h000188"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="img/image18.jpeg" alt="DIN editor" width="750"></span></p>
+</div>
+<div id="h000189" class="ulist">
+<ul>
+<li>
+<p><strong>Añadir/Eliminar resto :</strong> Al seleccionar esta opción se creará una chapa sobrante. También es posible eliminar los restos seleccionando la misma opción cuando ya se han creado.</p>
+</li>
+</ul>
+</div>
+<div id="h000190" class="ulist">
+<ul>
+<li>
+<p><strong>Visualización :</strong>
+El usuario puede activar o desactivar la visualización de la chapa o de la máquina.</p>
+</li>
+</ul>
+</div>
+<div id="h000191" class="ulist">
+<ul>
+<li>
+<p><strong>Resaltar Microjoint :</strong> El usuario puede confirmar rápidamente si los contornos requeridos están dotados de microjoint o no. Al seleccionar esta opción, se resalta la microjoint en el dibujo.</p>
+</li>
+</ul>
+</div>
+<div id="h000192" class="ulist">
+<ul>
+<li>
+<p><strong>Ajustes :</strong>
+El usuario puede configurar la distancia que permite añadir restos.</p>
+</li>
+</ul>
+</div>
+<div id="h000193" class="ulist">
+<ul>
+<li>
+<p><strong>Cancelar :</strong> Cerrará el cuadro de diálogo y volverá a la página de programas sin guardar los cambios.</p>
+</li>
+</ul>
+</div>
+<div id="h000194" class="ulist">
+<ul>
+<li>
+<p><strong>Guardar :</strong>
+Esta opción guarda los cambios realizados por el usuario.Seleccione el programa LST que desea editar y, a continuación, pulse el botón <strong>Guardar</strong>. Esto lleva a la página de edición, donde el usuario puede realizar los cambios necesarios en el programa.En la página de texto LST, podemos realizar cambios en el código CN. Las opciones de buscar <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>F</kbd></span> y reemplazar <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>H</kbd></span> de un editor de texto están disponibles.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image39.jpeg" alt="Edit LST" width="750"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_orientación">Orientación<a id="h000195"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Esta página muestra el nombre y la dimensión del programa en la parte superior. El usuario puede cambiar la orientación en la que se debe mostrar el programa (vertical u horizontal) en <strong>ajustes de máquina</strong>.</p>
+</div>
+<div id="h000196" class="paragraph">
+<p><span class="image"><img src="img/image17.jpeg" alt="Edit DIN"></span></p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#h000187">Editar página</a>
+  </li>
+  <li level="1">
+   <a href="#_orientación">Orientación</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="programs.html">Seleccionar programa</a></span>
+ <span class="next"><a href="laserfunct.html">Editar tecnología láser</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

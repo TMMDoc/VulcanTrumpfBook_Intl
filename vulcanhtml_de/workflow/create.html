@@ -1,0 +1,303 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Anlegen</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Willkommen bei Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Einführung</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">Bedienoberfläche</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Maschinenbedienung</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Bedienpult</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Produktions-Workflow</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="preparation.html">Vorbereitung</a></li>
+    <li><button class="tree blank"></button><a class="active" href="create.html">Anlegen</a></li>
+    <li><button class="tree blank"></button><a href="filemanager.html">Dateiverwaltung</a></li>
+    <li><button class="tree blank"></button><a href="programs.html">Programm wählen</a></li>
+    <li><button class="tree blank"></button><a href="edit.html">NC-Programm bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="laserfunct.html">Lasertechnologie bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="layout.html">Layout bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="simulation.html">Simulationslauf</a></li>
+    <li><button class="tree blank"></button><a href="offset.html">Arbeitsversatzmaße</a></li>
+    <li><button class="tree blank"></button><a href="run.html">Ausführen</a></li>
+    <li><button class="tree blank"></button><a href="reentry.html">Wiedereinstieg</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Lasertechnologietabellen (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminologie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Laserdatenelemente</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Mehrstufiges Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Schneiden</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Spezielle Prozesse</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Ändern von Laserdaten</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">LTT-Verwaltung</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Rampenzyklen</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Beschleunigungssteuerung (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Technologiefunktionen</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Tafel abdampfen</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine-Sensor</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Springen</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Schneidwerkzeuge</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Steuerelemente</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Schmierzyklus</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Schutzglasüberwachung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Schrottschnitt</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Tafelursprungspunkt anfahren</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Düsenzentrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Zielschuss</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Gasspülung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">Manueller Sollwert für Höhenregelung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">In Parkposition fahren</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">Düsenreinigung und Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Kantenerkennung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Fokuskamm</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Fokuslage</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Positionierung der Pilotdiode</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Produktionsplan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Aktivierung/Deaktivierung</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Änderung</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">Tafelanschlag</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">Maschineneinstellungen</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Quittierung des Materialstatus</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Fehlerbehebung</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Häufige Kollisionen</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Arbeitsversatz</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Extrem kleine Konturen</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Produktions-Workflow</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="create.html">Anlegen</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Anlegen</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Auf dieser Seite werden alle verfügbaren DXF-Dateien angezeigt.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image9.png" alt="Create page" width="750">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_job_anlegen">Job anlegen<a id="h000181"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Der Bediener muss eine oder mehrere der DXF-Dateien auswählen und anschließend die Schaltfläche Job anlegen betätigen. Wenn ein Job erstellt wurde, wird Ihnen eine Tab-Schnittstelle wie im Screenshot unten angezeigt. In diesem Fenster befinden sich die folgenden vier Tabs:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Tab Teile</p>
+</li>
+<li>
+<p>Tab Konfiguration</p>
+</li>
+<li>
+<p>Tab Tafeln</p>
+</li>
+<li>
+<p>Tab Layouts</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_tab_teile">Tab Teile<a id="h000182"></a></h3>
+<div class="paragraph">
+<p>Hier kann der Bediener beliebig viele Teile hinzufügen. Um alle Teile hinzuzufügen, müssen alle DXF-Dateien und anschließend Job erstellen gewählt werden. Auf dem Tab Teile kann der Bediener die maximale Menge, die Priorität, die Walzrichtung, die Teildrehung und die Gruppe ändern. Auf diesem Tab verwalten Sie die Liste der Teile (und deren erforderliche Mengen), die geschachtelt werden müssen.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image10.jpeg" alt="Parts tab" width="750">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tab_konfiguration">Tab Konfiguration<a id="h000183"></a></h3>
+<div class="paragraph">
+<p>Hier können Sie die Parameter wie Material, Dicke, Folie, Behandlung und Teilspalt ändern.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image11.jpeg" alt="Configuration tab" width="750">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tab_tafeln">Tab Tafeln<a id="h000184"></a></h3>
+<div class="imageblock">
+<div class="content">
+<img src="img/image12b.png" alt="Sheets tab" width="750">
+</div>
+</div>
+<div class="paragraph">
+<p>Das ist der Tab, auf dem Sie die Liste der Tafeln verwalten, die beim Schachteln berücksichtigt werden sollen. Der Bediener kann Tafeln mit unterschiedlichen Größen hinzufügen. Er kann die Menge erhöhen oder verkleinern. Der Rand kann ebenfalls geändert werden.</p>
+</div>
+<div class="paragraph">
+<p>Verwenden Sie <strong>TwinLine</strong>, wenn Sie eine effiziente Möglichkeit zur Bearbeitung Ihrer Teile benötigen.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tab_layouts">Tab Layouts<a id="h000185"></a></h3>
+<div class="paragraph">
+<p><span class="image"><img src="img/image13.jpeg" alt="layout tab" width="750"></span></p>
+</div>
+<div class="paragraph">
+<p>Wenn Sie den Tab Layout auswählen, startet Vulcan Control automatisch die Berechnung der Schachtelung, wenn keine Layouts vorhanden sind. Sobald die Berechnung abgeschlossen ist, werden die berechneten Layouts in Form einer Liste von Miniaturansichten angezeigt. Sie können jedes dieser Layouts im Flux-Hauptfenster bearbeiten, indem Sie auf die Miniaturansicht klicken. Sie werden zu einem vollwertigen Layout-Editor geleitet, in dem Sie die Position/Ausrichtung von Teilen ändern, die Werkzeuge, die Reihenfolge usw. ändern können.</p>
+</div>
+<div class="paragraph">
+<p>Betätigen Sie die Schaltfläche <strong>Neuberechnung</strong>, um die verbleibenden (nicht geschachtelten Teile) zu schachteln. Wenn Sie mit dem Schachteln noch einmal von vorn beginnen möchten, löschen Sie die vorhandenen Layouts und betätigen Sie dann diese Schaltfläche.</p>
+</div>
+<div class="paragraph">
+<p>Wenn Sie die Schaltfläche Bearbeiten wählen, wird die Bearbeitungsseite für das Layout geöffnet, die in Abschnitt 3.3 eingehend erläutert wird. Bei Betätigen der Schaltfläche Abbrechen werden die hier vorgenommenen Änderungen nicht gespeichert.</p>
+</div>
+<div class="paragraph">
+<p>Der Bediener kann die Layouts mit der Funktion <strong>Layouts speichern</strong> speichern. Geben Sie den Namen ein und klicken Sie auf
+<a id="h000186"></a> <strong>OK</strong>, um die Layouts zu speichern. Das gespeicherte Layout ist auf der Seite Programme verfügbar.</p>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_job_anlegen">Job anlegen</a>
+  </li>
+  <li level="2">
+   <a href="#_tab_teile">Tab Teile</a>
+  </li>
+  <li level="2">
+   <a href="#_tab_konfiguration">Tab Konfiguration</a>
+  </li>
+  <li level="2">
+   <a href="#_tab_tafeln">Tab Tafeln</a>
+  </li>
+  <li level="2">
+   <a href="#_tab_layouts">Tab Layouts</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="preparation.html">Vorbereitung</a></span>
+ <span class="next"><a href="filemanager.html">Dateiverwaltung</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

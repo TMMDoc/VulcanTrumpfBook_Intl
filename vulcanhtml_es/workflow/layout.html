@@ -1,0 +1,596 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Editar diseño</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Bienvenido a Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Introducción</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">Interfaz de usuario</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Flujo de trabajo</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Funcionamiento de la máquina</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Panel de control</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Flujo de trabajo de producción</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="preparation.html">Preparación</a></li>
+    <li><button class="tree blank"></button><a href="create.html">Crear</a></li>
+    <li><button class="tree blank"></button><a href="filemanager.html">Gestión de archivos</a></li>
+    <li><button class="tree blank"></button><a href="programs.html">Seleccionar programa</a></li>
+    <li><button class="tree blank"></button><a href="edit.html">Editar código CN</a></li>
+    <li><button class="tree blank"></button><a href="laserfunct.html">Editar tecnología láser</a></li>
+    <li><button class="tree blank"></button><a class="active" href="layout.html">Editar diseño</a></li>
+    <li><button class="tree blank"></button><a href="simulation.html">Ejecución de la simulación</a></li>
+    <li><button class="tree blank"></button><a href="offset.html">Offsets de trabajo</a></li>
+    <li><button class="tree blank"></button><a href="run.html">Ejecutar</a></li>
+    <li><button class="tree blank"></button><a href="reentry.html">Reentrada</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Tablas de tecnología láser (TTL)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminología</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Elementos de datos láser</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Penetración</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Penetración multietapa</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Corte</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Procesos especiales</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Modificación de los datos del láser</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">Gestión de TTL</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Ciclos de rampa</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Control de aceleración (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Funciones tecnológicas</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Evaporar chapa</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">Sensor PierceLine</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Frog Jumping</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Útiles de corte</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Controles</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Ciclo de lubricación</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Control del cristal de protección</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Corte de desperdicios</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Ir al origen de la chapa</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">Calibración del sensor de altura</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Centro de boquilla</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Disparo al objetivo</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Purga con gas</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">Punto de ajuste manual HC</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">Ir a la posición de aparcamiento</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">Calibración del sensor de altura y limpieza de boquilla</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Detección de bordes</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Peine de foco</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Posición focal</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Posicionamiento del diodo piloto</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Plan de producción</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Activación/Desactivación</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Modificación</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">StopOnSheet</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">Ajustes de máquina</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Confirmación del estado del material</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Flujo de trabajo</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Solución de problemas</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Colisiones frecuentes</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Offset de trabajo</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Contornos pequeños extremos</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Aviso legal</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Flujo de trabajo de producción</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="layout.html">Editar diseño</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Editar diseño</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tenemos el formato FXLYT de Flux que admite Vulcan Control. La ventaja de utilizar archivos FXLYT es que son maleables y el operador puede hacer mucho más con ellos que con los archivos DIN rígidos.El usuario debe seleccionar un archivo de diseño y, a continuación, pulsar Editar para ir a la página Editar diseño. Tiene cinco opciones como se indica a continuación:</p>
+</div>
+<div id="h000271" class="ulist">
+<ul>
+<li>
+<p>Pieza</p>
+</li>
+<li>
+<p>Contorno</p>
+</li>
+<li>
+<p>Utillaje</p>
+</li>
+<li>
+<p>Rejilla</p>
+</li>
+<li>
+<p>Secuencia</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pieza">Pieza<a id="h000276"></a></h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/image21.png" alt="Layout part page" width="850">
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image right"><img src="img/image220.png" alt="step size" width="85"></span>
+<span class="image right"><img src="img/image22.png" alt="Move dialog" width="85"></span></p>
+</div>
+<div id="h000277" class="paragraph">
+<p><strong>Añadir :</strong> el usuario puede añadir piezas DXF en el diseño.</p>
+</div>
+<div id="h000278" class="paragraph">
+<p><strong>Mover :</strong> la pieza seleccionada en el diseño se puede mover con esta opción.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Mover a la izquierda : la pieza se mueve a la izquierda.</p>
+</li>
+<li>
+<p>Mover a la derecha : la pieza se mueve a la derecha.</p>
+</li>
+<li>
+<p>Mover hacia arriba : la pieza se mueve hacia la parte superior.</p>
+</li>
+<li>
+<p>Mover hacia abajo : la pieza se mueve hacia la parte inferior.La cantidad en la que se mueve la pieza depende del tamaño de paso seleccionado.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image right"><img src="img/image220.png" alt="step size" width="85"></span>
+<span class="image right"><img src="img/image23.png" alt="Rotate dialog" width="85"></span></p>
+</div>
+<div id="h000279" class="paragraph">
+<p><strong>Rotar :</strong> la pieza seleccionada en el diseño se puede girar utilizando esta opción.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Girar 90 grados a la derecha : la pieza gira 90 grados en el sentido de las agujas del reloj.</p>
+</li>
+<li>
+<p>Girar 90 grados a la izquierda : la pieza gira 90 grados en sentido contrario a las agujas del reloj.</p>
+</li>
+<li>
+<p>Girar a la derecha : la pieza gira en el sentido de las agujas del reloj.</p>
+</li>
+<li>
+<p>Girar a la izquierda : la pieza gira en sentido contrario a las agujas del reloj.La cantidad en la que gira la pieza depende del tamaño de paso seleccionado.</p>
+</li>
+</ol>
+</div>
+<div id="h000280" class="paragraph">
+<p><strong>Tamaño del paso :</strong> se basa en el valor especificado para Pequeño, Mediano y Grande para Mover y Girar, la pieza se moverá y girará de forma correspondiente. El usuario puede editar el valor en función de sus preferencias.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image24.jpg" alt="Step size dialog" width="350">
+</div>
+</div>
+<div id="h000281" class="paragraph">
+<p><strong>Alternar :</strong> el usuario puede seleccionar cualquier pieza y hacer clic en la opción alternar para seleccionar todas otras piezas restantes. Pueden seleccionarse varias piezas haciendo clic en las piezas respectivas. La selección puede anularse haciendo clic en las piezas seleccionadas.A continuación, se pueden mover, girar o eliminar conjuntamente.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image25.png" alt="Toggle function" width="850">
+</div>
+</div>
+<div id="h000282" class="paragraph">
+<p><strong>Eliminar :</strong> el usuario puede eliminar la pieza según la selección. Haga clic en SÍ en la ventana emergente para eliminar.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image26.jpg" alt="Delete popup" width="300">
+</div>
+</div>
+<div id="h000283" class="paragraph">
+<p><strong>Reanidar (Renest) :</strong> el usuario puede usar la opción de reanidar para anidar todas las piezas en el diseño.</p>
+</div>
+<div id="h000284" class="paragraph">
+<p><strong>Ajustes de pieza :</strong> El usuario puede utilizar esta opción para cambiar el tamaño de la chapa, el margen de la chapa, la dirección de enrollado y el espacio entre piezas.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image27.jpg" alt="Settings dialog" width="300">
+</div>
+</div>
+<div id="h000285" class="paragraph">
+<p><strong>Base de datos láser :</strong> el usuario puede utilizar esta opción para cambiar la página de datos del láser que contiene el material, el grosor, el diámetro de la boquilla, el tipo de gas, el tratamiento y la lámina.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image28.jpg" alt="Laser database dialog" width="400"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_contorno">Contorno<a id="h000286"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>En esta página, el usuario puede seleccionar los contornos y luego usar estas opciones para editar.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image29.png" alt="Contour Edit option" width="275"></span></p>
+</div>
+<div id="h000287" class="ulist">
+<ul>
+<li>
+<p><strong>Microjoint :</strong>
+El usuario debe seleccionar el contorno antes de seleccionar cualquiera de las opciones que se indican a continuación:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Asegurar microjoints: si un contorno seleccionado ya tiene una o más microjoints, no haga nada; de lo contrario, inserte una microjoint.</p>
+</li>
+<li>
+<p>Añadir microjoint : esta opción añade múltiples microjoints al contorno seleccionado.</p>
+</li>
+<li>
+<p>Reduce microjoint : esta opción reduce la microjoint para el contorno seleccionado.</p>
+</li>
+<li>
+<p>Destacar microjoint : esta opción destaca las microjoints en el diseño.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+<div id="h000288" class="ulist">
+<ul>
+<li>
+<p><strong>Corte de restos :</strong> el usuario debe seleccionar el contorno interno para realizar las siguientes opciones:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Crear corte de restos: esta opción se utiliza para crear corte de restos.</p>
+</li>
+<li>
+<p>Eliminar corte de restos: esta opción elimina el corte de restos seleccionado.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+<div id="h000289" class="ulist">
+<ul>
+<li>
+<p><strong>Ajustes de contorno</strong>: esta opción se utiliza para cambiar el ancho de la microjoint, el tamaño de la rejilla de corte de restos y la longitud de aproximación del corte de restos.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image32.jpg" alt="Contour settings dialog" width="400">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_utillaje">Utillaje<a id="h000290"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Con esta opción, el usuario puede mover la aproximación al punto de destino y editar los parámetros del útil seleccionando el contorno.</p>
+</div>
+<div id="h000291" class="ulist">
+<ul>
+<li>
+<p><strong>Mover aproximación :</strong> esta opción se utiliza para mover la aproximación seleccionando el punto de aproximación y desplazándose al nuevo punto de destino.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image33.jpg" alt="Move approach option" width="75">
+</div>
+</div>
+<div id="h000292" class="ulist">
+<ul>
+<li>
+<p><strong>Corte láser :</strong> al seleccionar el utillaje, se abre el cuadro de diálogo. El usuario puede hacer cambios en el utillaje láser.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image34.png" alt="Laser cut dialogue" width="850">
+</div>
+</div>
+<div id="h000293" class="ulist">
+<ul>
+<li>
+<p>El usuario puede cambiar la dirección del corte del sentido de las agujas del reloj al al sentido contrario a las agujas de reloj o viceversa.</p>
+</li>
+</ul>
+</div>
+<div id="h000294" class="ulist">
+<ul>
+<li>
+<p>Elija el tipo de penetración en función del requisito.</p>
+</li>
+</ul>
+</div>
+<div id="h000295" class="ulist">
+<ul>
+<li>
+<p>Elija las condiciones de corte en función del requisito.</p>
+</li>
+</ul>
+</div>
+<div id="h000296" class="ulist">
+<ul>
+<li>
+<p>Cambie los parámetros de aproximación: longitud, radio y ángulo en función del requisito.</p>
+</li>
+</ul>
+</div>
+<div id="h000297" class="ulist">
+<ul>
+<li>
+<p>Habilite/deshabilite la microjoint y cambie su ancho en función del requisito.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_rejilla">Rejilla<a id="h000298"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>En esta página, el usuario puede mover y eliminar la línea de corte una vez habilitada la creación del corte de chapa en los <strong>ajustes</strong>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image35.png" alt="Skeleton options" width="80"></span>
+<span class="image"><img src="img/image36.jpeg" alt="Move slice line dialog" width="175"></span></p>
+</div>
+<div id="h000299" class="ulist">
+<ul>
+<li>
+<p><strong>Mover línea de corte :</strong> El usuario debe habilitar la opción de crear corte de chapa para crear la línea de corte y, a continuación, seleccionar la línea de corte para moverla hacia la izquierda o hacia la derecha según la distancia indicada en el tamaño del paso.</p>
+</li>
+</ul>
+</div>
+<div id="h000300" class="ulist">
+<ul>
+<li>
+<p><strong>Eliminar línea de corte :</strong> El usuario debe seleccionar la línea de corte y, a continuación, eliminarla utilizando la opción Eliminar línea de corte.</p>
+</li>
+</ul>
+</div>
+<div id="h000301" class="ulist">
+<ul>
+<li>
+<p><strong>Ajustes de la rejilla :</strong>
+image::image37.jpg[Skeleton settings dialog,400]</p>
+</li>
+<li>
+<p><strong>Crear corte de chapa :</strong> si la rejilla de la chapa debe cortarse o no.</p>
+</li>
+</ul>
+</div>
+<div id="h000303" class="ulist">
+<ul>
+<li>
+<p><strong>Espaciado X &amp; Y :</strong> este es el espaciado entre líneas de corte vertical y horizontal respectivamente.</p>
+</li>
+</ul>
+</div>
+<div id="h000304" class="ulist">
+<ul>
+<li>
+<p><strong>Crear chapa hoja remanente :</strong> habilitar o deshabilitar la chapa remanente para crear o eliminar corte residual respectivamente.</p>
+</li>
+</ul>
+</div>
+<div id="h000305" class="ulist">
+<ul>
+<li>
+<p><strong>Anchura mínima de chapa restante :</strong> aunque se marque lo anterior, solo se añadirá un corte final cuando la anchura de la chapa no utilizada creada por el corte sea mayor o igual que este valor.</p>
+</li>
+</ul>
+</div>
+<div id="h000306" class="ulist">
+<ul>
+<li>
+<p><strong>Offset X del corte final</strong>: es la distancia desde el extremo derecho del equipamiento de la pieza hasta el corte vertical final que crea la chapa remanente.</p>
+</li>
+</ul>
+</div>
+<div id="h000307" class="ulist">
+<ul>
+<li>
+<p><strong>Procesar líneas de corte después de todas las piezas :</strong> su activación hará que se corten las piezas primero y luego la chapa. Los siguientes parámetros afectan cómo se programa cada corte en tiras individual:</p>
+</li>
+</ul>
+</div>
+<div id="h000308" class="ulist">
+<ul>
+<li>
+<p><strong>Medida de la ranura de microjoint en el borde de la chapa :</strong>: ajústela a un valor mayor que cero si desea que quede una pequeña alma en los puntos en los que el corte en tiras toca el borde de la chapa.</p>
+</li>
+</ul>
+</div>
+<div id="h000309" class="ulist">
+<ul>
+<li>
+<p><strong>Medida de la ranura de microjoint en el borde de la pieza :</strong> ajústela a un valor mayor que cero si desea que quede una pequeña alma en los puntos en los que el corte en tiras toca el borde de la pieza.</p>
+</li>
+</ul>
+</div>
+<div id="h000310" class="ulist">
+<ul>
+<li>
+<p><strong>Distancia de penetración desde el borde de la pieza :</strong> esta es la distancia del punto de perforación desde el borde de la pieza.</p>
+</li>
+</ul>
+</div>
+<div id="h000311" class="ulist">
+<ul>
+<li>
+<p><strong>Medir la distancia desde el borde de la chapa :</strong> este parámetro identifica la distancia antes del borde de la chapa donde la altura del cabezal láser está bloqueada y la regulación de distancia desactivada.</p>
+</li>
+</ul>
+</div>
+<div id="h000312" class="ulist">
+<ul>
+<li>
+<p><strong>Trayecto de marcha en inercia después del borde de la chapa :</strong> es la distancia que recorre el cabezal de la máquina más allá del borde de la chapa con el láser encendido y la regulación de distancia desactivada.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_secuencia">Secuencia<a id="h000313"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Muestra la secuencia de corte del diseño.</p>
+</div>
+<div id="h000314" class="paragraph">
+<p><strong>Cancelar :</strong> se perderán todos los cambios realizados. Volverá a la
+página de programas.</p>
+</div>
+<div id="h000315" class="paragraph">
+<p><strong>Guardar :</strong> guarda todos los cambios.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image38.png" alt="Sequence page" width="850">
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_pieza">Pieza</a>
+  </li>
+  <li level="1">
+   <a href="#_contorno">Contorno</a>
+  </li>
+  <li level="1">
+   <a href="#_utillaje">Utillaje</a>
+  </li>
+  <li level="1">
+   <a href="#_rejilla">Rejilla</a>
+  </li>
+  <li level="1">
+   <a href="#_secuencia">Secuencia</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="laserfunct.html">Editar tecnología láser</a></span>
+ <span class="next"><a href="simulation.html">Ejecución de la simulación</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

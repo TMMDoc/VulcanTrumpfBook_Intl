@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Modification</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Bienvenue dans Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">Interface utilisateur</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Flux de travail</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Utilisation de la machine</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Tableau de commande</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../workflow/index.html">Flux de production</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../workflow/preparation.html">Préparation</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/create.html">Créer</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/filemanager.html">Gestion de fichiers</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/programs.html">Sélection du programme</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/edit.html">Modifier le programme CN</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/laserfunct.html">Editer la technologie laser</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/layout.html">Modifier le layout</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/simulation.html">Course de simulation</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/offset.html">Décalages de travail</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/run.html">Exécuter</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/reentry.html">Reprise</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Tableau technologique laser (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminologie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Éléments de paramètres laser</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Perçage</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Perçage en plusieurs étapes</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Découpe</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Processus spéciaux</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Modification des paramètres laser</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">Gestion de TTL</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Rampes de puissance</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Commande d'accélération (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Fonctions de technologie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Vaporiser la tôle</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojonctions</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">Capteur PierceLine</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Saut de grenouille</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Outils de coupe</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Commandes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Cycle de lubrification</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Surveillance du verre de protection</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Coupe de chutes</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Aller à l'origine de la tôle</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">Etalonnage du capteur de hauteur</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Centre de buse</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Tir cible</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Balayage au gaz</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">Commande de hauteur Valeur de consigne manuelle</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">Aller à la position parking</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">Nettoyage des buses et étalonnage du capteur de hauteur</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Détection des arêtes</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Peigne de focalisation</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Position focale</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Positionnement de diode pilote</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Plan de production</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="pp_activation.html">Activation/Désactivation</a></li>
+    <li><button class="tree blank"></button><a class="active" href="pp_buttons.html">Modification</a></li>
+    <li><button class="tree blank"></button><a href="pp_stoponsheet.html">Arrêt sur la tôle</a></li>
+    <li><button class="tree blank"></button><a href="pp_machinesettings.html">Réglages machine</a></li>
+    <li><button class="tree blank"></button><a href="pp_materialstatusacknowledgement.html">Validation du statut article</a></li>
+    <li><button class="tree blank"></button><a href="pp_generalworkflow.html">Flux de travail</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Dépannage</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Collisions fréquentes</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Décalage de travail</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Petits contours extrêmes</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Plan de production</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="pp_buttons.html">Modification</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Modification</h1>
+<div class="sect1">
+<h2 id="_ajouter_des_packs_de_plan_de_production">Ajouter des packs de plan de production<a id="h000160"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cette fonction permet d&#8217;ajouter les packs de plan de production dans la liste de plan de production. Les fichiers d&#8217;origine peuvent se trouver sur un disque local, un disque amovible, un disque réseau.
+Les packs de plan de production ajoutés seront listés et les sous-tâches qui appartiennent aux packs de plan de production seront triées ci-dessous.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/pp_add.png" alt="PP Add"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="h000161">Verrouiller/Déverrouiller le plan de production</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="img/pp_lock.png" alt="PP Lock"></span></p>
+</div>
+<div class="paragraph">
+<p>Cette fonction permet de verrouiller/déverrouiller le pack de plan de production.
+Une fois le pack de plan de production importé, il est verrouillé par défaut.
+Sélectionner un plan de production et cliquer sur le bouton de verrouillage pour déverrouiller le plan de production, ce qui signifie que le plan de production est désormais un plan de production actif.
+Une fois que le pack du plan de production est actif, tous les programmes qu&#8217;il comprend peuvent être traités un par un.
+Verrouiller/déverrouiller les impacts sur l&#8217;ensemble du plan de production, ne pas permettre de définir un programme unique.
+Un seul plan de production peut être Actif ; un plan actif est surligné en couleur foncée.
+Un plan de production actif ne peut pas être supprimé immédiatement, toute autre opération doit verrouiller le plan de production d&#8217;abord.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="h000162">Ajustement de l&#8217;ordre du plan de production</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cette fonction permet d&#8217;ajuster la priorité du pack de plan de production dans la liste de plan de production, ce qui modifie la séquence d&#8217;usinage.
+Cette fonction sera désactivée pendant l&#8217;exécution du plan de production.
+Sélectionnez un plan de production et utilisez ce symbole haut/bas pour ajuster l&#8217;ordre.
+Le plan situé en haut a la priorité la plus élevée.
+Chaque plan de production déverrouillé sera traité dans l&#8217;ordre, de haut en bas. (Fonction pas encore exécutée)</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/pp_sequence.png" alt="PP Sequence"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="h000163">Supprimer un plan de production</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cette fonction permet de supprimer un pack de plan de production de la liste de plan de production
+Sélectionnez un plan de production et utilisez le symbole « X » pour supprimer le pack de plan de production.
+L&#8217;entièreté du pack sélectionné sera supprimé, il n&#8217;est pas permis de supprimer un seul programme individuellement.
+Le plan de production est supprimé de la liste de plan de production uniquement, les fichiers bruts qui sont stockés sur le disque local ne sont pas supprimés.
+Cette fonction sera désactivée pendant l&#8217;exécution du plan de production.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/pp_delete.png" alt="PP Delete"></span></p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_ajouter_des_packs_de_plan_de_production">Ajouter des packs de plan de production</a>
+  </li>
+  <li level="1">
+   <a href="#h000161">Verrouiller/Déverrouiller le plan de production</a>
+  </li>
+  <li level="1">
+   <a href="#h000162">Ajustement de l&#8217;ordre du plan de production</a>
+  </li>
+  <li level="1">
+   <a href="#h000163">Supprimer un plan de production</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="pp_activation.html">Activation/Désactivation</a></span>
+ <span class="next"><a href="pp_stoponsheet.html">Arrêt sur la tôle</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

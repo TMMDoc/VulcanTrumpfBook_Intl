@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Gépüzemeltetés</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Üdvözöljük itt: Vulcan Control</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Bevezetés</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="home.html">Kezelőfelület</a></li>
+    <li><button class="tree blank"></button><a href="workflow.html">Munkafolyamat</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jog.html">Gépüzemeltetés</a></li>
+    <li><button class="tree blank"></button><a href="controlpanel.html">Kezelőpult</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../workflow/index.html">Gyártási munkafolyamat</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../workflow/preparation.html">Előkészületek</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/create.html">Létrehozás</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/filemanager.html">Fájlkezelés</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/programs.html">Program kiválasztása</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/edit.html">NC program szerkesztése</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/laserfunct.html">Lézertechnológia szerkesztése</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/layout.html">Elrendezés szerkesztése</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/simulation.html">Szimuláció futtatása</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/offset.html">Munka eltolások</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/run.html">Futtatás</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/reentry.html">Újbóli belépés</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Lézer-technológiatáblázatok(LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminológia</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Lézeradatelemek</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Beszúrás</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Többfokozatú beszúrás</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Vágás</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Speciális folyamatok</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Lézeradatok módosítása</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">Vágási táblázatok kezelése</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Rámpaciklusok</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">Flyline</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Gyorsulásszabályozás (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Technológiai funkciók</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Lemez gőzölése</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanoillesztések</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine érzékelő</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Gyors átugrás</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Vágószerszámok</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Vezérlések</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Kenési ciklus</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Védőüveg-felügyelet</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Hulladékvágás</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Ugrás a lemez origójához</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">A magasságérzékelő kalibrálása</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Fúvóka középpont</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Célra irányított lézerimpulzus</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Gázöblítés</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">HC Kézi beállítási pont</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">Ugrás parkolóhelyzetbe</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">A fúvóka tisztítása és magasságérzékelő kalibrálása</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Élfelismerés</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Fókuszfésű</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Fókusztávolság</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Vezérlődióda pozícionálás</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Gyártási terv</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Aktiválás/deaktiválás</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Módosítás</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">Stop a lemezen (StopOnSheet)</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">A gép beállításai</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Anyagállapot nyugtázása</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Munkafolyamat</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Hibakezelés</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Gyakori ütközések</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Munkaeltolás</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Extrém kis kontúrok</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impresszum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Bevezetés</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jog.html">Gépüzemeltetés</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Gépüzemeltetés</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Az érintőképernyő használatával a következő lehetőségek állnak rendelkezésre a gép üzemeltetéséhez:</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kézi_mozgatás">Kézi mozgatás<a id="h000088"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ezen az oldalon lehet a tengelyt mozgatni. Az X, Y és Z-tengelyek aktuális pozíciója is megtekinthető itt.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image4.png" alt="Setup page">
+</div>
+</div>
+<div class="paragraph">
+<p>A következő mozgatási típusok használhatók:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Modális mozgatás</p>
+</li>
+<li>
+<p>Inkrementális mozgatás</p>
+</li>
+<li>
+<p>Mozgatás célpontba</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_modális_mozgatás">Modális mozgatás<a id="h000089"></a></h3>
+<div class="paragraph">
+<p>Az egér 300 ms-nál hosszabb ideig történő lenyomása modális mozgást indít el, egészen addig, amíg a felhasználó fel nem emeli az ujját/fel nem engedi az egérgombot (hosszú kattintás). Attól függően, hogy a felhasználó hol kattintott a nyílra, a gép különböző sebességgel mozog. A modális mozgás sebessége a <strong>beállításokban</strong> konfigurálható.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_léptetés">Léptetés<a id="h000090"></a></h3>
+<div class="paragraph">
+<p>Egy kattintás (az egér lenyomása, majd azonnali ferengedése 300 ms-on belül) lépésenkénti mozgást eredményez. Attól függően, hogy a felhasználó hol kattintott a nyílra, a tengely rövid, közepes vagy nagy lépésekben mozog. A lépésméret a <strong>beállításokban</strong> konfigurálható.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mozgatás_célpontba">Mozgatás célpontba<a id="h000091"></a></h3>
+<div class="paragraph">
+<p>A felhasználó az adatbeviteli mezőben megadhatja a kiválasztott tengely célpontját.
+Nyomja meg a <strong>START</strong> gombot a mozgás indításához. A tengely mozgása bármikor leállítható a <strong>STOP</strong> billentyűvel.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sebesség_felülbírálása">Sebesség felülbírálása<a id="h000092"></a></h3>
+<div class="paragraph">
+<p>A felhasználó az <strong>Override +</strong> és <strong>Override -</strong> gombokkal befolyásolhatja a tengelymozgások sebességét (százalékban).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image6.jpg" alt="Override window" width="250">
+</div>
+</div>
+<div id="h000093" class="ulist">
+<ul>
+<li>
+<p><strong>Override + :</strong> Növeli a konfigurált/beállított tengely vagy útvonal sebességének felülbírálási százalékát. 10% felett az érték 10%-os , 10% alatt pedig 1%-os lépésekben változik.</p>
+</li>
+</ul>
+</div>
+<div id="h000094" class="ulist">
+<ul>
+<li>
+<p><strong>Override - :</strong> Csökkenti a konfigurált/beállított tengely vagy útvonal sebességének felülbírálási százalékát. 10% felett az érték 10%-os , 10% alatt pedig 1%-os dekrementumokban változik. A felhasználó a csúszkával is növelheti vagy csökkentheti a sebességet.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_alaphelyzetbe_állítás">Alaphelyzetbe állítás<a id="h000095"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A tengelyek referencia helyzetbe állítása kétféleképpen történhet.</p>
+</div>
+<div id="h000096" class="ulist">
+<ul>
+<li>
+<p><strong>Automatikusan :</strong> Ha ez a funkció aktiválva van, akkor a berendezés a START billentyű megnyomásakor automatikusan elindítja a referenciapontba való elmozdulást. A referenciapontba való elmozdulás bármikor megszakítható a STOP billentyű megnyomásával.</p>
+</li>
+</ul>
+</div>
+<div id="h000097" class="ulist">
+<ul>
+<li>
+<p><strong>Manuálisan :</strong> Ha ez a funkció van kiválasztva, akkor kezdeményezhető az egyes tengelyek manuális elmozdítása a referenciapontba. Válassza ki a kívánt tengelyt, majd nyomja meg a START billentyűt a mozgatás elindításához. A referenciapontba való elmozdulás bármikor megszakítható a STOP billentyű megnyomásával.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image7.jpeg" alt="Homing window">
+</div>
+</div>
+<div id="h000098" class="paragraph">
+<p><strong>Beállítások</strong>
+A felhasználó a <strong>beállításokban</strong> megadhatja az egyes nyílirányokhoz tartozó lépésközt (léptetéshez) és sebességet (modális mozgáshoz).”</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image8.jpg" alt="Setting window" width="350">
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_kézi_mozgatás">Kézi mozgatás</a>
+  </li>
+  <li level="2">
+   <a href="#_modális_mozgatás">Modális mozgatás</a>
+  </li>
+  <li level="2">
+   <a href="#_léptetés">Léptetés</a>
+  </li>
+  <li level="2">
+   <a href="#_mozgatás_célpontba">Mozgatás célpontba</a>
+  </li>
+  <li level="2">
+   <a href="#_sebesség_felülbírálása">Sebesség felülbírálása</a>
+  </li>
+  <li level="1">
+   <a href="#_alaphelyzetbe_állítás">Alaphelyzetbe állítás</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="workflow.html">Munkafolyamat</a></span>
+ <span class="next"><a href="controlpanel.html">Kezelőpult</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

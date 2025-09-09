@@ -1,0 +1,96 @@
+Version=58
+APPNAME=Vulcan Control
+BRAND=TRUMPF
+FLAVOR=VULCAN
+LANGUAGE=EN
+VULCAN=
+Folders=9
+Pages=64
+UIXlate=False, DebugUIXlate=False, Language=EN
+
+contents.txt • 255901.025916
+impressum.adoc • Impresszum
+Index.adoc • Üdvözöljük itt: {APPNAME}
+manifest.txt • 251905.121919
+configure\contents.txt • 255909.065930
+configure\index.adoc • Gépkonfiguráció
+configure\LaserDB.adoc • Lézer adatbázis
+configure\setting.adoc • A gép beállításai
+Controls\contents.txt • 255901.025913
+Controls\EdgeDetection.adoc • Élfelismerés
+Controls\FocalDistance.adoc • Fókusztávolság
+Controls\FocusComb.adoc • Fókuszfésű
+Controls\GasPurge.adoc • Gázöblítés
+Controls\HCManualSet.adoc • HC Kézi beállítási pont
+Controls\HeightSensorCal.adoc • A magasságérzékelő kalibrálása
+Controls\index.adoc • Vezérlések
+Controls\LubricationCycle.adoc • Kenési ciklus
+Controls\NozzleCentre.adoc • Fúvóka középpont
+Controls\NozzleClean.adoc • A fúvóka tisztítása és magasságérzékelő kalibrálása
+Controls\ParkPosition.adoc • Ugrás parkolóhelyzetbe
+Controls\PilotDiodePos.adoc • Vezérlődióda pozícionálás
+Controls\Protective.adoc • Védőüveg-felügyelet
+Controls\ScrapCut.adoc • Hulladékvágás
+Controls\SheetOrigin.adoc • Ugrás a lemez origójához
+Controls\TargetShot.adoc • Célra irányított lézerimpulzus
+Controls\traversal.adoc • Üresjárati levegőfúvás
+Intro\contents.txt • 255909.065930
+Intro\ControlPanel.adoc • Kezelőpult
+Intro\Home.adoc • Kezelőfelület
+Intro\index.adoc • Bevezetés
+Intro\Jog.adoc • Gépüzemeltetés
+Intro\Workflow.adoc • Munkafolyamat
+LTT\contents.txt • 255909.065930
+LTT\DCA.adoc • Gyorsulásszabályozás (DCA)
+LTT\export.adoc • Vágási táblázatok kezelése
+LTT\FlyLine.adoc • Flyline
+LTT\General.adoc • Terminológia
+LTT\Index.adoc • Lézer-technológiatáblázatok(LTT)
+LTT\rampCycles.adoc • Rámpaciklusok
+LTT\selection.adoc • Lézeradatok módosítása
+modify\contents.txt • 255909.065930
+modify\Index.adoc • Program módosítása
+modify\microjoints.adoc • Mikrohidak módosítása
+modify\renest.adoc • Újrabeágyazás
+ProductionPlan\contents.txt • 250603.040613
+ProductionPlan\index.adoc • Gyártási terv
+ProductionPlan\PP_Activation.adoc • Aktiválás/deaktiválás
+ProductionPlan\PP_Buttons.adoc • Módosítás
+ProductionPlan\PP_GeneralWorkflow.adoc • Munkafolyamat
+ProductionPlan\PP_MachineSettings.adoc • A gép beállításai
+ProductionPlan\PP_MaterialStatusAcknowledgement.adoc • Anyagállapot nyugtázása
+ProductionPlan\PP_StopOnSheet.adoc • Stop a lemezen (StopOnSheet)
+technology\contents.txt • 255909.065930
+technology\cuttingTools.adoc • Vágószerszámok
+technology\frog.adoc • Gyors átugrás
+technology\Index.adoc • Technológiai funkciók
+technology\nano.adoc • Nanoillesztések
+technology\pierceline.adoc • PierceLine érzékelő
+technology\vaporize.adoc • Lemez gőzölése
+Troubleshooting\collisions.adoc • Gyakori ütközések
+Troubleshooting\contents.txt • 255909.065930
+Troubleshooting\Diagnostics.adoc • Adathiba, biztonsági mentési és helyreállítási hiba
+Troubleshooting\Extreme.adoc • Extrém kis kontúrok
+Troubleshooting\Index.adoc • Hibakezelés
+Troubleshooting\Laserissues.adoc • Lézerproblémák
+Troubleshooting\Workoffset.adoc • Munkaeltolás
+Workflow\contents.txt • 255909.065930
+Workflow\Create.adoc • Létrehozás
+Workflow\Edit.adoc • NC program szerkesztése
+Workflow\filemanager.adoc • Fájlkezelés
+Workflow\Index.adoc • Gyártási munkafolyamat
+Workflow\Laserfunct.adoc • Lézertechnológia szerkesztése
+Workflow\layout.adoc • Elrendezés szerkesztése
+Workflow\offset.adoc • Munka eltolások
+Workflow\Preparation.adoc • Előkészületek
+Workflow\Programs.adoc • Program kiválasztása
+Workflow\reentry.adoc • Újbóli belépés
+Workflow\Run.adoc • Futtatás
+Workflow\Simulation.adoc • Szimuláció futtatása
+LTT\LaserData\contents.txt • 255909.065930
+LTT\LaserData\Cutting.adoc • Vágás
+LTT\LaserData\index.adoc • Lézeradatelemek
+LTT\LaserData\multistage.adoc • Többfokozatú beszúrás
+LTT\LaserData\piercing.adoc • Beszúrás
+LTT\LaserData\special.adoc • Speciális folyamatok
+Workflow\img\2pt.svg

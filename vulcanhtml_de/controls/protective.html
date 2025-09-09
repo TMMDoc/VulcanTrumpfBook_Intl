@@ -1,0 +1,365 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Schutzglasüberwachung</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Willkommen bei Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Einführung</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">Bedienoberfläche</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Maschinenbedienung</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Bedienpult</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../workflow/index.html">Produktions-Workflow</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../workflow/preparation.html">Vorbereitung</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/create.html">Anlegen</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/filemanager.html">Dateiverwaltung</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/programs.html">Programm wählen</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/edit.html">NC-Programm bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/laserfunct.html">Lasertechnologie bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/layout.html">Layout bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/simulation.html">Simulationslauf</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/offset.html">Arbeitsversatzmaße</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/run.html">Ausführen</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/reentry.html">Wiedereinstieg</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Lasertechnologietabellen (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminologie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Laserdatenelemente</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Mehrstufiges Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Schneiden</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Spezielle Prozesse</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Ändern von Laserdaten</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">LTT-Verwaltung</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Rampenzyklen</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Beschleunigungssteuerung (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Technologiefunktionen</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Tafel abdampfen</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine-Sensor</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Springen</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Schneidwerkzeuge</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Steuerelemente</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="lubricationcycle.html">Schmierzyklus</a></li>
+    <li><button class="tree blank"></button><a class="active" href="protective.html">Schutzglasüberwachung</a></li>
+    <li><button class="tree blank"></button><a href="scrapcut.html">Schrottschnitt</a></li>
+    <li><button class="tree blank"></button><a href="sheetorigin.html">Tafelursprungspunkt anfahren</a></li>
+    <li><button class="tree blank"></button><a href="heightsensorcal.html">Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="nozzlecentre.html">Düsenzentrierung</a></li>
+    <li><button class="tree blank"></button><a href="targetshot.html">Zielschuss</a></li>
+    <li><button class="tree blank"></button><a href="gaspurge.html">Gasspülung</a></li>
+    <li><button class="tree blank"></button><a href="hcmanualset.html">Manueller Sollwert für Höhenregelung</a></li>
+    <li><button class="tree blank"></button><a href="parkposition.html">In Parkposition fahren</a></li>
+    <li><button class="tree blank"></button><a href="nozzleclean.html">Düsenreinigung und Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="edgedetection.html">Kantenerkennung</a></li>
+    <li><button class="tree blank"></button><a href="focuscomb.html">Fokuskamm</a></li>
+    <li><button class="tree blank"></button><a href="focaldistance.html">Fokuslage</a></li>
+    <li><button class="tree blank"></button><a href="pilotdiodepos.html">Positionierung der Pilotdiode</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Produktionsplan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Aktivierung/Deaktivierung</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Änderung</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">Tafelanschlag</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">Maschineneinstellungen</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Quittierung des Materialstatus</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Fehlerbehebung</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Häufige Kollisionen</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Arbeitsversatz</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Extrem kleine Konturen</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Steuerelemente</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="protective.html">Schutzglasüberwachung</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Schutzglasüberwachung</h1>
+<div class="sect1">
+<h2 id="_parametrierung">Parametrierung<a id="h000048"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Die Schutzglasüberwachung ist ein System, das den Zustand des Schutzglases überwacht. Es kann die Produktion von Teilen minderer Qualität oder sogar Maschinenschäden verhindern.</p>
+</div>
+<div class="paragraph">
+<p>Das Verhalten ist wie folgt definiert:</p>
+</div>
+<div id="h000049" class="ulist">
+<ul>
+<li>
+<p>Wenn der Qualitätswert des Schutzglases während des Schneidens unter der Fehlerschwelle liegt: Die Maschine stoppt die Bearbeitung, der Strahl schaltet sich aus und im Vordergrund der HMI wird ein Fenster angezeigt.</p>
+</li>
+</ul>
+</div>
+<div id="h000050" class="ulist">
+<ul>
+<li>
+<p>Wenn die Schaltfläche <strong>Schließen</strong> im Fenster angeklickt wird, fährt die Maschine mit dem Schneiden der aktuellen Tafel fort. Bevor die nächste Tafel bearbeitet wird, wird eine Schutzglasmessung durchgeführt. Liegt die Qualität immer noch unter der Fehlerschwelle, wird das Fenster erneut angezeigt. Wenn Sie auf „Schließen“ klicken, kann die Maschine mit der Bearbeitung fortfahren, und das Fenster erscheint am Ende der Tafel erneut.</p>
+</li>
+</ul>
+</div>
+<div id="h000051" class="ulist">
+<ul>
+<li>
+<p>Wenn das Glas von Anfang an verschmutzt ist, stoppt die Maschine nach dem Schneiden der ersten Kontur und führt eine Schutzglasmessung durch. Liegt die Qualität unter der Fehlerschwelle, wird ein Fenster angezeigt. Wenn die Schaltfläche <strong>Schließen</strong> angeklickt wird, erlaubt das der Maschine die Fortsetzung des Schneidens der aktuellen Tafel.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Es ist sowohl eine Offline-Messung als auch eine Online-Messung möglich:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">Offline-Messung</th>
+<th class="tableblock halign-left valign-top">Online-Überwachung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Messart</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Feste Messbedingungen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">In-situ-Messung</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Trigger</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Relative Grenze zum sauberen Referenzwert</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Relative Grenze zum sauberen Referenzwert</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Wirkung</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ergebnis in Prozent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reaktion am Konturende</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Zweck</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verhindert die Produktion von Materialschrott</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Löst Offline-Messung aus</p></td>
+</tr>
+</tbody>
+</table>
+<div id="h000052" class="paragraph">
+<p><strong>Offline-Messung</strong>: Die Offline-Messung wird verwendet, um die Glasqualität unter stabilen Bedingungen zu überprüfen. Bei der Offline-Messung wird Laserleistung auf drei verschiedenen Stufen emittiert, jeweils für einen bestimmten Zeitraum – üblicherweise 500 ms. Das vom Glas reflektierte Licht wird bei jeder Leistungsstufe gemessen, und es wird die normierte Reflexionshelligkeit berechnet und mit einem Referenzwert verglichen, der mit der gleichen Methode ermittelt wird. In diese Berechnung wird auch ein Offline-Grenzwert einbezogen, um die Glasqualität zu bestimmen. Bei gleichem Reflexionshelligkeitswert deutet ein höherer Grenzwert auf bessere Glasqualität hin. Daher wird nur bei erheblicher Verschmutzung des Glases eine Warnung bzw. eine Fehlermeldung getriggert.</p>
+</div>
+<div id="h000053" class="paragraph">
+<p><strong>Online-Überwachung</strong>: Mit der Online-Messung wird die Glasqualität beim Schneiden überprüft. Immer wenn Laserleistung vorhanden ist, wird der Mittelwert des reflektierten Lichts über einen Zeitraum berechnet, und auf diesen Wert wird ein Tiefpassfilter angewendet. Dann wird der Online-Grenzwert berücksichtigt, um die endgültige Glasqualität zu bestimmen. Aufgrund der Instabilität der Laserleistung und der Rückreflexion der geschnittenen Tafel liegt der Online-Grenzwert erheblich über dem Offline-Grenzwert.</p>
+</div>
+<div class="paragraph">
+<p>Die Parametrierung erfolgt auf der Einstellungsseite:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/protective.png" alt="protective" width="500"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_luminositätsmessung">Luminositätsmessung<a id="h000054"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Die Schutzfenstermessung basiert auf einer Luminositätsmessung. Wenn der Zustand <strong>Sauber</strong> ist, erlaubt der Status des Schutzfensters das Fortsetzen des Schneidens im Hinblick auf gute Schneidergebnisse. Wenn der Zustand <strong>Kontaminiert</strong> ist, ist der Status des Schutzfensters unzureichend und es ist ratsam, das Schutzfenster auszuwechseln, um gute Schneidergebnisse zu erzielen.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/lumi0.png" alt="lumi0" width="650"></span></p>
+</div>
+<div class="paragraph">
+<p>Reinigen oder ersetzen Sie das Schutzglas, je nach Prozentsatz des Qualitätswerts.</p>
+</div>
+<div id="h000055" class="ulist">
+<ul>
+<li>
+<p>80 % - 90 % &#8594; sauber<br></p>
+</li>
+<li>
+<p>&lt; 80% &#8594; ersetzen</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/lumimeasure.png" alt="LumiMeasure" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p>Mit den obigen Eingaben bewegen sich die X-Achse und die Y-Achse auf den positionierten Wert zu.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/lumierror.png" alt="LumiError" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p>Beim Ausführen des Programms werden die Daten von Frequenz und Tastverhältnis gemäß den Bedieneranforderungen befolgt. Der Leistungsparameter ist vordefiniert als aufsteigender Schritt von 500 W, 1000 W und 1500 W.</p>
+</div>
+<div class="paragraph">
+<p>Fokusdurchmesser, Fokusabstand und Verweilzeit wurden ebenfalls entsprechend den Bedieneranforderungen modifiziert. Eingegebene Werte können während des Programmablaufs überwacht werden.
+Die angegebene Verweilzeit hält das Programm bis zur konfigurierten Verweilzeit an, und dann erfolgt der Abbruch.</p>
+</div>
+<div class="paragraph">
+<p>Der Messmodus verfügt über Offline- und Referenzdaten. In der Offline-Auswahl kann der Bediener das Programm ausführen und den Status des Schutzfensters überprüfen. In der Referenzauswahl kann der Bediener die Daten und Werte von Qualität und Linearität überprüfen und sie mit der Option Speichern speichern. Im Allgemeinen wird die Referenzauswahl ausgewählt, wenn das Schutzfenster neuer ist, was gute Ergebnisse liefert.</p>
+</div>
+<div class="paragraph">
+<p>Wenn das Luminositätsmessprogramm läuft, protokolliert es die Daten, die in <strong>LumiMeasurelog.txt</strong> über den Pfad <code>C:\ProgramData\Metamation{APPNAME}\Log\Currentyear\Currentmonth\Currentday</code> oder in der Bedienoberfläche gelesen werden können.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/lumi1.png" alt="t" width="300"></span>
+<span class="image"><img src="img/lumi2.png" alt="lumi2" width="550"></span></p>
+</div>
+<div class="paragraph">
+<p>Bezüglich der obigen Berechnung werden zur Optimierung der Überwachungsfunktion in der MK-Datei die folgenden Parameter hinzugefügt:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Offline-Grenzwert Lumi-Messung</p>
+</li>
+<li>
+<p>Online-Grenzwert Lumi-Messung</p>
+</li>
+<li>
+<p>Warngrenze in Prozent</p>
+</li>
+<li>
+<p>Fehlergrenze in Prozent</p>
+</li>
+<li>
+<p>Zeitverzögerung für Warnmeldung in Sekunden</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/lumi3.png" alt="lumi3" width="750"></span></p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_parametrierung">Parametrierung</a>
+  </li>
+  <li level="1">
+   <a href="#_luminositätsmessung">Luminositätsmessung</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="lubricationcycle.html">Schmierzyklus</a></span>
+ <span class="next"><a href="scrapcut.html">Schrottschnitt</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

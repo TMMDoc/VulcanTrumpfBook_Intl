@@ -1,0 +1,404 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/flux-icon.png">
+  <title>切割</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">欢迎来到 Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../intro/index.html">介绍</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../intro/home.html">用户界面</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/workflow.html">工作流程</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/jog.html">机床操作</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/controlpanel.html">控制面板</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../workflow/index.html">生产工作流程</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../workflow/preparation.html">准备</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/create.html">创建</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/filemanager.html">文件管理</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/programs.html">选择程序</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/edit.html">编辑NC代码</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/laserfunct.html">编辑激光工艺</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/layout.html">编辑布局</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/simulation.html">模拟运行</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/offset.html">工作偏移</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/run.html">运行</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/reentry.html">重入</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">激光工艺表（LTT）</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../general.html">术语</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">激光数据项目</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="piercing.html">穿刺</a></li>
+      <li><button class="tree blank"></button><a href="multistage.html">多级穿刺</a></li>
+      <li><button class="tree blank"></button><a class="active" href="cutting.html">切割</a></li>
+      <li><button class="tree blank"></button><a href="special.html">特殊流程</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../selection.html">修改激光数据</a></li>
+    <li><button class="tree blank"></button><a href="../export.html">LTT管理</a></li>
+    <li><button class="tree blank"></button><a href="../rampcycles.html">斜坡循环</a></li>
+    <li><button class="tree blank"></button><a href="../flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../dca.html">加速度控制（DCA）</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../technology/index.html">工艺功能</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../technology/vaporize.html">蒸发板材</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/nano.html">纳米连接</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/pierceline.html">PierceLine探针</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/frog.html">蛙跳</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/cuttingtools.html">切割工具</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../controls/index.html">控制</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../controls/lubricationcycle.html">润滑循环</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/protective.html">玻璃保护片监控</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/scrapcut.html">废料切割</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/sheetorigin.html">转到板材原点</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/heightsensorcal.html">高度探针校准</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/nozzlecentre.html">喷嘴中心</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/targetshot.html">目标射击</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/gaspurge.html">冲刷气体</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/hcmanualset.html">HC手动设定点</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/parkposition.html">转到停机位置</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/nozzleclean.html">喷嘴清洁和高度探针校准</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/edgedetection.html">边缘检测</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/focuscomb.html">焦点梳</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/focaldistance.html">焦距</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/pilotdiodepos.html">引导二极管定位</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../productionplan/index.html">生产计划</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../productionplan/pp_activation.html">激活/停用</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/pp_buttons.html">修改</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/pp_stoponsheet.html">停止在板材上</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/pp_machinesettings.html">机床设置</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/pp_materialstatusacknowledgement.html">材料状态确认</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/pp_generalworkflow.html">工作流程</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../troubleshooting/index.html">故障排除</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../troubleshooting/collisions.html">频繁碰撞</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshooting/workoffset.html">工作偏移</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshooting/extreme.html">极小轮廓</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">版本说明</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">激光工艺表（LTT）</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">激光数据项目</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="cutting.html">切割</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>切割</h1>
+<div class="sect1">
+<h2 id="_进刀策略">进刀策略<a id="h000109"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>为了避免穿刺造成轮廓损坏，材料在轮廓的一侧被穿刺几毫米。然后使用不同策略接近轮廓，具体取决于材料、材料厚度和轮廓尺寸。</p>
+</div>
+<div class="sect2">
+<h3 id="_正常进刀">正常进刀<a id="h000110"></a></h3>
+<div class="paragraph">
+<p>使用正常进刀，切割直接从起始孔进行，
+从相应的切割表中选择切割参数。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_减量进刀">减量进刀<a id="h000111"></a></h3>
+<div class="paragraph">
+<p>以低速接近轮廓。功率、频率、喷嘴距离。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/app1.png" alt="app1"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_带预切割的进刀">带预切割的进刀<a id="h000112"></a></h3>
+<div class="paragraph">
+<p>穿刺后，以低速切割几毫米，具体取决于材料厚度。然后切割头以最后激活的定位速度返回到起始孔，接近轮廓并用相应切割表中的参数进行切割。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_进刀后冷却">进刀后冷却<a id="h000113"></a></h3>
+<div class="paragraph">
+<p>对于进刀后冷却，激光束在进刀后将在实际轮廓被切割之前短暂关闭。不过，切割气体仍继续流动并冷却加工点。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_打标和凿坑">打标和凿坑<a id="h000114"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>材料零件的打标是通过材料表面颜色的变化实现的。因为只有最少的材料被移除，因此在涂珐琅或涂漆后通常不会再感觉到打标的存在。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_切割过程">切割过程<a id="h000115"></a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_大中小轮廓切割">大、中、小轮廓切割<a id="h000116"></a></h3>
+<div class="paragraph">
+<p>在TRUMPF的CNC编程和激光切割背景中，<strong>大、中、小轮廓</strong>的方案与切割或加工过程中的不同几何特征的尺寸和复杂性有关。这些区别有助于
+优化模具移动、切割策略和加工速度。</p>
+</div>
+<div class="sect3">
+<h4 id="_1_大轮廓">1.大轮廓<a id="h000117"></a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>大轮廓是指零件的<strong>长连续切割</strong>或<strong>外轮廓</strong>。</p>
+</li>
+<li>
+<p>这些通常是定义外部形状的<strong>主要</strong>切割路径。</p>
+</li>
+</ul>
+</div>
+<div id="h000118" class="paragraph">
+<p><strong>特点：</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>直线或平滑弯曲。</p>
+</li>
+<li>
+<p>更少的中断。</p>
+</li>
+<li>
+<p>由于热积聚或精度损失的风险较小，因此可以以<strong>更高的速度</strong>切割。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_中等轮廓">2.中等轮廓<a id="h000119"></a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>零件内部或沿零件的中等尺寸特征，例如
+<a id="h000120"></a> <strong>大型切口、孔或槽</strong>。</p>
+</li>
+<li>
+<p>这些轮廓比大轮廓更复杂，但不像小轮廓那么复杂。</p>
+</li>
+</ul>
+</div>
+<div id="h000121" class="paragraph">
+<p><strong>特点：</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>由于细节适中，可能需要调整切割速度。</p>
+</li>
+<li>
+<p>需要某种程度的<strong>精确</strong>控制来保持准确性。</p>
+</li>
+<li>
+<p>会影响散热和材料性能。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_小轮廓">3.小轮廓<a id="h000122"></a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>这些指的是<strong>详细、复杂的切割</strong>，例如
+<strong>小孔、精细图案或尖角</strong>。</p>
+</li>
+<li>
+<p>切割小轮廓需要<strong>更高的精度</strong>和
+<strong>更慢的速度</strong>，以保持准确性并避免缺陷。</p>
+</li>
+</ul>
+</div>
+<div id="h000125" class="paragraph">
+<p><strong>特点：</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>通常涉及<strong>狭窄的半径、错综复杂的形状或密集的切割区域</strong>。</p>
+</li>
+<li>
+<p>容易产生<strong>热效应</strong>（熔化、毛刺、材料变形）。</p>
+</li>
+<li>
+<p>可能需要<strong>自适应策略</strong>，如降低功率、精细喷嘴控制、或微连接工艺。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_模拟校准曲线">模拟校准曲线<a id="h000126"></a></h3>
+<div class="paragraph">
+<p>TRUMPF 使用3点校准曲线进行模拟激光控制。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/3ptltt.png" alt="3ptLTT"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_flyline">FlyLine<a id="h000127"></a></h3>
+<div class="paragraph">
+<p>FlyLine是一种加工策略，可以帮助在加工某些板材类型时节省大量的时间。FlyLine特别适用于孔栅。</p>
+</div>
+<div id="h000128" class="ulist">
+<ul>
+<li>
+<p>激光束在飞行加工中打开和关闭，具有很高的位置精度。
+当激光束打开和关闭时，轴不会停止。</p>
+</li>
+<li>
+<p>不在一条线上的单个轮廓被分割成轴向平行的轮廓段。这可以避免转角加工。
+仅在方向发生少量变化时，速度才会降低。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_进刀策略">进刀策略</a>
+  </li>
+  <li level="2">
+   <a href="#_正常进刀">正常进刀</a>
+  </li>
+  <li level="2">
+   <a href="#_减量进刀">减量进刀</a>
+  </li>
+  <li level="2">
+   <a href="#_带预切割的进刀">带预切割的进刀</a>
+  </li>
+  <li level="2">
+   <a href="#_进刀后冷却">进刀后冷却</a>
+  </li>
+  <li level="1">
+   <a href="#_打标和凿坑">打标和凿坑</a>
+  </li>
+  <li level="1">
+   <a href="#_切割过程">切割过程</a>
+  </li>
+  <li level="2">
+   <a href="#_大中小轮廓切割">大、中、小轮廓切割</a>
+  </li>
+  <li level="2">
+   <a href="#_模拟校准曲线">模拟校准曲线</a>
+  </li>
+  <li level="2">
+   <a href="#_flyline">FlyLine</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="multistage.html">多级穿刺</a></span>
+ <span class="next"><a href="special.html">特殊流程</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

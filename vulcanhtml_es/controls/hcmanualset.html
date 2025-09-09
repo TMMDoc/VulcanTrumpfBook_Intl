@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Punto de ajuste manual HC</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Bienvenido a Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Introducción</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">Interfaz de usuario</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Flujo de trabajo</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Funcionamiento de la máquina</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Panel de control</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../workflow/index.html">Flujo de trabajo de producción</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../workflow/preparation.html">Preparación</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/create.html">Crear</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/filemanager.html">Gestión de archivos</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/programs.html">Seleccionar programa</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/edit.html">Editar código CN</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/laserfunct.html">Editar tecnología láser</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/layout.html">Editar diseño</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/simulation.html">Ejecución de la simulación</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/offset.html">Offsets de trabajo</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/run.html">Ejecutar</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/reentry.html">Reentrada</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Tablas de tecnología láser (TTL)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminología</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Elementos de datos láser</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Penetración</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Penetración multietapa</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Corte</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Procesos especiales</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Modificación de los datos del láser</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">Gestión de TTL</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Ciclos de rampa</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Control de aceleración (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Funciones tecnológicas</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Evaporar chapa</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">Sensor PierceLine</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Frog Jumping</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Útiles de corte</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Controles</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="lubricationcycle.html">Ciclo de lubricación</a></li>
+    <li><button class="tree blank"></button><a href="protective.html">Control del cristal de protección</a></li>
+    <li><button class="tree blank"></button><a href="scrapcut.html">Corte de desperdicios</a></li>
+    <li><button class="tree blank"></button><a href="sheetorigin.html">Ir al origen de la chapa</a></li>
+    <li><button class="tree blank"></button><a href="heightsensorcal.html">Calibración del sensor de altura</a></li>
+    <li><button class="tree blank"></button><a href="nozzlecentre.html">Centro de boquilla</a></li>
+    <li><button class="tree blank"></button><a href="targetshot.html">Disparo al objetivo</a></li>
+    <li><button class="tree blank"></button><a href="gaspurge.html">Purga con gas</a></li>
+    <li><button class="tree blank"></button><a class="active" href="hcmanualset.html">Punto de ajuste manual HC</a></li>
+    <li><button class="tree blank"></button><a href="parkposition.html">Ir a la posición de aparcamiento</a></li>
+    <li><button class="tree blank"></button><a href="nozzleclean.html">Calibración del sensor de altura y limpieza de boquilla</a></li>
+    <li><button class="tree blank"></button><a href="edgedetection.html">Detección de bordes</a></li>
+    <li><button class="tree blank"></button><a href="focuscomb.html">Peine de foco</a></li>
+    <li><button class="tree blank"></button><a href="focaldistance.html">Posición focal</a></li>
+    <li><button class="tree blank"></button><a href="pilotdiodepos.html">Posicionamiento del diodo piloto</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Plan de producción</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Activación/Desactivación</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Modificación</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">StopOnSheet</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">Ajustes de máquina</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Confirmación del estado del material</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Flujo de trabajo</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Solución de problemas</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Colisiones frecuentes</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Offset de trabajo</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Contornos pequeños extremos</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Aviso legal</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Controles</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="hcmanualset.html">Punto de ajuste manual HC</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Punto de ajuste manual HC</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/hcmanualset.png" alt="HCManualSet" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>La función de control de altura se utiliza para comprobar manualmente la altura entre la boquilla y la pieza de trabajo.</p>
+</div>
+<div class="paragraph">
+<p>Al activar este programa, solicita introducir el <strong>Factor de ganancia</strong> y la <strong>Altura de la boquilla</strong>.
+Aquí, el factor de ganancia denota la velocidad del movimiento y la altura de la boquilla denota la altura de la boquilla. Ayuda a comprobar la altura entre la boquilla y la pieza de trabajo. El usuario también puede elegir el modo de control requerido.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/hcmanualset1.png" alt="HCManualSet1" width="600">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_modo_de_control">Modo de control<a id="h000029"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>El modo de control controlará el proceso de regulación de distancia.Durante la perforación de la chapa fina u otras condiciones especiales, la selección de <strong>Control de altura ON</strong> mejorará el tiempo de proceso.Para ciertas condiciones, como el corte de chatarra, la detección de bordes, etc., puede haber una necesidad de controlar la distancia en función de las instrucciones, la congelación o desconexión completa.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_modo_de_control">Modo de control</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="gaspurge.html">Purga con gas</a></span>
+ <span class="next"><a href="parkposition.html">Ir a la posición de aparcamiento</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,605 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Elrendezés szerkesztése</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Üdvözöljük itt: Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Bevezetés</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">Kezelőfelület</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Munkafolyamat</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Gépüzemeltetés</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Kezelőpult</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Gyártási munkafolyamat</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="preparation.html">Előkészületek</a></li>
+    <li><button class="tree blank"></button><a href="create.html">Létrehozás</a></li>
+    <li><button class="tree blank"></button><a href="filemanager.html">Fájlkezelés</a></li>
+    <li><button class="tree blank"></button><a href="programs.html">Program kiválasztása</a></li>
+    <li><button class="tree blank"></button><a href="edit.html">NC program szerkesztése</a></li>
+    <li><button class="tree blank"></button><a href="laserfunct.html">Lézertechnológia szerkesztése</a></li>
+    <li><button class="tree blank"></button><a class="active" href="layout.html">Elrendezés szerkesztése</a></li>
+    <li><button class="tree blank"></button><a href="simulation.html">Szimuláció futtatása</a></li>
+    <li><button class="tree blank"></button><a href="offset.html">Munka eltolások</a></li>
+    <li><button class="tree blank"></button><a href="run.html">Futtatás</a></li>
+    <li><button class="tree blank"></button><a href="reentry.html">Újbóli belépés</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Lézer-technológiatáblázatok(LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminológia</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Lézeradatelemek</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Beszúrás</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Többfokozatú beszúrás</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Vágás</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Speciális folyamatok</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Lézeradatok módosítása</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">Vágási táblázatok kezelése</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Rámpaciklusok</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">Flyline</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Gyorsulásszabályozás (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Technológiai funkciók</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Lemez gőzölése</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanoillesztések</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine érzékelő</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Gyors átugrás</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Vágószerszámok</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Vezérlések</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Kenési ciklus</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Védőüveg-felügyelet</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Hulladékvágás</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Ugrás a lemez origójához</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">A magasságérzékelő kalibrálása</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Fúvóka középpont</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Célra irányított lézerimpulzus</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Gázöblítés</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">HC Kézi beállítási pont</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">Ugrás parkolóhelyzetbe</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">A fúvóka tisztítása és magasságérzékelő kalibrálása</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Élfelismerés</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Fókuszfésű</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Fókusztávolság</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Vezérlődióda pozícionálás</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Gyártási terv</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Aktiválás/deaktiválás</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Módosítás</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">Stop a lemezen (StopOnSheet)</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">A gép beállításai</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Anyagállapot nyugtázása</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Munkafolyamat</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Hibakezelés</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Gyakori ütközések</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Munkaeltolás</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Extrém kis kontúrok</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impresszum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Gyártási munkafolyamat</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="layout.html">Elrendezés szerkesztése</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Elrendezés szerkesztése</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Rendelkezünk a Flux FXLYT formátumval, amely támogatja a(z) Vulcan Control használatát. Az FXLYT fájlformátum használatának előnye, hogy rugalmasan alakítható és sokkal több lehetőséget biztosít a kezelő számára, mint a kötöttebb DIN fájlformátum.</p>
+</div>
+<div class="paragraph">
+<p>A felhasználónak ki kell választania egy elrendezési fájlt, majd a Szerkesztés gomb megnyomásával az Elrendezés szerkesztése oldalra kell lépnie. Ott öt opció áll rendelkezésre az alábbiak szerint:</p>
+</div>
+<div id="h000271" class="ulist">
+<ul>
+<li>
+<p>Alkatrész</p>
+</li>
+<li>
+<p>Kontúr</p>
+</li>
+<li>
+<p>Felszerszámozás</p>
+</li>
+<li>
+<p>Váz</p>
+</li>
+<li>
+<p>Sorrend</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_alkatrész">Alkatrész<a id="h000276"></a></h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/image21.png" alt="Layout part page" width="850">
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image right"><img src="img/image220.png" alt="step size" width="85"></span>
+<span class="image right"><img src="img/image22.png" alt="Move dialog" width="85"></span></p>
+</div>
+<div id="h000277" class="paragraph">
+<p><strong>Hozzáadás :</strong> A felhasználó DXF-fájlformátumú alkatrészeket adhat hozzá az elrendezéshez.</p>
+</div>
+<div id="h000278" class="paragraph">
+<p><strong>Mozgatás :</strong> Az elrendezésben kiválasztott alkatrész ezzel az opcióval mozgatható.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Mozgatás balra : Az alkatrész balra mozdul.</p>
+</li>
+<li>
+<p>Mozgatás jobbra : Az alkatrész jobbra mozdul.</p>
+</li>
+<li>
+<p>Mozgatás felfelé : Az alkatrész a felső szél felé mozdul.</p>
+</li>
+<li>
+<p>Mozgatás lefelé : Az alkatrész az alsó szél felé mozdul.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Az alkatrész mozgásának mértéke a kiválasztott lépésmérettől függ.</p>
+</div>
+<div class="paragraph">
+<p><span class="image right"><img src="img/image220.png" alt="step size" width="85"></span>
+<span class="image right"><img src="img/image23.png" alt="Rotate dialog" width="85"></span></p>
+</div>
+<div id="h000279" class="paragraph">
+<p><strong>Forgatás :</strong> Az elrendezésben kiválasztott alkatrész ezzel az opcióval forgatható.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Forgatás 90 fokkal jobbra : Az alkatrész 90 fokkal elfordul balról jobbra.</p>
+</li>
+<li>
+<p>Forgatás 90 fokkal balra : Az alkatrész 90 fokkal elfordul jobbról balra.</p>
+</li>
+<li>
+<p>Forgatás jobbra : Az alkatrész balról jobbra forog.</p>
+</li>
+<li>
+<p>Forgatás balra : Az alkatrész jobbról balra forog.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Az alkatrész elfordulásának mértéke a kiválasztott lépésmérettől függ.</p>
+</div>
+<div id="h000280" class="paragraph">
+<p><strong>Lépésméret :</strong> A Kicsi, Közepes és Nagy méreteknél az alkatrész a Mozgatáshoz, valamint a Forgatáshoz megadott értékeknek megfelelően fog mozogni, illetve forogni. A felhasználó a saját preferenciái alapján szerkesztheti az értéket.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image24.jpg" alt="Step size dialog" width="350">
+</div>
+</div>
+<div id="h000281" class="paragraph">
+<p><strong>Váltás :</strong> A felhasználó kiválaszthat egy alkatrészt, majd a Váltás opcióra kattintva kijelölheti az összes többi, még fennmaradó alkatrészt. Több alkatrész kiválasztása a megfelelő alkatrészekre kattintva végezhető el. A kijelölés megszüntethető a kijelölt alkatrészekre kattintva.
+Ezután az alkatrészeket együtt lehet mozgatni, forgatni vagy törölni.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image25.png" alt="Toggle function" width="850">
+</div>
+</div>
+<div id="h000282" class="paragraph">
+<p><strong>Törlés :</strong> A felhasználó törölheti a kiválasztott alkatrészt. A törléshez kattintson az IGEN gombra az előugró ablakban.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image26.jpg" alt="Delete popup" width="300">
+</div>
+</div>
+<div id="h000283" class="paragraph">
+<p><strong>Újrabeágyazás :</strong> A felhasználó az Újrabeágyazás opcióval az összes alkatrészt beágyazhatja az elrendezésbe.</p>
+</div>
+<div id="h000284" class="paragraph">
+<p><strong>Alkatrész-beállítások :</strong> A felhasználó ezzel az opcióval módosíthatja a lemezméretet, a táblaszélt, a hengerlési irányt és az alkatrész résméretét.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image27.jpg" alt="Settings dialog" width="300">
+</div>
+</div>
+<div id="h000285" class="paragraph">
+<p><strong>Lézer adatbázis :</strong> A felhasználó ezzel az opcióval módosíthatja a lézeradat oldalt, amely tartalmazza az anyagot, a vastagságot, a fúvókaátmérőt, a gáztípust, a kezelést és a fóliát.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image28.jpg" alt="Laser database dialog" width="400"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kontúr">Kontúr<a id="h000286"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ezen az oldalon a felhasználó kiválaszthatja a kontúrokat, majd ezeket az opciókat használhatja a szerkesztéshez.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image29.png" alt="Contour Edit option" width="275"></span></p>
+</div>
+<div id="h000287" class="ulist">
+<ul>
+<li>
+<p><strong>Mikrohíd :</strong>
+A felhasználónak ki kell választania a kontúrt, mielőtt kiválasztja az alábbi lehetőségek bármelyikét:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Mikrohíd biztosítása : Ha a kiválasztott kontúr már rendelkezik egy vagy több mikrohíddal, ne tegyen semmit, ellenkező esetben illesszen be egy mikrohidat.</p>
+</li>
+<li>
+<p>Mikrohíd hozzáadása : Ezzel az opcióval több mikrohíd adható hozzá a kiválasztott kontúrhoz.</p>
+</li>
+<li>
+<p>Mikrohidak számának csökkentése : Ez az opció csökkenti a kiválasztott kontúr mikrohídjainak számát.</p>
+</li>
+<li>
+<p>Mikrohíd kiemelése : Ezzel a beállítással kiemelheti a mikrohidakat az elrendezésben.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+<div id="h000288" class="ulist">
+<ul>
+<li>
+<p><strong>Hulladékvágás :</strong> A felhasználónak ki kell választania a belső kontúrt az alábbi opciók végrehajtásához:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Hulladékvágás létrehozása : Ez az opció a hulladékvágás létrehozására szolgál.</p>
+</li>
+<li>
+<p>Hulladékvágás törlése : Ez az opció a hulladékvágás törlésére szolgál.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+<div id="h000289" class="ulist">
+<ul>
+<li>
+<p><strong>Kontúrbeállítások</strong> : Ezzel az opcióval módosíthatja a mikrohíd szélességét, a hulladékvágási rács méretét és a hulladékvágás indítási hosszát.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image32.jpg" alt="Contour settings dialog" width="400">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_felszerszámozás">Felszerszámozás<a id="h000290"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ezzel az opcióval a felhasználó az indítást a kitűzött pontra mozgathatja, a kontúr kijelölésével pedig szerkesztheti a szerszám paramétereit.</p>
+</div>
+<div id="h000291" class="ulist">
+<ul>
+<li>
+<p><strong>Indítás mozgatása :</strong> Ez az opció az indítás elmozdítására szolgál az indítási pont kiválasztásával és az új célponthoz való mozgatással.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image33.jpg" alt="Move approach option" width="75">
+</div>
+</div>
+<div id="h000292" class="ulist">
+<ul>
+<li>
+<p><strong>Lézervágás :</strong> A felszerszámozás kiválasztásával megnyílik egy párbeszédablak. A felhasználó módosíthatja a lézerszerszámokat.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image34.png" alt="Laser cut dialogue" width="850">
+</div>
+</div>
+<div id="h000293" class="ulist">
+<ul>
+<li>
+<p>A felhasználó megfordíthatja a vágás irányát balról jobbra vagy fordítva.</p>
+</li>
+</ul>
+</div>
+<div id="h000294" class="ulist">
+<ul>
+<li>
+<p>Válassza ki a beszúrás típusát a követelményektől függően.</p>
+</li>
+</ul>
+</div>
+<div id="h000295" class="ulist">
+<ul>
+<li>
+<p>Válassza ki a vágási feltételeket a követelményektől függően.</p>
+</li>
+</ul>
+</div>
+<div id="h000296" class="ulist">
+<ul>
+<li>
+<p>Módosítsa az indítási paramétereket - Hossz, Sugár és Szög - a követelményektől függően.</p>
+</li>
+</ul>
+</div>
+<div id="h000297" class="ulist">
+<ul>
+<li>
+<p>Engedélyezze/tiltsa a mikrohidat és módosítsa annak szélességét a követelményektől függően.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_váz">Váz<a id="h000298"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ezen az oldalon a felhasználó áthelyezheti és törölheti a szeletelő vonalat, ha a <strong>beállítások</strong> között engedélyezve van a lemeztábla-vágás létrehozása.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image35.png" alt="Skeleton options" width="80"></span>
+<span class="image"><img src="img/image36.jpeg" alt="Move slice line dialog" width="175"></span></p>
+</div>
+<div id="h000299" class="ulist">
+<ul>
+<li>
+<p><strong>A szeletelő vonal mozgatása :</strong> A felhasználónak engedélyeznie kell a lemeztábla-vágás létrehozása opciót a szeletelő vonal létrehozásához, majd ki kell választania a szeletelő vonalat, hogy a lépésméretnél megadott távolságnak megfelelően balra vagy jobbra mozgassa azt.</p>
+</li>
+</ul>
+</div>
+<div id="h000300" class="ulist">
+<ul>
+<li>
+<p><strong>A szeletelő vonal törlése :</strong> A felhasználónak ki kell választania a szeletelő vonalat, majd törölnie kell azt a Szeletelő vonal törlése opcióval.</p>
+</li>
+</ul>
+</div>
+<div id="h000301" class="ulist">
+<ul>
+<li>
+<p><strong>A váz beállításai :</strong>
+image::image37.jpg[Skeleton settings dialog,400]</p>
+</li>
+<li>
+<p><strong>Lemeztábla-vágás létrehozása :</strong> A lemeztábla vázát fel kell-e szeletelni vagy sem.</p>
+</li>
+</ul>
+</div>
+<div id="h000303" class="ulist">
+<ul>
+<li>
+<p><strong>X és Y szabad tér :</strong> Ez a függőleges és a vízszintes szeletelő vonalak közötti távolság.</p>
+</li>
+</ul>
+</div>
+<div id="h000304" class="ulist">
+<ul>
+<li>
+<p><strong>Maradék lemez létrehozása :</strong> A maradék lemez engedélyezése vagy letiltása a maradéklemez-vágás létrehozásához vagy törléséhez.</p>
+</li>
+</ul>
+</div>
+<div id="h000305" class="ulist">
+<ul>
+<li>
+<p><strong>A maradék lemez minimális szélessége :</strong> Még ha a fenti beállítás be is van jelölve, a végső vágás csak akkor kerül hozzáadásra, ha a vágás által létrehozott, fel nem használt lemez szélessége nagyobb vagy egyenlő ennél az értéknél.</p>
+</li>
+</ul>
+</div>
+<div id="h000306" class="ulist">
+<ul>
+<li>
+<p><strong>Végső vágás X eltolás :</strong> Ez a távolság az alkatrész szerszámozásának legszélső jobb oldali pontjától az utolsó függőleges vágásig, amely létrehozza a maradék (hulladék) lemezt.</p>
+</li>
+</ul>
+</div>
+<div id="h000307" class="ulist">
+<ul>
+<li>
+<p><strong>A szeletelő vonalak megmunkálása az összes alkatrész után :</strong> Ha bekapcsolja, akkor először az alkatrészeket, majd a lemezt vágja. A következő paraméterek befolyásolják az egyes szeletelő vágások programozását:</p>
+</li>
+</ul>
+</div>
+<div id="h000308" class="ulist">
+<ul>
+<li>
+<p><strong>Mikrohíd résméret a táblaszélnél :</strong> Állítsa ezt az értéket nullánál nagyobbra, ha azt szeretné, hogy a szeletelő vágás és a táblaszél érintkezési pontjain egy kis gerinc maradjon.</p>
+</li>
+</ul>
+</div>
+<div id="h000309" class="ulist">
+<ul>
+<li>
+<p><strong>Mikrohíd résméret az alkatrész szélénél :</strong> Állítsa ezt az értéket nullánál nagyobbra, ha azt szeretné, hogy a szeletelő vágás és az alkatrész-szél érintkezési pontjain egy kis gerinc maradjon.</p>
+</li>
+</ul>
+</div>
+<div id="h000310" class="ulist">
+<ul>
+<li>
+<p><strong>Beszúrási távolság az alkatrész szélétől :</strong> Ez a beszúrási pont távolsága az alkatrész szélétől.</p>
+</li>
+</ul>
+</div>
+<div id="h000311" class="ulist">
+<ul>
+<li>
+<p><strong>Mérési távolság a táblaszéltől :</strong> Ez a paraméter határozza meg azt a távolságot a táblaszél előtt, ahol a lézerfej magassága zárolódik és a távolságszabályozás kikapcsolódik.</p>
+</li>
+</ul>
+</div>
+<div id="h000312" class="ulist">
+<ul>
+<li>
+<p><strong>Utánfutási út a táblaszél után :</strong> Ez az az érték, amennyivel a gépfej a táblaszélen túlhalad, ha a lézer be van kapcsolva, de a távolságszabályozás ki van kapcsolva.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sorrend">Sorrend<a id="h000313"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Az lemezteríték vágási sorrendjét mutatja.</p>
+</div>
+<div id="h000314" class="paragraph">
+<p><strong>Mégse :</strong> Minden elvégzett módosítás elvész. Visszalépünk a programok oldalára.</p>
+</div>
+<div id="h000315" class="paragraph">
+<p><strong>Mentés :</strong> Menti az összes módosítást.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image38.png" alt="Sequence page" width="850">
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_alkatrész">Alkatrész</a>
+  </li>
+  <li level="1">
+   <a href="#_kontúr">Kontúr</a>
+  </li>
+  <li level="1">
+   <a href="#_felszerszámozás">Felszerszámozás</a>
+  </li>
+  <li level="1">
+   <a href="#_váz">Váz</a>
+  </li>
+  <li level="1">
+   <a href="#_sorrend">Sorrend</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="laserfunct.html">Lézertechnológia szerkesztése</a></span>
+ <span class="next"><a href="simulation.html">Szimuláció futtatása</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

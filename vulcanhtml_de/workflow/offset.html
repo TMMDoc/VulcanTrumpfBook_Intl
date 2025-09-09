@@ -1,0 +1,351 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Arbeitsversatzmaße</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Willkommen bei Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Einführung</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">Bedienoberfläche</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Maschinenbedienung</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Bedienpult</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Produktions-Workflow</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="preparation.html">Vorbereitung</a></li>
+    <li><button class="tree blank"></button><a href="create.html">Anlegen</a></li>
+    <li><button class="tree blank"></button><a href="filemanager.html">Dateiverwaltung</a></li>
+    <li><button class="tree blank"></button><a href="programs.html">Programm wählen</a></li>
+    <li><button class="tree blank"></button><a href="edit.html">NC-Programm bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="laserfunct.html">Lasertechnologie bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="layout.html">Layout bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="simulation.html">Simulationslauf</a></li>
+    <li><button class="tree blank"></button><a class="active" href="offset.html">Arbeitsversatzmaße</a></li>
+    <li><button class="tree blank"></button><a href="run.html">Ausführen</a></li>
+    <li><button class="tree blank"></button><a href="reentry.html">Wiedereinstieg</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Lasertechnologietabellen (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminologie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Laserdatenelemente</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Mehrstufiges Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Schneiden</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Spezielle Prozesse</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Ändern von Laserdaten</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">LTT-Verwaltung</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Rampenzyklen</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Beschleunigungssteuerung (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Technologiefunktionen</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Tafel abdampfen</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine-Sensor</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Springen</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Schneidwerkzeuge</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Steuerelemente</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Schmierzyklus</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Schutzglasüberwachung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Schrottschnitt</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Tafelursprungspunkt anfahren</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Düsenzentrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Zielschuss</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Gasspülung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">Manueller Sollwert für Höhenregelung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">In Parkposition fahren</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">Düsenreinigung und Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Kantenerkennung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Fokuskamm</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Fokuslage</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Positionierung der Pilotdiode</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Produktionsplan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Aktivierung/Deaktivierung</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Änderung</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">Tafelanschlag</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">Maschineneinstellungen</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Quittierung des Materialstatus</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Fehlerbehebung</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Häufige Kollisionen</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Arbeitsversatz</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Extrem kleine Konturen</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Produktions-Workflow</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="offset.html">Arbeitsversatzmaße</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Arbeitsversatzmaße</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Die Maschine kann das Arbeitsversatzmaß auf mehrere Arten bestimmen.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/wo.png" alt="WO"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_diode_positionieren">Diode positionieren<a id="h000316"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Der gebräuchlichste Weg ist, den grünen Laserpointer im Tippbetrieb in die gewünschte Position zu bringen und die Schaltfläche <strong>Einstellen</strong> zu betätigen. Die Maschine verwendet sie als Arbeitsversatzmaß.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_düsenmitte">Düsenmitte<a id="h000317"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Diese Option kann besonders dann nützlich sein, wenn die Maschine die Düse bereits am Nullpunkt positioniert hat. Die Maschine verwendet die Düsenmitte als Arbeitsversatzmaß.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_manuell">Manuell<a id="h000318"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Bei speziellen Arbeitsgängen oder wenn Sie mit Vorrichtungen arbeiten, gibt Ihnen diese Option eine Möglichkeit, das Arbeitsversatzmaß manuell einzustellen.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_punkt_kantenerkennung">2-Punkt-Kantenerkennung<a id="h000319"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Diese Option ist nützlich, wenn Sie das Arbeitsversatzmaß am Rand des Materials einstellen müssen. Die Maschine fordert Sie auf, die Düse im Tippbetrieb zum ersten Punkt zu bewegen und bestimmt die Ecke der Tafel automatisch. Diese Funktion arbeitet schnell und ist auf Kleinteile ausgerichtet, die an einer Ecke der Tafel platziert werden sollen.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Die Genauigkeit der 2-Punkt-Strategie ist durch die Genauigkeit der Maschine begrenzt. Daher darf diese Strategie nicht für eine komplette zu schneidende Tafel verwendet werden.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Die Logik funktioniert wie folgt:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/2pt.svg" alt="2pt" width="650"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Sie wählen mit dem Laser eine Position nahe der gewünschten Nullstellung.</p>
+</li>
+<li>
+<p>Die Maschine führt von der Position aus, an der Sie gestartet sind, eine Ecksuche in X-Richtung durch.</p>
+</li>
+<li>
+<p>Die Maschine führt eine Ecksuche in <strong>der nächstgelegenen Mitte zwischen zwei Auflageleisten durch</strong>.
+Dadurch wird die Genauigkeit der Eckmessung maximiert.</p>
+</li>
+<li>
+<p>Die Maschine geht in die Ecke, die sie gefunden hat und schneidet das Teil nach erfolgter Bestätigung.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="test">3-Punkt-Kantenerkennung</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Die 3-Punkte-Methode ist wesentlich genauer und arbeitet mit 3 Messpunkten auf einer vollständigen Tafel. Es wird davon ausgegangen, dass wir eine vollständige Tafel (&gt; 1000 x 2000) auf dem Tisch haben, und es werden drei Ecksuchen bei x300, x1500 und y300 durchgeführt, um den Nullpunkt zu finden. Das ist die bevorzugte Methode zum Schneiden einer vollständigen Tafel.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/3pt.png" alt="3pt" width="650"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Wenn die Kantenerkennung auf einer Auflageleiste durchgeführt wird, führt dies zu ungenauen Ergebnissen. Daher wählt die Maschine automatisch eine Position zwischen zwei Auflageleisten.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Bevor die Dreipunktkantenerkennung in der Lasermaschine angewandt werden kann, muss die Tafelgröße in der Flux-Software angegeben werden. Stellen Sie sicher, dass das im Programm angegebene Tafelformat mit der tatsächlich in die Maschine geladenen Tafel übereinstimmt. Stellen Sie sicher, dass die Pilotdiode in der Ecke der Tafel platziert ist.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/3point.png" alt="3point" width="650">
+</div>
+</div>
+<div class="paragraph">
+<p>Durch Auswählen der 3-Punkt-Kantenerkennung im Menü Nullpunktverschiebung wird der folgende Arbeitsgang durchgeführt:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Fahren Sie zuerst den Schneidkopf zur Pilotdiode an der (0,0)-Position an der Tafelkante.</p>
+</li>
+<li>
+<p>Der Schneidkopf fährt in diese Position, um die erste Kante der Tafel zu finden.</p>
+</li>
+<li>
+<p>Wenn die erste Kante erkannt wurde, fährt der Schneidkopf in die zweite Position, um die zweite Kante der Tafel zu finden.</p>
+</li>
+<li>
+<p>Wenn die zweite Kante erkannt wurde, sucht der Schneidkopf die dritte Kante der Tafel (um das Steigungsmaß der Tafel zu finden).</p>
+</li>
+<li>
+<p>Auf eine Bestätigung hin fährt die Kopfposition automatisch zur Startposition und führt den Schneidvorgang aus.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_diode_positionieren">Diode positionieren</a>
+  </li>
+  <li level="1">
+   <a href="#_düsenmitte">Düsenmitte</a>
+  </li>
+  <li level="1">
+   <a href="#_manuell">Manuell</a>
+  </li>
+  <li level="1">
+   <a href="#_2_punkt_kantenerkennung">2-Punkt-Kantenerkennung</a>
+  </li>
+  <li level="1">
+   <a href="#test">3-Punkt-Kantenerkennung</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="simulation.html">Simulationslauf</a></span>
+ <span class="next"><a href="run.html">Ausführen</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

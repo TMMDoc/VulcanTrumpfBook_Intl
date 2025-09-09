@@ -1,0 +1,304 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Gestion de fichiers</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Bienvenue dans Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">Interface utilisateur</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Flux de travail</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Utilisation de la machine</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Tableau de commande</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Flux de production</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="preparation.html">Préparation</a></li>
+    <li><button class="tree blank"></button><a href="create.html">Créer</a></li>
+    <li><button class="tree blank"></button><a class="active" href="filemanager.html">Gestion de fichiers</a></li>
+    <li><button class="tree blank"></button><a href="programs.html">Sélection du programme</a></li>
+    <li><button class="tree blank"></button><a href="edit.html">Modifier le programme CN</a></li>
+    <li><button class="tree blank"></button><a href="laserfunct.html">Editer la technologie laser</a></li>
+    <li><button class="tree blank"></button><a href="layout.html">Modifier le layout</a></li>
+    <li><button class="tree blank"></button><a href="simulation.html">Course de simulation</a></li>
+    <li><button class="tree blank"></button><a href="offset.html">Décalages de travail</a></li>
+    <li><button class="tree blank"></button><a href="run.html">Exécuter</a></li>
+    <li><button class="tree blank"></button><a href="reentry.html">Reprise</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Tableau technologique laser (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminologie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Éléments de paramètres laser</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Perçage</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Perçage en plusieurs étapes</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Découpe</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Processus spéciaux</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Modification des paramètres laser</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">Gestion de TTL</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Rampes de puissance</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Commande d'accélération (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Fonctions de technologie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Vaporiser la tôle</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojonctions</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">Capteur PierceLine</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Saut de grenouille</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Outils de coupe</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Commandes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Cycle de lubrification</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Surveillance du verre de protection</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Coupe de chutes</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Aller à l'origine de la tôle</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">Etalonnage du capteur de hauteur</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Centre de buse</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Tir cible</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Balayage au gaz</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">Commande de hauteur Valeur de consigne manuelle</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">Aller à la position parking</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">Nettoyage des buses et étalonnage du capteur de hauteur</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Détection des arêtes</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Peigne de focalisation</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Position focale</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Positionnement de diode pilote</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Plan de production</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Activation/Désactivation</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Modification</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">Arrêt sur la tôle</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">Réglages machine</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Validation du statut article</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Flux de travail</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Dépannage</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Collisions fréquentes</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Décalage de travail</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Petits contours extrêmes</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Flux de production</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="filemanager.html">Gestion de fichiers</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Gestion de fichiers</h1>
+<div class="sect1">
+<h2 id="_importer">Importer<a id="h000262"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pour importer des fichiers, vous pouvez directement utiliser le bouton <strong>Importer</strong> en haut à droite de l&#8217;écran. Il vous permet d&#8217;importer avec un minimum de clics.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/import.png" alt="import"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gestionnaire_de_fichiers">Gestionnaire de fichiers<a id="h000263"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Toutes les autres opérations de fichiers sont effectuées à l&#8217;aide de l&#8217;option Gestionnaire de fichiers (disponible sur le côté droit de l&#8217;écran).</p>
+</div>
+<div class="paragraph">
+<p>Les fonctions suivantes sont disponibles dans les opérations de fichier :</p>
+</div>
+<div id="h000264" class="ulist">
+<ul>
+<li>
+<p><strong>Renommer :</strong> Cette commande vous permet de modifier le nom du programme sélectionné.
+Vous pouvez saisir le nouveau nom dans la fenêtre de dialogue qui apparaît.</p>
+</li>
+</ul>
+</div>
+<div id="h000265" class="ulist">
+<ul>
+<li>
+<p><strong>Supprimer :</strong> Ce commutateur permet de supprimer le programme sélectionné.</p>
+</li>
+</ul>
+</div>
+<div id="h000266" class="ulist">
+<ul>
+<li>
+<p><strong>Cloner :</strong> Cette commande vous permet de faire une copie exacte du ou des programmes que vous avez sélectionnés. Sélectionnez un ou plusieurs programmes et appuyez sur ce bouton pour créer une copie du ou des programmes sélectionnés. Lorsque plus d&#8217;un programme est cloné, une fenêtre de dialogue <strong>Cloner les fichiers</strong> apparaît et vous demande si vous souhaitez cloner le nombre de fichiers sélectionné. Une fois que vous appuyez sur la marque OK, les fichiers sont clonés. En général, le nom du fichier cloné comporte un numéro après le nom de la pièce, séparé par un tilde (par exemple, si vous clonez une pièce nommée P5, le nom de la pièce clonée sera P5~1).</p>
+</li>
+</ul>
+</div>
+<div id="h000267" class="ulist">
+<ul>
+<li>
+<p><strong>Exporter :</strong> Lorsque vous appuyez sur cette commande, la boîte de dialogue <strong>Exporter Fichier</strong> s&#8217;ouvre et vous permet de choisir l&#8217;emplacement où exporter le(s) fichier(s) sélectionné(s).</p>
+</li>
+</ul>
+</div>
+<div id="h000268" class="ulist">
+<ul>
+<li>
+<p><strong>Importer :</strong> Vous pouvez importer un ou plusieurs programmes à l&#8217;aide de cette fonctionnalité. Ce bouton ouvre la boîte de dialogue Importer Fichiers dans laquelle un ou plusieurs fichiers Programme ou Programme Direct peuvent être sélectionnés pour l&#8217;importation. Une fois les fichiers sélectionnés, appuyez sur la marque OK dans la fenêtre de dialogue pour importer le(s) fichier(s). Si le nom du ou des fichiers que vous essayez d&#8217;importer existe déjà, un message d&#8217;avertissement s&#8217;affiche, comme le montre l&#8217;image ci-dessous, demandant s&#8217;il faut remplacer le(s) fichier(s) existant(s). //Cette option est présente à l&#8217;extérieur du menu du gestionnaire de fichiers.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image48.jpg" alt="Overwrite window" width="300"></span></p>
+</div>
+<div id="h000269" class="ulist">
+<ul>
+<li>
+<p><strong>Organiser :</strong> La sélection de l&#8217;identification du programme, en haut de l&#8217;écran, ouvre cette option. Une fenêtre de dialogue telle que celle illustrée dans l&#8217;image ci-dessous s&#8217;affiche lorsque vous appuyez sur ce bouton.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image49.jpeg" alt="Programs sorting window" width="450"></span></p>
+</div>
+<div class="paragraph">
+<p>La page Edition affiche tous les programmes du dossier Programmes. Vous pouvez créer des dossiers et structurer vos données dans ces dossiers. Vous pouvez créer de nouveaux dossiers à l&#8217;aide de la commande <strong>nouveau dossier</strong>. Cela créera un nouveau dossier dans le dossier Programmes. Sur la gauche, vous pouvez voir la section <strong>Sélectionner un dossier</strong> qui affiche la structure du répertoire. Vous pouvez choisir un dossier dans l&#8217;arborescence et afficher le contenu du dossier sélectionné dans la page d&#8217;édition.</p>
+</div>
+<div class="paragraph">
+<p>Vous pouvez également trier les fichiers dans le dossier en utilisant les options fournies sous la section <strong>Trier par</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Pour trier par nom dans l&#8217;ordre croissant, choisissez <strong>Nom [A..Z]</strong> et pour trier par nom dans l&#8217;ordre décroissant, choisissez <strong>Nom [Z..A]</strong>.</p>
+</div>
+<div id="h000270" class="paragraph">
+<p><strong>Récents</strong> affiche tous les programmes créés récemment et <strong>Anciens</strong> affiche les programmes triés dans l&#8217;ordre croissant de leur date de création.</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;option <strong>Afficher les vignettes</strong> permet d&#8217;activer ou de désactiver l&#8217;affichage des vignettes pour les programmes dans la page Edition. Le bouton <strong>supprimer</strong> permet de supprimer un sous-répertoire.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Seul un sous-répertoire vide peut être supprimé.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Appuyez sur <strong>terminé</strong> pour appliquer les modifications et quitter.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_importer">Importer</a>
+  </li>
+  <li level="1">
+   <a href="#_gestionnaire_de_fichiers">Gestionnaire de fichiers</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="create.html">Créer</a></span>
+ <span class="next"><a href="programs.html">Sélection du programme</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

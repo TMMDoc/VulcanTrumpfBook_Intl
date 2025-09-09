@@ -1,0 +1,558 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Kezelőpult</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Üdvözöljük itt: Vulcan Control</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Bevezetés</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="home.html">Kezelőfelület</a></li>
+    <li><button class="tree blank"></button><a href="workflow.html">Munkafolyamat</a></li>
+    <li><button class="tree blank"></button><a href="jog.html">Gépüzemeltetés</a></li>
+    <li><button class="tree blank"></button><a class="active" href="controlpanel.html">Kezelőpult</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../workflow/index.html">Gyártási munkafolyamat</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../workflow/preparation.html">Előkészületek</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/create.html">Létrehozás</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/filemanager.html">Fájlkezelés</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/programs.html">Program kiválasztása</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/edit.html">NC program szerkesztése</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/laserfunct.html">Lézertechnológia szerkesztése</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/layout.html">Elrendezés szerkesztése</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/simulation.html">Szimuláció futtatása</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/offset.html">Munka eltolások</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/run.html">Futtatás</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/reentry.html">Újbóli belépés</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Lézer-technológiatáblázatok(LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminológia</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Lézeradatelemek</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Beszúrás</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Többfokozatú beszúrás</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Vágás</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Speciális folyamatok</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Lézeradatok módosítása</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">Vágási táblázatok kezelése</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Rámpaciklusok</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">Flyline</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Gyorsulásszabályozás (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Technológiai funkciók</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Lemez gőzölése</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanoillesztések</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine érzékelő</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Gyors átugrás</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Vágószerszámok</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Vezérlések</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Kenési ciklus</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Védőüveg-felügyelet</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Hulladékvágás</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Ugrás a lemez origójához</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">A magasságérzékelő kalibrálása</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Fúvóka középpont</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Célra irányított lézerimpulzus</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Gázöblítés</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">HC Kézi beállítási pont</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">Ugrás parkolóhelyzetbe</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">A fúvóka tisztítása és magasságérzékelő kalibrálása</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Élfelismerés</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Fókuszfésű</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Fókusztávolság</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Vezérlődióda pozícionálás</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Gyártási terv</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Aktiválás/deaktiválás</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Módosítás</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">Stop a lemezen (StopOnSheet)</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">A gép beállításai</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Anyagállapot nyugtázása</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Munkafolyamat</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Hibakezelés</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Gyakori ütközések</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Munkaeltolás</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Extrém kis kontúrok</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impresszum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Bevezetés</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="controlpanel.html">Kezelőpult</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Kezelőpult</h1>
+<div class="paragraph">
+<p>A kezelőpanel a lézergép működésre való előkészítésének nélkülözhetetlen eleme. További részletekért olvassa el az üzemeltetési kézikönyvet.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/import1.png" alt="import1" width="850"></span></p>
+</div>
+<div class="paragraph">
+<p>A kezelőpanel a következő vezérlő kapcsolókból áll:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Kijelző</p>
+</li>
+<li>
+<p>Vész-stop</p>
+</li>
+<li>
+<p>Lézer tesztüzem</p>
+</li>
+<li>
+<p>Hajtás jóváhagyó gomb</p>
+</li>
+<li>
+<p>Lézer engedélyezése</p>
+</li>
+<li>
+<p>Ajtókapcsoló</p>
+</li>
+<li>
+<p>Override</p>
+</li>
+<li>
+<p>USB port</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 22.2222%;">
+<col style="width: 55.5556%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Név</th>
+<th class="tableblock halign-left valign-top">Kezelőelem</th>
+<th class="tableblock halign-left valign-top">Előfeltételek</th>
+<th class="tableblock halign-left valign-top">Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VÉSZ-STOP (nyomógomb)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w1.png" alt="w1"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="h000074" class="ulist">
+<ul>
+<li>
+<p>A teljes rendszer áramellátása le van kapcsolva (a 24 V-os vezérlőfeszültség továbbra is fennmarad).</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Minden tengelymozgás le van állítva.<br></p>
+</li>
+<li>
+<p>Minden hajtás elektromosan le van kapcsolva.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>A megmunkálás meg van szakítva:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A lézersugár ki van kapcsolva.<br></p>
+</li>
+<li>
+<p>A sugárletiltás zárva.<br></p>
+</li>
+<li>
+<p>A vágógázellátás szünetel.<br></p>
+</li>
+<li>
+<p>Egy aktív megmunkálási program meg van szakítva és szükség esetén újra kell indítani azt.<br></p>
+</li>
+<li>
+<p>A gépnek meg kell közelítenie az alaphelyzetét.<br></p>
+</li>
+<li>
+<p>A tengelyek referenciapontjai nem változnak.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>A hidraulikus berendezés, a kompakt porelszívó és a hosszirányú és/vagy keresztirányú szállítószalag ki van kapcsolva.</p>
+</li>
+<li>
+<p>Minden pneumatikus mozgás le van állítva vagy veszélytelen állapotba van kapcsolva. A sűrítettlevegő-ellátás változatlanul biztosított.</p>
+</li>
+<li>
+<p>A vákuum fennmarad.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GÉP BE/KI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w2.png" alt="w2"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A bekapcsoláskor a gomb villog.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>A gép bekapcsolása:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Kigyullad, ha a gép üzemkész.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>A gép kikapcsolása:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Kialszik, ha a gépet kikapcsolják.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>A gép kikapcsolását a következők is kiváltják:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>"VÉSZ-STOP" nyomógomb.<br></p>
+</li>
+<li>
+<p>"VÉSZ STOPOT" kiváltó hibák</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lézerteszt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w3.png" alt="w3"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Világít, ha a gép tesztüzemben működik.<br></p>
+</li>
+<li>
+<p>A kiválasztott megmunkálási program a lézersugár begyújtása nélkül fut le.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lézer Be/Ki</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w4.png" alt="w4"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Elindítja a lézer automatikus bekapcsolási ciklusát:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Villog a bekapcsolási ciklus közben.<br></p>
+</li>
+<li>
+<p>Világít, ha a lézer üzemkész.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Elindítja a lézer automatikus kikapcsolási ciklusát:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Villog a kikapcsolási ciklus közben.<br></p>
+</li>
+<li>
+<p>Kialszik, ha a gépet kikapcsolják.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ajtó kireteszelés</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w5.png" alt="w5"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A védőajtó ki van reteszelve és nyitható.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Állapotkijelző (a biztonsági fénysorompó megszakítva)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w6.png" alt="w6"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A "VÉSZ STOP" nem aktív, nincs aktív "előltolás stop".</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="h000076" class="ulist">
+<ul>
+<li>
+<p>Villog, amikor a raklapcserélőt védő biztonsági fénysorompó megszakad.</p>
+</li>
+<li>
+<p>A biztonsági fénysorompó újbóli aktiválása: Nyomja meg a "Biztonsági fénysorompó nyugtázása" lábkapcsolót az indítóoszlopon. Ezután nyomja meg a "Start" gombot a kezelőpanelen. Folytassa a raklapcserélő szüneteltetett mozgását: nyomja meg a "Start" gombot.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Előtolási sebesség</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w7.png" alt="w7"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="h000077" class="ulist">
+<ul>
+<li>
+<p>Az X- és Y-tengelyek mozgási sebességét vezérli 4 és 120% között:<br></p>
+</li>
+<li>
+<p>A gyártási alaptevékenység során a mozgatás szabályozása: 4-100 m/perc.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Navigációs gombok</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w8.png" alt="w8"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>A kiválasztott NC tengelyeket a (+) vagy a (-) irányba mozgatja.<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>A tengelyeket +/- irányba mozgatja.<br></p>
+</li>
+<li>
+<p>A plusz/mínusz gombok növelik/csökkentik a ± szimbólummal jelölt "Manuális funkciók" értékét.<br></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Visszaállítás (Stop)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w9.png" alt="w9"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Törli az aktív hibaüzeneteket.</p>
+</li>
+<li>
+<p>Leállítja az aktív programot.</p>
+</li>
+<li>
+<p>A referenciapontok megmaradnak.</p>
+</li>
+<li>
+<p>Az alaphelyzet elveszhet.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Előtolás stop (szünet)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w10.png" alt="w10"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Kigyullad, ha az „ELŐTOLÁS STOP” funkciót aktiválják.<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Minden tengelymozgás le van állítva.<br></p>
+</li>
+<li>
+<p>A megmunkálás meg van szakítva:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>A lézersugár ki van kapcsolva.<br></p>
+</li>
+<li>
+<p>A sugárletiltás zárva.<br></p>
+</li>
+<li>
+<p>A vágógázellátás szünetel.<br></p>
+</li>
+<li>
+<p>Az aktív megmunkálási program szünetel és nyugtázással tovább folytatható.<br></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>A hidraulikus berendezés, a kompakt porelszívó és a hosszirányú és/vagy keresztirányú szállítószalag ki van kapcsolva.<br></p>
+</li>
+<li>
+<p>Minden pneumatikus mozgás le van állítva vagy veszélytelen állapotba van kapcsolva. A sűrítettlevegő-ellátás változatlanul biztosított.<br></p>
+</li>
+<li>
+<p>A vákuum továbbra is megmarad; Az „előtolás stop” nyugtázásához nyomja meg az „Előtolás stop nyugtázása” gombot.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Az előtolás stop nyugtázása (az előtolás indítása)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w11.png" alt="w11"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nincs hiba: A biztonsági fénysorompó nyugtázva.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="h000079" class="ulist">
+<ul>
+<li>
+<p>Villog hiba esetén vagy „ELŐTOLÁS STOP” aktiválásakor.</p>
+</li>
+<li>
+<p>Például a biztonsági fénysorompó megszakításával, Aktív hiba nyugtázása, „ELŐTOLÁS STOP” nyugtázása.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Start (programindítás)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w12.png" alt="w12"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nincs hiba, a gép üzemkész.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="h000081" class="ulist">
+<ul>
+<li>
+<p>A „Start” gomb a kiválasztott alaptevékenységtől függően a következő funkciókkal rendelkezik:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Ha az Alaptevékenység beállítása művelet van kiválasztva: a gép alaphelyzetbe mozdul anélkül, hogy megkezdené a megbízáslista vagy a kiválasztott megmunkálási program végrehajtását.<br></p>
+</li>
+<li>
+<p>Minden más alaptevékenység esetén: a gép alaphelyzetbe mozdul és megkezdi a megbízáslista végrehajtását.<br></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jog.html">Gépüzemeltetés</a></span>
+ <span class="next"><a href="../workflow/index.html">Gyártási munkafolyamat</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

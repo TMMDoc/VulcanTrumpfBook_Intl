@@ -1,0 +1,96 @@
+Version=58
+APPNAME=Vulcan Control
+BRAND=TRUMPF
+FLAVOR=VULCAN
+LANGUAGE=EN
+VULCAN=
+Folders=9
+Pages=64
+UIXlate=False, DebugUIXlate=False, Language=EN
+
+contents.txt • 255901.025916
+impressum.adoc • Impressum
+Index.adoc • Willkommen bei {APPNAME}
+manifest.txt • 253603.053610
+configure\contents.txt • 255909.065930
+configure\index.adoc • Maschinenkonfiguration
+configure\LaserDB.adoc • Laserdatenbestand
+configure\setting.adoc • Maschineneinstellungen
+Controls\contents.txt • 255901.025913
+Controls\EdgeDetection.adoc • Kantenerkennung
+Controls\FocalDistance.adoc • Fokuslage
+Controls\FocusComb.adoc • Fokuskamm
+Controls\GasPurge.adoc • Gasspülung
+Controls\HCManualSet.adoc • Manueller Sollwert für Höhenregelung
+Controls\HeightSensorCal.adoc • Höhensensor-Kalibrierung
+Controls\index.adoc • Steuerelemente
+Controls\LubricationCycle.adoc • Schmierzyklus
+Controls\NozzleCentre.adoc • Düsenzentrierung
+Controls\NozzleClean.adoc • Düsenreinigung und Höhensensor-Kalibrierung
+Controls\ParkPosition.adoc • In Parkposition fahren
+Controls\PilotDiodePos.adoc • Positionierung der Pilotdiode
+Controls\Protective.adoc • Schutzglasüberwachung
+Controls\ScrapCut.adoc • Schrottschnitt
+Controls\SheetOrigin.adoc • Tafelursprungspunkt anfahren
+Controls\TargetShot.adoc • Zielschuss
+Controls\traversal.adoc • Querblasen
+Intro\contents.txt • 255909.065930
+Intro\ControlPanel.adoc • Bedienpult
+Intro\Home.adoc • Bedienoberfläche
+Intro\index.adoc • Einführung
+Intro\Jog.adoc • Maschinenbedienung
+Intro\Workflow.adoc • Workflow
+LTT\contents.txt • 255909.065930
+LTT\DCA.adoc • Beschleunigungssteuerung (DCA)
+LTT\export.adoc • LTT-Verwaltung
+LTT\FlyLine.adoc • FlyLine
+LTT\General.adoc • Terminologie
+LTT\Index.adoc • Lasertechnologietabellen (LTT)
+LTT\rampCycles.adoc • Rampenzyklen
+LTT\selection.adoc • Ändern von Laserdaten
+modify\contents.txt • 255909.065930
+modify\Index.adoc • Änderung eines Programms
+modify\microjoints.adoc • Microjoints ändern
+modify\renest.adoc • Nachschachteln
+ProductionPlan\contents.txt • 250603.040613
+ProductionPlan\index.adoc • Produktionsplan
+ProductionPlan\PP_Activation.adoc • Aktivierung/Deaktivierung
+ProductionPlan\PP_Buttons.adoc • Änderung
+ProductionPlan\PP_GeneralWorkflow.adoc • Workflow
+ProductionPlan\PP_MachineSettings.adoc • Maschineneinstellungen
+ProductionPlan\PP_MaterialStatusAcknowledgement.adoc • Quittierung des Materialstatus
+ProductionPlan\PP_StopOnSheet.adoc • Tafelanschlag
+technology\contents.txt • 255909.065930
+technology\cuttingTools.adoc • Schneidwerkzeuge
+technology\frog.adoc • Springen
+technology\Index.adoc • Technologiefunktionen
+technology\nano.adoc • Nanojoints
+technology\pierceline.adoc • PierceLine-Sensor
+technology\vaporize.adoc • Tafel abdampfen
+Troubleshooting\collisions.adoc • Häufige Kollisionen
+Troubleshooting\contents.txt • 255909.065930
+Troubleshooting\Diagnostics.adoc • Fehlerdaten, Backup und Restore
+Troubleshooting\Extreme.adoc • Extrem kleine Konturen
+Troubleshooting\Index.adoc • Fehlerbehebung
+Troubleshooting\Laserissues.adoc • Laserprobleme
+Troubleshooting\Workoffset.adoc • Arbeitsversatz
+Workflow\contents.txt • 255909.065930
+Workflow\Create.adoc • Anlegen
+Workflow\Edit.adoc • NC-Programm bearbeiten
+Workflow\filemanager.adoc • Dateiverwaltung
+Workflow\Index.adoc • Produktions-Workflow
+Workflow\Laserfunct.adoc • Lasertechnologie bearbeiten
+Workflow\layout.adoc • Layout bearbeiten
+Workflow\offset.adoc • Arbeitsversatzmaße
+Workflow\Preparation.adoc • Vorbereitung
+Workflow\Programs.adoc • Programm wählen
+Workflow\reentry.adoc • Wiedereinstieg
+Workflow\Run.adoc • Ausführen
+Workflow\Simulation.adoc • Simulationslauf
+LTT\LaserData\contents.txt • 255909.065930
+LTT\LaserData\Cutting.adoc • Schneiden
+LTT\LaserData\index.adoc • Laserdatenelemente
+LTT\LaserData\multistage.adoc • Mehrstufiges Einstechen
+LTT\LaserData\piercing.adoc • Einstechen
+LTT\LaserData\special.adoc • Spezielle Prozesse
+Workflow\img\2pt.svg

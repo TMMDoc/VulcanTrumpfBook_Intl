@@ -1,0 +1,446 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Editar tecnología láser</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Bienvenido a Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Introducción</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">Interfaz de usuario</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Flujo de trabajo</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Funcionamiento de la máquina</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Panel de control</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Flujo de trabajo de producción</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="preparation.html">Preparación</a></li>
+    <li><button class="tree blank"></button><a href="create.html">Crear</a></li>
+    <li><button class="tree blank"></button><a href="filemanager.html">Gestión de archivos</a></li>
+    <li><button class="tree blank"></button><a href="programs.html">Seleccionar programa</a></li>
+    <li><button class="tree blank"></button><a href="edit.html">Editar código CN</a></li>
+    <li><button class="tree blank"></button><a class="active" href="laserfunct.html">Editar tecnología láser</a></li>
+    <li><button class="tree blank"></button><a href="layout.html">Editar diseño</a></li>
+    <li><button class="tree blank"></button><a href="simulation.html">Ejecución de la simulación</a></li>
+    <li><button class="tree blank"></button><a href="offset.html">Offsets de trabajo</a></li>
+    <li><button class="tree blank"></button><a href="run.html">Ejecutar</a></li>
+    <li><button class="tree blank"></button><a href="reentry.html">Reentrada</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Tablas de tecnología láser (TTL)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminología</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Elementos de datos láser</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Penetración</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Penetración multietapa</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Corte</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Procesos especiales</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Modificación de los datos del láser</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">Gestión de TTL</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Ciclos de rampa</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Control de aceleración (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Funciones tecnológicas</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Evaporar chapa</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">Sensor PierceLine</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Frog Jumping</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Útiles de corte</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Controles</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Ciclo de lubricación</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Control del cristal de protección</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Corte de desperdicios</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Ir al origen de la chapa</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">Calibración del sensor de altura</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Centro de boquilla</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Disparo al objetivo</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Purga con gas</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">Punto de ajuste manual HC</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">Ir a la posición de aparcamiento</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">Calibración del sensor de altura y limpieza de boquilla</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Detección de bordes</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Peine de foco</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Posición focal</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Posicionamiento del diodo piloto</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Plan de producción</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Activación/Desactivación</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Modificación</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">StopOnSheet</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">Ajustes de máquina</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Confirmación del estado del material</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Flujo de trabajo</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Solución de problemas</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Colisiones frecuentes</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Offset de trabajo</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Contornos pequeños extremos</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Aviso legal</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Flujo de trabajo de producción</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="laserfunct.html">Editar tecnología láser</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Editar tecnología láser</h1>
+<div class="sect1">
+<h2 id="_general">General<a id="h000204"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Esta opción permite al operario responder y resolver cualquier problema que pueda surgir en la máquina.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image19.png" alt="image19" width="960"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_página_láser">Página láser<a id="h000205"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>El usuario puede seleccionar la página láser según el requisito en las funciones del láser.Del mismo modo, se puede editar manualmente en la orden G253 de texto DIN. Los cambios realizados en cualquiera de ellas se aplicarán tanto al texto DIN como a las funciones láser.</p>
+</div>
+<div id="h000206" class="ulist">
+<ul>
+<li>
+<p><strong>Material</strong>: especifica el tipo de material.</p>
+</li>
+</ul>
+</div>
+<div id="h000207" class="ulist">
+<ul>
+<li>
+<p><strong>Espesor</strong>: define el espesor del material.</p>
+</li>
+</ul>
+</div>
+<div id="h000208" class="ulist">
+<ul>
+<li>
+<p><strong>Diámetro de la boquilla</strong>: establece el diámetro de la boquilla utilizada para el corte.</p>
+</li>
+</ul>
+</div>
+<div id="h000209" class="ulist">
+<ul>
+<li>
+<p><strong>Tipo de gas</strong>: determina el gas auxiliar utilizado en el proceso de corte.</p>
+</li>
+</ul>
+</div>
+<div id="h000210" class="ulist">
+<ul>
+<li>
+<p><strong>Tratamiento</strong>: se refiere a cualquier tratamiento previo o posterior al procesamiento aplicado al material.</p>
+</li>
+</ul>
+</div>
+<div id="h000211" class="ulist">
+<ul>
+<li>
+<p><strong>Lámina</strong>: especifica si hay una lámina protectora en la superficie del material, lo que puede afectar a los parámetros de corte.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_penetración">Penetración<a id="h000212"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>El usuario puede seleccionar el tipo de penetración en función de sus preferencias.</p>
+</div>
+<div id="h000213" class="ulist">
+<ul>
+<li>
+<p><strong>Control de altura :</strong> controla el proceso de regulación de distancia durante la penetración. Por lo general, tras posicionarse a la distancia de separación de penetración, el control de altura se desactivará. Esto evitará la vibración del cabezal de corte debido a las salpicaduras de material durante la penetración y, por lo tanto, mejorará la calidad de la penetración. Es posible mantener el control de altura activado durante la penetración de chapas finas u otras condiciones especiales, para mejorar el tiempo de proceso.</p>
+</li>
+</ul>
+</div>
+<div id="h000214" class="ulist">
+<ul>
+<li>
+<p><strong>Rayo :</strong> controla la activación/desactivación del rayo al cambiar de parámetros de penetración a corte. Por lo general, una vez completada la penetración, el rayo se apaga y los parámetros del láser se actualizan a los valores de corte, luego el rayo se enciende y comienza el corte.</p>
+</li>
+</ul>
+</div>
+<div id="h000215" class="ulist">
+<ul>
+<li>
+<p><strong>Tiempo de enfriamiento :</strong> controla el parámetro de tiempo de enfriamiento ON/OFF en la penetración. Al final de cada paso/etapa de penetración, se define un tiempo de enfriamiento en el parámetro.Durante este tiempo, el rayo se apagará para enfriar el material y luego se volverá a encender, lo que evitará el sobrecalentamiento del material durante la penetración.</p>
+</li>
+</ul>
+</div>
+<div id="h000216" class="ulist">
+<ul>
+<li>
+<p><strong>Soplado de aire lateral :</strong> controla la activación/desactivación de la válvula solenoide de soplado de aire lateral durante un tiempo definido en el parámetro de penetración. Se utilizan potencias láser elevadas para penetrar los materiales gruesos y, al final de la penetración, se sopla aire a alta presión desde los lados para enfriar el material, eliminar las salpicaduras, etc., de modo que no se vea afectado el corte.</p>
+</li>
+</ul>
+</div>
+<div id="h000217" class="ulist">
+<ul>
+<li>
+<p><strong>Limpieza de rebabas :</strong> controla la llamada del subprograma de limpieza de rebabas al final de la penetración. Una vez completada la penetración, en determinados materiales se formará una lava fundida en la parte superior del material, como si fuera una montaña. Para eliminar este material fundido, se activará un subprograma que moverá el cabezal con alta presión sobre la lava para limpiarla. El tipo de gas y la presión se definen en los parámetros de la máquina.</p>
+</li>
+</ul>
+</div>
+<div id="h000218" class="ulist">
+<ul>
+<li>
+<p><strong>Rampa de frecuencia :</strong> controlará la rampa de frecuencia en la penetración. Si el método de penetración seleccionado es penetración variada Power/Duty/Gap (PM=22 a 27), entonces la activación de este bit también aumentará la frecuencia. No es válido en otro tipo de métodos de perforación.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_corte">Corte<a id="h000219"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>El usuario puede cortar según sus preferencias (cambiando el proceso o el tipo de contorno).Según el tipo de contorno, el dibujo se representará en el color correspondiente que se indica a continuación:</p>
+</div>
+<div class="paragraph">
+<p>Contorno pequeño = Naranja<br>
+Contorno medio = Rosa<br>
+Contorno grande = Verde<br>
+Marcado = Marrón</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image20.jpeg" alt="Contour colour" width="350">
+</div>
+<div class="title">Figure 1. Corte de contorno</div>
+</div>
+<div id="h000220" class="ulist">
+<ul>
+<li>
+<p><strong>Entrada (Lead-in) :</strong> controla la activación/desactivación de la función de entrada en el PLC. En el programa NC, la longitud de entrada se define para cada corte del contorno y se puede ajustar mediante el parámetro <strong>Longitud de ajuste de entrada</strong> de la base de datos. Si se activa, utilizará los parámetros de inicio del contorno concreto y, una vez alcanzada la distancia definida, cambiará a los parámetros del contorno.</p>
+</li>
+</ul>
+</div>
+<div id="h000221" class="ulist">
+<ul>
+<li>
+<p><strong>Pre-perforación (pre hole) :</strong> controla la llamada del subprograma Pre-perforación antes del inicio del corte real. Si se activa, utilizará los parámetros de pre-perforación disponibles en la base de datos. Una vez completada la pre-perforación, los parámetros se cambian a valores de contorno.</p>
+</li>
+</ul>
+</div>
+<div id="h000222" class="ulist">
+<ul>
+<li>
+<p><strong>Control al vuelo (Fly control) :</strong> controla el enmascaramiento de las salidas del PLC al CN para el proceso al vuelo.</p>
+</li>
+</ul>
+</div>
+<div id="h000223" class="ulist">
+<ul>
+<li>
+<p><strong>Retroceso entrada (Retrace lead-in) :</strong> controla la función de retroceso del corte de entrada. Si el bit de entrada está activo y el corte de entrada ha finalizado, el cabezal retrocede a la misma longitud de la trayectoria de entrada con el rayo apagado, pero con el control de altura activo. Una vez más, el corte se inicia con los parámetros de contorno, por lo que la longitud de entrada se corta con dos conjuntos de parámetros para obtener un mejor ancho de ranura de corte y una limpieza óptima de las rebabas.</p>
+</li>
+</ul>
+</div>
+<div id="h000224" class="ulist">
+<ul>
+<li>
+<p><strong>Corte residual (Remnant cut) :</strong> controla el corte residual de la chapa en los bordes. Si el bit de corte residual está activo, la orden M14 no encenderá el rayo láser, pero se completarán otras funciones como el posicionamiento en altura, Gas activado, etc.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fin_de_láser">Fin de láser<a id="h000225"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Se basan en la distancia de retracción del eje Z junto con el "Frog jump", la congelación HC, el parámetro final, etc., al final.</p>
+</div>
+<div id="h000226" class="ulist">
+<ul>
+<li>
+<p><strong>Retracción Z (Z-retract) :</strong> el usuario puede especificar la distancia de retracción del eje Z al final del corte.</p>
+</li>
+</ul>
+</div>
+<div id="h000227" class="ulist">
+<ul>
+<li>
+<p><strong>"Frog jump" :</strong> controla la activación / desactivación de la función "Frog jump" del eje Z. Por lo general, una vez finalizado el corte, el eje Z se mueve primero a la posición de retracción y, a continuación, los ejes X e Y se posicionan en el siguiente punto de operación. Con el "Frog Jump" activado, el eje Z comienza a moverse hacia la posición de retracción, al mismo tiempo que los ejes X e Y también comienzan a moverse. Si el eje Z no alcanza la posición de retracción, pero los ejes X e Y están a punto de completar la posición de destino, se cancela el movimiento de retracción del eje Z y se activa la posición de separación. Por lo tanto, las posiciones de los ejes X, Y y Z están listas para la siguiente operación. De esta manera, se mejora el tiempo de proceso.</p>
+</li>
+</ul>
+</div>
+<div id="h000228" class="ulist">
+<ul>
+<li>
+<p><strong>Control de altura de congelación (Freeze height control) :</strong> controla la congelación del control de altura (HC) al final del corte. La distancia antes de la cual se activa la congelación se define en el parámetro de la base de datos. Mientras se realiza el corte y al final, si la tarea cae, puede provocar que el cabezal se mueva hacia abajo. Para evitar esta situación, el movimiento del cabezal se congelará al final del corte.</p>
+</li>
+</ul>
+</div>
+<div id="h000229" class="ulist">
+<ul>
+<li>
+<p><strong>Parámetros finales (End param) :</strong> controla la activación / desactivación del uso de los 'Parámetros finales' al final del corte. La distancia antes de la cual se deben habilitar los parámetros finales se define en el parámetro de la base de datos. Al final del corte, es posible cambiar a diferentes parámetros al vuelo para obtener un mejor acabado del trabajo gracias a la desaceleración de los ejes.</p>
+</li>
+</ul>
+</div>
+<div id="h000230" class="ulist">
+<ul>
+<li>
+<p><strong>Rayo :</strong> apagará el rayo antes de alcanzar una cierta distancia al final del corte, para permitir una microjoint.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_microjoint">Microjoint<a id="h000231"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pequeña sección sin cortar para mantener las piezas unidas a la chapa, evitando que se muevan.</p>
+</div>
+<div id="h000232" class="ulist">
+<ul>
+<li>
+<p><strong>Anchura de microjoint</strong>: el usuario puede seleccionar los contornos similares y habilitar una microjoint con un rango de valores de 0 a 3. El valor predeterminado es +0,7 mm.Pequeña sección sin cortar para mantener las piezas unidas a la chapa, evitando que se muevan.</p>
+</li>
+</ul>
+</div>
+<div id="h000233" class="ulist">
+<ul>
+<li>
+<p><strong>Anchura de microjoint</strong>: el usuario puede seleccionar los contornos similares y habilitar una microjoint con un rango de valores de 0 a 3. El valor predeterminado es +0,7 mm.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_general">General</a>
+  </li>
+  <li level="1">
+   <a href="#_página_láser">Página láser</a>
+  </li>
+  <li level="1">
+   <a href="#_penetración">Penetración</a>
+  </li>
+  <li level="1">
+   <a href="#_corte">Corte</a>
+  </li>
+  <li level="1">
+   <a href="#_fin_de_láser">Fin de láser</a>
+  </li>
+  <li level="1">
+   <a href="#_microjoint">Microjoint</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="edit.html">Editar código CN</a></span>
+ <span class="next"><a href="layout.html">Editar diseño</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

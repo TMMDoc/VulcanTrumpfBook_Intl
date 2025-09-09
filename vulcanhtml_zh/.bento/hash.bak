@@ -1,0 +1,96 @@
+Version=58
+APPNAME=Vulcan Control
+BRAND=TRUMPF
+FLAVOR=VULCAN
+LANGUAGE=EN
+VULCAN=
+Folders=9
+Pages=64
+UIXlate=False, DebugUIXlate=False, Language=EN
+
+contents.txt • 255901.025916
+impressum.adoc • 版本说明
+Index.adoc • 欢迎来到 {APPNAME}
+manifest.txt • 252105.122155
+configure\contents.txt • 255909.065930
+configure\index.adoc • 机床配置
+configure\LaserDB.adoc • 激光数据库
+configure\setting.adoc • 机床设置
+Controls\contents.txt • 255901.025913
+Controls\EdgeDetection.adoc • 边缘检测
+Controls\FocalDistance.adoc • 焦距
+Controls\FocusComb.adoc • 焦点梳
+Controls\GasPurge.adoc • 冲刷气体
+Controls\HCManualSet.adoc • HC手动设定点
+Controls\HeightSensorCal.adoc • 高度探针校准
+Controls\index.adoc • 控制
+Controls\LubricationCycle.adoc • 润滑循环
+Controls\NozzleCentre.adoc • 喷嘴中心
+Controls\NozzleClean.adoc • 喷嘴清洁和高度探针校准
+Controls\ParkPosition.adoc • 转到停机位置
+Controls\PilotDiodePos.adoc • 引导二极管定位
+Controls\Protective.adoc • 玻璃保护片监控
+Controls\ScrapCut.adoc • 废料切割
+Controls\SheetOrigin.adoc • 转到板材原点
+Controls\TargetShot.adoc • 目标射击
+Controls\traversal.adoc • 横移吹气
+Intro\contents.txt • 255909.065930
+Intro\ControlPanel.adoc • 控制面板
+Intro\Home.adoc • 用户界面
+Intro\index.adoc • 介绍
+Intro\Jog.adoc • 机床操作
+Intro\Workflow.adoc • 工作流程
+LTT\contents.txt • 255909.065930
+LTT\DCA.adoc • 加速度控制（DCA）
+LTT\export.adoc • LTT管理
+LTT\FlyLine.adoc • FlyLine
+LTT\General.adoc • 术语
+LTT\Index.adoc • 激光工艺表（LTT）
+LTT\rampCycles.adoc • 斜坡循环
+LTT\selection.adoc • 修改激光数据
+modify\contents.txt • 255909.065930
+modify\Index.adoc • 修改程序
+modify\microjoints.adoc • 修改微连接
+modify\renest.adoc • 重新排样
+ProductionPlan\contents.txt • 250603.040613
+ProductionPlan\index.adoc • 生产计划
+ProductionPlan\PP_Activation.adoc • 激活/停用
+ProductionPlan\PP_Buttons.adoc • 修改
+ProductionPlan\PP_GeneralWorkflow.adoc • 工作流程
+ProductionPlan\PP_MachineSettings.adoc • 机床设置
+ProductionPlan\PP_MaterialStatusAcknowledgement.adoc • 材料状态确认
+ProductionPlan\PP_StopOnSheet.adoc • 停止在板材上
+technology\contents.txt • 255909.065930
+technology\cuttingTools.adoc • 切割工具
+technology\frog.adoc • 蛙跳
+technology\Index.adoc • 工艺功能
+technology\nano.adoc • 纳米连接
+technology\pierceline.adoc • PierceLine探针
+technology\vaporize.adoc • 蒸发板材
+Troubleshooting\collisions.adoc • 频繁碰撞
+Troubleshooting\contents.txt • 255909.065930
+Troubleshooting\Diagnostics.adoc • 错误数据、备份和还原
+Troubleshooting\Extreme.adoc • 极小轮廓
+Troubleshooting\Index.adoc • 故障排除
+Troubleshooting\Laserissues.adoc • 激光问题
+Troubleshooting\Workoffset.adoc • 工作偏移
+Workflow\contents.txt • 255909.065930
+Workflow\Create.adoc • 创建
+Workflow\Edit.adoc • 编辑NC代码
+Workflow\filemanager.adoc • 文件管理
+Workflow\Index.adoc • 生产工作流程
+Workflow\Laserfunct.adoc • 编辑激光工艺
+Workflow\layout.adoc • 编辑布局
+Workflow\offset.adoc • 工作偏移
+Workflow\Preparation.adoc • 准备
+Workflow\Programs.adoc • 选择程序
+Workflow\reentry.adoc • 重入
+Workflow\Run.adoc • 运行
+Workflow\Simulation.adoc • 模拟运行
+LTT\LaserData\contents.txt • 255909.065930
+LTT\LaserData\Cutting.adoc • 切割
+LTT\LaserData\index.adoc • 激光数据项目
+LTT\LaserData\multistage.adoc • 多级穿刺
+LTT\LaserData\piercing.adoc • 穿刺
+LTT\LaserData\special.adoc • 特殊流程
+Workflow\img\2pt.svg

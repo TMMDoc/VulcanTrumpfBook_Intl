@@ -1,0 +1,453 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Lézertechnológia szerkesztése</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Üdvözöljük itt: Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Bevezetés</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">Kezelőfelület</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Munkafolyamat</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Gépüzemeltetés</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Kezelőpult</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Gyártási munkafolyamat</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="preparation.html">Előkészületek</a></li>
+    <li><button class="tree blank"></button><a href="create.html">Létrehozás</a></li>
+    <li><button class="tree blank"></button><a href="filemanager.html">Fájlkezelés</a></li>
+    <li><button class="tree blank"></button><a href="programs.html">Program kiválasztása</a></li>
+    <li><button class="tree blank"></button><a href="edit.html">NC program szerkesztése</a></li>
+    <li><button class="tree blank"></button><a class="active" href="laserfunct.html">Lézertechnológia szerkesztése</a></li>
+    <li><button class="tree blank"></button><a href="layout.html">Elrendezés szerkesztése</a></li>
+    <li><button class="tree blank"></button><a href="simulation.html">Szimuláció futtatása</a></li>
+    <li><button class="tree blank"></button><a href="offset.html">Munka eltolások</a></li>
+    <li><button class="tree blank"></button><a href="run.html">Futtatás</a></li>
+    <li><button class="tree blank"></button><a href="reentry.html">Újbóli belépés</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Lézer-technológiatáblázatok(LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminológia</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Lézeradatelemek</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Beszúrás</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Többfokozatú beszúrás</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Vágás</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Speciális folyamatok</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Lézeradatok módosítása</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">Vágási táblázatok kezelése</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Rámpaciklusok</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">Flyline</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Gyorsulásszabályozás (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Technológiai funkciók</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Lemez gőzölése</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanoillesztések</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine érzékelő</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Gyors átugrás</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Vágószerszámok</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Vezérlések</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Kenési ciklus</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Védőüveg-felügyelet</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Hulladékvágás</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Ugrás a lemez origójához</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">A magasságérzékelő kalibrálása</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Fúvóka középpont</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Célra irányított lézerimpulzus</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Gázöblítés</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">HC Kézi beállítási pont</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">Ugrás parkolóhelyzetbe</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">A fúvóka tisztítása és magasságérzékelő kalibrálása</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Élfelismerés</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Fókuszfésű</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Fókusztávolság</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Vezérlődióda pozícionálás</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Gyártási terv</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Aktiválás/deaktiválás</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Módosítás</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">Stop a lemezen (StopOnSheet)</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">A gép beállításai</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Anyagállapot nyugtázása</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Munkafolyamat</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Hibakezelés</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Gyakori ütközések</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Munkaeltolás</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Extrém kis kontúrok</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impresszum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Gyártási munkafolyamat</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="laserfunct.html">Lézertechnológia szerkesztése</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Lézertechnológia szerkesztése</h1>
+<div class="sect1">
+<h2 id="_általános_adatok">Általános adatok<a id="h000204"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ez az opció lehetővé teszi a kezelő számára, hogy reagáljon a gépen felmerülő problémákra és megoldja azokat.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image19.png" alt="image19" width="960"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lézer_oldal">Lézer oldal<a id="h000205"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A felhasználó a lézerfunkcióknál az igényeinek megfelelően választhatja ki a lézer oldalt.
+Hasonlóképpen, kézzel is szerkeszthető a DIN text G253 paranccsal. A bármelyikben végrehajtott változtatások mind a DIN szöveges, mind a lézerfunkciókban érvényre jutnak.</p>
+</div>
+<div id="h000206" class="ulist">
+<ul>
+<li>
+<p><strong>Anyag</strong>: Meghatározza az anyag típusát.</p>
+</li>
+</ul>
+</div>
+<div id="h000207" class="ulist">
+<ul>
+<li>
+<p><strong>Vastagság</strong>: Meghatározza az anyag vastagságát.</p>
+</li>
+</ul>
+</div>
+<div id="h000208" class="ulist">
+<ul>
+<li>
+<p><strong>Fúvókaátmérő</strong>: Beállítja a vágáshoz használt fúvóka átmérőjét.</p>
+</li>
+</ul>
+</div>
+<div id="h000209" class="ulist">
+<ul>
+<li>
+<p><strong>Gáztípus</strong>: Meghatározza a vágási folyamat során használt folyamatgázt.</p>
+</li>
+</ul>
+</div>
+<div id="h000210" class="ulist">
+<ul>
+<li>
+<p><strong>Kezelés</strong>: Az anyagon alkalmazott bármilyen elő- vagy utómegmunkálási kezelésre utal.</p>
+</li>
+</ul>
+</div>
+<div id="h000211" class="ulist">
+<ul>
+<li>
+<p><strong>Fólia</strong>: Meghatározza, hogy az anyag felületén van-e védőfólia, amely befolyásolhatja a vágási paramétereket.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_beszúrás">Beszúrás<a id="h000212"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A felhasználó kiválaszthatja a beszúrás típusát a saját preferenciái alapján.</p>
+</div>
+<div id="h000213" class="ulist">
+<ul>
+<li>
+<p><strong>Magasságszabályozás :</strong> Vezérli a távolságszabályozás folyamatát a beszúrás során. Általában, miután a gép beáll a beszúrási (Pierce Stand-off) távolságra, a magasságszabályozás ki kapcsolódik. Ez megakadályozza a vágófej rázkódását, amit a beszúrás során keletkező anyagfröccsenés okozhat, javítva ezáltal a beszúrás minőségét. Lehetőség van a magasságszabályozás bekapcsolva tartására vékonylemezbe történő beszúráskor vagy más különleges körülmények között, hogy javuljon a megmunkálási idő.</p>
+</li>
+</ul>
+</div>
+<div id="h000214" class="ulist">
+<ul>
+<li>
+<p><strong>Sugár :</strong> Ez vezérli a sugár be-/kikapcsolását, amikor a gép átvált a beszúrási paraméterekről a vágási paraméterekre. Általában a beszúrás befejezése után a sugár kikapcsol és a lézerparaméterek frissülnek a vágási értékekre, majd a sugár bekapcsol, és megkezdődik a vágás.</p>
+</li>
+</ul>
+</div>
+<div id="h000215" class="ulist">
+<ul>
+<li>
+<p><strong>Lehűlési idő :</strong> Ez szabályozza a lehűlési idő BE/KI paramétert a beszúrásnál. A beszúrás minden egyes lépésének/szakaszának végén a paraméterben egy lehűlési idő kerül meghatározásra.
+Ez idő alatt a sugár kikapcsol, hogy az anyag lehűljön, majd újraindul; így elkerülhető az anyag túlmelegedése a beszúrás során.</p>
+</li>
+</ul>
+</div>
+<div id="h000216" class="ulist">
+<ul>
+<li>
+<p><strong>Oldalsó légbefúvás :</strong> Az oldalsó légbefúvó mágnesszelep BE/KI kapcsolását vezérli a beszúrási paraméterben meghatározott időtartam alatt. A vastag anyagokban végzett beszúrás nagy lézerteljesítményt igényel; a beszúrás végén nagynyomású levegőt fúvatnak oldalról az anyag lehűtése, a fröccsenések eltávolítása stb. céljából, hogy a vágás simán menjen.</p>
+</li>
+</ul>
+</div>
+<div id="h000217" class="ulist">
+<ul>
+<li>
+<p><strong>Sorja letisztítása :</strong> Vezérli a sorjeletisztító alprogram behívását a beszúrás végén. Miután a beszúrás befejeződött, bizonyos anyagoknál az anyag felső részén kupac formájában olvadt lávaszerű anyag képződik. Az olvadt anyag eltávolítása érdekében egy alprogramot kell behívni, amely nagy nyomással mozgatja a fejet a "láva" felett, hogy eltávolítsa azt. A gáztípus és a nyomás a gépparaméterekben van megadva.</p>
+</li>
+</ul>
+</div>
+<div id="h000218" class="ulist">
+<ul>
+<li>
+<p><strong>Frekvenciaafokozás :</strong> Szabályozza a frekvenciafokozást a beszúrásnál. Ha a kiválasztott beszúrási mód a teljesítmény/kitöltési tényező/résméret változtatásával történő beszúrás (PM=22-től 27-ig), akkor ennek a bitnek az aktiválása a frekvenciát is fokozza. Más típusú beszúrási módszereknél nem alkalmazható.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vágás">Vágás<a id="h000219"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A felhasználó a saját preferenciái alapján végezheti a vágást (a folyamat és a kontúrtípus módosításával).
+A kontúrtípus alapján a rajz az alábbi megfelelő színekben kerül ábrázolásra:</p>
+</div>
+<div class="paragraph">
+<p>Kis kontúr = narancssárga<br>
+Közepes kontúr = rózsaszín<br>
+Nagy kontúr = zöld<br>
+Jelölés = barna</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image20.jpeg" alt="Contour colour" width="350">
+</div>
+<div class="title">Figure 1. Kontúrvágás</div>
+</div>
+<div id="h000220" class="ulist">
+<ul>
+<li>
+<p><strong>Bevezető pálya:</strong> Ez vezérli a bevezető pálya be-/kikapcsolását a PLC-ben.
+Az NC-programban a bevezető pálya hossza a kontúr minden egyes vágásához meg van határozva; a <strong>Bevezető pálya beállítási hossza</strong> az adatbázisban lévő paraméterrel állítható be. Ha aktiválva van, akkor az adott kontúr kezdőparamétereit használja, majd meghatározott távolság elérését követően átvált a kontúr paramétereire.</p>
+</li>
+</ul>
+</div>
+<div id="h000221" class="ulist">
+<ul>
+<li>
+<p><strong>Előfurat :</strong> A tényleges vágás megkezdése előtt vezérli az Előfurat alprogram behívását. Ha aktiválva van, akkor az adatbázisban rendelkezésre álló előfurat paramétereket használja. Az előfurat elkészülte után a paraméterek kontúrértékekre váltanak.</p>
+</li>
+</ul>
+</div>
+<div id="h000222" class="ulist">
+<ul>
+<li>
+<p><strong>Fly vezérlés :</strong> Ez szabályozza a PLC-ből az NC felé irányuló kimenetek maszkolását a „fly” folyamat során.</p>
+</li>
+</ul>
+</div>
+<div id="h000223" class="ulist">
+<ul>
+<li>
+<p><strong>Visszafutó bevezető pálya :</strong> Ez vezérli a bevezető vágás visszafutási (retrace) funkcióját. Ha a bevezető bit aktív és a bevezető vágás befejeződött, akkor a gép a fejet visszavezeti ugyanarra a bevezető pályahosszra, kikapcsolt sugárral, de aktív magasságszabályozással. A vágás ismét kontúrparaméterekkel indul, így a bevezető pálya hosszát a gép két paraméterkészlettel vágja le a jobb vágásrés-szélesség és a sorja letisztítása érdekében.</p>
+</li>
+</ul>
+</div>
+<div id="h000224" class="ulist">
+<ul>
+<li>
+<p><strong>Maradéklemez vágása :</strong> Ez szabályozza a maradéklemez vágását a peremzóna mentén. Ha a maradéklemez vágás bit aktív, akkor az M14 parancs nem kapcsolja be a lézersugarat; ettől eltekintve az egyéb funkciók, mint például a magassági pozícionálás, gáz bekapcsolása stb. végrehajtásra kerülnek.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_a_lézeres_megmunkálás_befejezése">A lézeres megmunkálás befejezése<a id="h000225"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ezek a funkciók a Z-tengely szabaddá tételi távolságán alapulnak, a végén a Gyors átugrás, a Magasságkövetés kikapcsolása, a Programzáró beállítások stb. mellett.</p>
+</div>
+<div id="h000226" class="ulist">
+<ul>
+<li>
+<p><strong>Z szabaddá tétel :</strong> A felhasználó megadhatja, hogy mekkora legyen a Z-tengely szabaddá tételi távolsága a vágás végén.</p>
+</li>
+</ul>
+</div>
+<div id="h000227" class="ulist">
+<ul>
+<li>
+<p><strong>Gyors átugrás :</strong> A Z-tengely Gyors átugrás funkciójának ki- és bekapcsolását szabályozza. Általában a vágás befejezése után a Z-tengelyt először szabaddá tételi pozícióba mozdul, majd az X- és az Y-tengely a következő műveleti pontra pozícionál. Ha a gyors átugrást engedélyezzük, akkor a Z-tengely elkezd szabaddá tételi pozícióba mozdulni, ezzel egyidejűleg az X- és Y-tengely is elkezd mozogni. Ha a Z-tengely nem éri el a visszahúzási pozíciót, de az X- és Y-tengely eléri a célpozíciót, akkor a Z-tengely visszahúzási mozgása megszakad és a kiállási pozíció aktiválódik. Így az X-, Y- és Z-tengely pozíciói készen állnak a következő műveletre. Ezáltal javul a megmunkálási idő.</p>
+</li>
+</ul>
+</div>
+<div id="h000228" class="ulist">
+<ul>
+<li>
+<p><strong>A magasságszabályozás felfüggesztése :</strong> It Vezérli a magasságszabályozás (HC) felfüggesztését a vágás végén. A távolság, amely előtt a felfüggesztés aktív lesz, az adatbázis-paraméterben van meghatározva. A vágás közben, illetve a végén, ha a kivágott darab leesik, a vágófej elmozdulhat lefelé. Ennek a helyzetnek az elkerülése érdekében a fej mozgása a vágás végén blokkolódik.</p>
+</li>
+</ul>
+</div>
+<div id="h000229" class="ulist">
+<ul>
+<li>
+<p><strong>Programzáró beállítások :</strong> A „Programzáró beállítások” vágás végi használatának engedélyezését/letiltását szabályozza. A távolság, amely előtt a felfüggesztés aktív lesz, az adatbázis-paraméterben van meghatározva. A vágás végén a tengelyek lassításának köszönhetően menet közben is át lehet váltani különböző paraméterekre a feladat jobb végrehajtása érdekében.</p>
+</li>
+</ul>
+</div>
+<div id="h000230" class="ulist">
+<ul>
+<li>
+<p><strong>Sugár :</strong> A vágás végén bizonyos távolság előtt kikapcsolja a sugarat, lehetővé téve mikrohíd kialakítását.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mikrohíd">Mikrohíd<a id="h000231"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kisméretű vágatlan rész, amely az alkatrészeket a lemeztáblához rögzíti, megakadályozva azok elmozdulását.</p>
+</div>
+<div id="h000232" class="ulist">
+<ul>
+<li>
+<p><strong>Mikrohíd szélessége</strong>: A felhasználó kiválaszthatja a hasonló kontúrokat kijelöléssel és engedélyezheti a mikrohidat 0 és 3 közötti értéktartományban. Az alapértelmezett érték +0,7 mm.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Kisméretű vágatlan rész, amely az alkatrészeket a lemeztáblához rögzíti, megakadályozva azok elmozdulását.</p>
+</div>
+<div id="h000233" class="ulist">
+<ul>
+<li>
+<p><strong>Mikrohíd szélessége</strong>: A felhasználó kiválaszthatja a hasonló kontúrokat kijelöléssel és engedélyezheti a mikrohidat 0 és 3 közötti értéktartományban. Az alapértelmezett érték +0,7 mm.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_általános_adatok">Általános adatok</a>
+  </li>
+  <li level="1">
+   <a href="#_lézer_oldal">Lézer oldal</a>
+  </li>
+  <li level="1">
+   <a href="#_beszúrás">Beszúrás</a>
+  </li>
+  <li level="1">
+   <a href="#_vágás">Vágás</a>
+  </li>
+  <li level="1">
+   <a href="#_a_lézeres_megmunkálás_befejezése">A lézeres megmunkálás befejezése</a>
+  </li>
+  <li level="1">
+   <a href="#_mikrohíd">Mikrohíd</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="edit.html">NC program szerkesztése</a></span>
+ <span class="next"><a href="layout.html">Elrendezés szerkesztése</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

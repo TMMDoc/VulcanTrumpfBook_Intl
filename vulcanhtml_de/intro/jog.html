@@ -1,0 +1,334 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Maschinenbedienung</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Willkommen bei Vulcan Control</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Einführung</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="home.html">Bedienoberfläche</a></li>
+    <li><button class="tree blank"></button><a href="workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jog.html">Maschinenbedienung</a></li>
+    <li><button class="tree blank"></button><a href="controlpanel.html">Bedienpult</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../workflow/index.html">Produktions-Workflow</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../workflow/preparation.html">Vorbereitung</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/create.html">Anlegen</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/filemanager.html">Dateiverwaltung</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/programs.html">Programm wählen</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/edit.html">NC-Programm bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/laserfunct.html">Lasertechnologie bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/layout.html">Layout bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/simulation.html">Simulationslauf</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/offset.html">Arbeitsversatzmaße</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/run.html">Ausführen</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/reentry.html">Wiedereinstieg</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Lasertechnologietabellen (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminologie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Laserdatenelemente</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Mehrstufiges Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Schneiden</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Spezielle Prozesse</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Ändern von Laserdaten</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">LTT-Verwaltung</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Rampenzyklen</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Beschleunigungssteuerung (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Technologiefunktionen</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Tafel abdampfen</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine-Sensor</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Springen</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Schneidwerkzeuge</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Steuerelemente</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Schmierzyklus</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Schutzglasüberwachung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Schrottschnitt</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Tafelursprungspunkt anfahren</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Düsenzentrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Zielschuss</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Gasspülung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">Manueller Sollwert für Höhenregelung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">In Parkposition fahren</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">Düsenreinigung und Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Kantenerkennung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Fokuskamm</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Fokuslage</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Positionierung der Pilotdiode</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Produktionsplan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Aktivierung/Deaktivierung</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Änderung</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">Tafelanschlag</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">Maschineneinstellungen</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Quittierung des Materialstatus</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Fehlerbehebung</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Häufige Kollisionen</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Arbeitsversatz</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Extrem kleine Konturen</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Einführung</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jog.html">Maschinenbedienung</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Maschinenbedienung</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Der Touchscreen bietet verschiedene Optionen zum Bedienen der Maschine:</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_verfahren">Verfahren<a id="h000088"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Auf dieser Seite kann die Achse verfahren werden. Hier können auch die aktuellen Positionen der X-, Y- und Z-Achse angezeigt werden.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image4.png" alt="Setup page">
+</div>
+</div>
+<div class="paragraph">
+<p>Folgende Verfahrarten stehen zur Verfügung:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Modales Verfahren</p>
+</li>
+<li>
+<p>Inkrementelles Verfahren</p>
+</li>
+<li>
+<p>Zielpunktverfahren</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_modales_verfahren">Modales Verfahren<a id="h000089"></a></h3>
+<div class="paragraph">
+<p>Eine länger als 300 ms gedrückte Maus startet eine modale Bewegung, bis der Bediener den Finger hebt/die Maus loslässt (langer Klick). Je nachdem, wo der Bediener auf den Pfeil geklickt hat, bewegt sich die Maschine mit unterschiedlichen Geschwindigkeiten. Die Geschwindigkeit für das modale Verfahren kann in den <strong>Einstellungen</strong> konfiguriert werden.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_schrittweises_verfahren">Schrittweises Verfahren<a id="h000090"></a></h3>
+<div class="paragraph">
+<p>Ein Klick (Maus nach unten, innerhalb von 300 ms unmittelbar gefolgt von Maus nach oben) bewegt sie in Schritten. Je nachdem, wo der Bediener auf den Pfeil geklickt hat, bewegt sich die Achse in kurzen, mittleren oder großen Schritten. Die Schrittweite kann in den <strong>Einstellungen</strong> konfiguriert werden.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_zielpunktfahrt">Zielpunktfahrt<a id="h000091"></a></h3>
+<div class="paragraph">
+<p>Der Bediener kann den Zielpunkt der ausgewählten Achse im Eingabefeld angeben.
+Drücken Sie die <strong>START</strong>-Taste, um die Bewegung zu starten. Die Bewegung der Achse kann jederzeit mit der <strong>STOPP</strong>-Taste gestoppt werden.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_geschwindigkeits_override">Geschwindigkeits-Override<a id="h000092"></a></h3>
+<div class="paragraph">
+<p>Mit <strong>Override +</strong> und <strong>Override -</strong> kann der Bediener die Geschwindigkeit von Achsenbewegungen beeinflussen (in Prozent).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image6.jpg" alt="Override window" width="250">
+</div>
+</div>
+<div id="h000093" class="ulist">
+<ul>
+<li>
+<p><strong>Override + :</strong> Erhöht den Override-Prozentsatz für die konfigurierte/eingestellte Achse oder Fahrbahngeschwindigkeit. Oberhalb von 10 % wird der Wert in Schritten von 10 % geändert, unterhalb von 10 % wird er in Schritten von 1 % geändert.</p>
+</li>
+</ul>
+</div>
+<div id="h000094" class="ulist">
+<ul>
+<li>
+<p><strong>Override - :</strong> Senkt den Override-Prozentsatz für die konfigurierte/eingestellte Achse oder Fahrbahngeschwindigkeit. Oberhalb von 10 % wird der Wert in Schritten von 10 % geändert, unterhalb von 10 % wird er in Schritten von 1 % geändert. Der Bediener kann zum Erhöhen oder Senken der Geschwindigkeit auch den Schieberegler verwenden.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_referenzpunktfahrt">Referenzpunktfahrt<a id="h000095"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Das Anfahren des Referenzpunkts durch die Achsen kann auf zwei Arten erfolgen.</p>
+</div>
+<div id="h000096" class="ulist">
+<ul>
+<li>
+<p><strong>Automatisch:</strong> Wenn diese Funktion aktiviert ist, wird durch Drücken der Start-Taste das automatische Anfahren des Referenzpunkts eingeleitet. Durch Drücken der Stopp-Taste kann das Anfahren des Referenzpunkts jederzeit abgebrochen werden.</p>
+</li>
+</ul>
+</div>
+<div id="h000097" class="ulist">
+<ul>
+<li>
+<p><strong>Manuell:</strong> Wenn diese Funktion ausgewählt ist, kann das manuelle Anfahren des Referenzpunkts durch eine einzelne Achse initiiert werden. Wählen Sie die gewünschte Achse und drücken Sie die
+Start-Taste, um das Verfahren einzuleiten. Durch Drücken der Stopp-Taste kann das Anfahren des Referenzpunkts jederzeit abgebrochen werden.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image7.jpeg" alt="Homing window">
+</div>
+</div>
+<div id="h000098" class="paragraph">
+<p><strong>Einstellungen</strong></p>
+</div>
+<div class="paragraph">
+<p>Der Bediener kann die Schrittweite (für schrittweises Verfahren) und die Geschwindigkeit (für modales Verfahren) für die spezifischen Bereiche auf dem Pfeil in den <strong>Einstellungen</strong> konfigurieren.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image8.jpg" alt="Setting window" width="350">
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_verfahren">Verfahren</a>
+  </li>
+  <li level="2">
+   <a href="#_modales_verfahren">Modales Verfahren</a>
+  </li>
+  <li level="2">
+   <a href="#_schrittweises_verfahren">Schrittweises Verfahren</a>
+  </li>
+  <li level="2">
+   <a href="#_zielpunktfahrt">Zielpunktfahrt</a>
+  </li>
+  <li level="2">
+   <a href="#_geschwindigkeits_override">Geschwindigkeits-Override</a>
+  </li>
+  <li level="1">
+   <a href="#_referenzpunktfahrt">Referenzpunktfahrt</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="workflow.html">Workflow</a></span>
+ <span class="next"><a href="controlpanel.html">Bedienpult</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

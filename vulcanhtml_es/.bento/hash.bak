@@ -1,0 +1,96 @@
+Version=58
+APPNAME=Vulcan Control
+BRAND=TRUMPF
+FLAVOR=VULCAN
+LANGUAGE=EN
+VULCAN=
+Folders=9
+Pages=64
+UIXlate=False, DebugUIXlate=False, Language=EN
+
+contents.txt • 255901.025916
+impressum.adoc • Aviso legal
+Index.adoc • Bienvenido a {APPNAME}
+manifest.txt • 255205.115228
+configure\contents.txt • 255909.065930
+configure\index.adoc • Configuración de la máquina
+configure\LaserDB.adoc • Base de datos láser
+configure\setting.adoc • Ajustes de la máquina
+Controls\contents.txt • 255901.025913
+Controls\EdgeDetection.adoc • Detección de bordes
+Controls\FocalDistance.adoc • Posición focal
+Controls\FocusComb.adoc • Peine de foco
+Controls\GasPurge.adoc • Purga con gas
+Controls\HCManualSet.adoc • Punto de ajuste manual HC
+Controls\HeightSensorCal.adoc • Calibración del sensor de altura
+Controls\index.adoc • Controles
+Controls\LubricationCycle.adoc • Ciclo de lubricación
+Controls\NozzleCentre.adoc • Centro de boquilla
+Controls\NozzleClean.adoc • Calibración del sensor de altura y limpieza de boquilla
+Controls\ParkPosition.adoc • Ir a la posición de aparcamiento
+Controls\PilotDiodePos.adoc • Posicionamiento del diodo piloto
+Controls\Protective.adoc • Control del cristal de protección
+Controls\ScrapCut.adoc • Corte de desperdicios
+Controls\SheetOrigin.adoc • Ir al origen de la chapa
+Controls\TargetShot.adoc • Disparo al objetivo
+Controls\traversal.adoc • Soplado transversal
+Intro\contents.txt • 255909.065930
+Intro\ControlPanel.adoc • Panel de control
+Intro\Home.adoc • Interfaz de usuario
+Intro\index.adoc • Introducción
+Intro\Jog.adoc • Funcionamiento de la máquina
+Intro\Workflow.adoc • Flujo de trabajo
+LTT\contents.txt • 255909.065930
+LTT\DCA.adoc • Control de aceleración (DCA)
+LTT\export.adoc • Gestión de TTL
+LTT\FlyLine.adoc • FlyLine
+LTT\General.adoc • Terminología
+LTT\Index.adoc • Tablas de tecnología láser (TTL)
+LTT\rampCycles.adoc • Ciclos de rampa
+LTT\selection.adoc • Modificación de los datos del láser
+modify\contents.txt • 255909.065930
+modify\Index.adoc • Modificación de un programa
+modify\microjoints.adoc • Modificar microjoints
+modify\renest.adoc • Postanidamiento
+ProductionPlan\contents.txt • 250603.040613
+ProductionPlan\index.adoc • Plan de producción
+ProductionPlan\PP_Activation.adoc • Activación/Desactivación
+ProductionPlan\PP_Buttons.adoc • Modificación
+ProductionPlan\PP_GeneralWorkflow.adoc • Flujo de trabajo
+ProductionPlan\PP_MachineSettings.adoc • Ajustes de máquina
+ProductionPlan\PP_MaterialStatusAcknowledgement.adoc • Confirmación del estado del material
+ProductionPlan\PP_StopOnSheet.adoc • StopOnSheet
+technology\contents.txt • 255909.065930
+technology\cuttingTools.adoc • Útiles de corte
+technology\frog.adoc • Frog Jumping
+technology\Index.adoc • Funciones tecnológicas
+technology\nano.adoc • Nanojoints
+technology\pierceline.adoc • Sensor PierceLine
+technology\vaporize.adoc • Evaporar chapa
+Troubleshooting\collisions.adoc • Colisiones frecuentes
+Troubleshooting\contents.txt • 255909.065930
+Troubleshooting\Diagnostics.adoc • Datos de error, copia de seguridad y restauración
+Troubleshooting\Extreme.adoc • Contornos pequeños extremos
+Troubleshooting\Index.adoc • Solución de problemas
+Troubleshooting\Laserissues.adoc • Problemas con el láser
+Troubleshooting\Workoffset.adoc • Offset de trabajo
+Workflow\contents.txt • 255909.065930
+Workflow\Create.adoc • Crear
+Workflow\Edit.adoc • Editar código CN
+Workflow\filemanager.adoc • Gestión de archivos
+Workflow\Index.adoc • Flujo de trabajo de producción
+Workflow\Laserfunct.adoc • Editar tecnología láser
+Workflow\layout.adoc • Editar diseño
+Workflow\offset.adoc • Offsets de trabajo
+Workflow\Preparation.adoc • Preparación
+Workflow\Programs.adoc • Seleccionar programa
+Workflow\reentry.adoc • Reentrada
+Workflow\Run.adoc • Ejecutar
+Workflow\Simulation.adoc • Ejecución de la simulación
+LTT\LaserData\contents.txt • 255909.065930
+LTT\LaserData\Cutting.adoc • Corte
+LTT\LaserData\index.adoc • Elementos de datos láser
+LTT\LaserData\multistage.adoc • Penetración multietapa
+LTT\LaserData\piercing.adoc • Penetración
+LTT\LaserData\special.adoc • Procesos especiales
+Workflow\img\2pt.svg

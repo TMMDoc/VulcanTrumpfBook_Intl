@@ -1,0 +1,390 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>运行</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">欢迎来到 Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">介绍</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">用户界面</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">工作流程</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">机床操作</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">控制面板</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">生产工作流程</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="preparation.html">准备</a></li>
+    <li><button class="tree blank"></button><a href="create.html">创建</a></li>
+    <li><button class="tree blank"></button><a href="filemanager.html">文件管理</a></li>
+    <li><button class="tree blank"></button><a href="programs.html">选择程序</a></li>
+    <li><button class="tree blank"></button><a href="edit.html">编辑NC代码</a></li>
+    <li><button class="tree blank"></button><a href="laserfunct.html">编辑激光工艺</a></li>
+    <li><button class="tree blank"></button><a href="layout.html">编辑布局</a></li>
+    <li><button class="tree blank"></button><a href="simulation.html">模拟运行</a></li>
+    <li><button class="tree blank"></button><a href="offset.html">工作偏移</a></li>
+    <li><button class="tree blank"></button><a class="active" href="run.html">运行</a></li>
+    <li><button class="tree blank"></button><a href="reentry.html">重入</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">激光工艺表（LTT）</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">术语</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">激光数据项目</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">穿刺</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">多级穿刺</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">切割</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">特殊流程</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">修改激光数据</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">LTT管理</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">斜坡循环</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">加速度控制（DCA）</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">工艺功能</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">蒸发板材</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">纳米连接</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine探针</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">蛙跳</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">切割工具</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">控制</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">润滑循环</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">玻璃保护片监控</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">废料切割</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">转到板材原点</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">高度探针校准</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">喷嘴中心</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">目标射击</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">冲刷气体</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">HC手动设定点</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">转到停机位置</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">喷嘴清洁和高度探针校准</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">边缘检测</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">焦点梳</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">焦距</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">引导二极管定位</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">生产计划</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">激活/停用</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">修改</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">停止在板材上</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">机床设置</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">材料状态确认</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">工作流程</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">故障排除</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">频繁碰撞</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">工作偏移</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">极小轮廓</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">版本说明</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">生产工作流程</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="run.html">运行</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>运行</h1>
+<div class="sect1">
+<h2 id="_程序选择器">程序选择器<a id="h000244"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>选择程序并按运行键将用户导航到运行选项卡。程序名称、尺寸、NCR状态和激光参数（轴详情、速度、气体压力、功率、气体类型、喷嘴高度、焦距、当前工作坐标系、工具坐标系、使用的M功能）显示在顶部。</p>
+</div>
+<div id="h000245" class="ulist">
+<ul>
+<li>
+<p><strong>启动：</strong> 启动程序。</p>
+</li>
+</ul>
+</div>
+<div id="h000246" class="ulist">
+<ul>
+<li>
+<p><strong>暂停：</strong> 暂停程序。此选项仅在用户启动程序时可用。</p>
+</li>
+</ul>
+</div>
+<div id="h000247" class="ulist">
+<ul>
+<li>
+<p><strong>继续：</strong> 继续执行已暂停的程序。</p>
+</li>
+</ul>
+</div>
+<div id="h000248" class="ulist">
+<ul>
+<li>
+<p><strong>停止或中止：</strong> 停止程序。</p>
+</li>
+</ul>
+</div>
+<div id="h000249" class="ulist">
+<ul>
+<li>
+<p><strong>编辑：</strong> 编辑程序，导航到前面提到的程序编辑页面。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image51.jpeg" alt="Run page" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>LST/布局程序显示如下：</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/mainlst.png" alt="mainLst"></span></p>
+</div>
+<div class="paragraph">
+<p>DIN程序显示如下，</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/maindin.png" alt="mainDIN"></span></p>
+</div>
+<div class="paragraph">
+<p>大多数信息都是不言自明的。右侧屏幕的参数
+显示以下信息：</p>
+</div>
+<div id="h000250" class="paragraph">
+<p><strong>S:</strong> 工作偏移</p>
+</div>
+<div id="h000251" class="paragraph">
+<p><strong>T:</strong> 模具偏移值</p>
+</div>
+<div id="h000252" class="paragraph">
+<p><strong>M:</strong> 激活的M功能
+如果离线编程输出程序运行时间，它将另外显示在主屏幕上。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/main.png" alt="main" width="800"></span></p>
+</div>
+<div class="paragraph">
+<p>运行时间 (NetProcessingTime)。
+估计时间（请参阅离线编程的数据）。
+更新当前活动信号程序的时间信息。一旦程序启动，时间计算将启动；新的程序启动时它将被重置。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_速度倍率">速度倍率<a id="h000253"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>用户可以使用倍率 + 和倍率 - 来影响
+轴移动的速度（百分比）。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image54.jpg" alt="Speed override window" width="200">
+</div>
+</div>
+<div id="h000254" class="ulist">
+<ul>
+<li>
+<p><strong>倍率 +：</strong> 增加配置/设置的轴或路径速度的倍率百分比。10%以上，数值以10%为增量变化，10%以下则以1%的增量变化。</p>
+</li>
+</ul>
+</div>
+<div id="h000255" class="ulist">
+<ul>
+<li>
+<p><strong>倍率 -：</strong> 降低配置/设置的轴或路径速度的倍率百分比。10 ％以上，该值以10 ％的递减量变化，10 ％以下则以1%的递减量变化。用户还可以使用滑块增加或
+降低速度。</p>
+</li>
+</ul>
+</div>
+<div id="h000256" class="paragraph">
+<p><strong>当机床运行时，用户可以在不同的选项卡之间导航：</strong></p>
+</div>
+<div class="paragraph">
+<p>即使机床在忙着切割板材，用户也可能退出 <strong>运行</strong> 页面。这是必要的，因为在程序运行时，
+操作员可能需要准备下一组程序（编辑程序，更改激光参数等）用于生产。此外，当
+用户在程序运行时切换选项卡时，会显示一个迷你播放器
+告知用户正在切割的程序的当前状态，而无需移动到 <strong>运行</strong> 选项卡。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image55.jpeg" alt="Program running at the bottom" width="800">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_显示">显示<a id="h000257"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>用户可以在图纸中打开或关闭板材、机床和横移显示。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image56.jpeg" alt="Display window" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>PLC静态消息显示在运行页面的左下角。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_状态">状态<a id="h000258"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>用户可以查看程序和机床状态的信息，它是只读类型。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image57.jpeg" alt="Program information window" width="800">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_程序控制">程序控制<a id="h000259"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>当程序运行时，用户可以通过选择所需的选项来控制程序。在程序控制中选择的选项将显示在左下角。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image58.jpeg" alt="program controls window" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>在DIN程序中，将显示程序控制中的所有选项。</p>
+</div>
+<div class="paragraph">
+<p>在LST/FXLYT程序中，将仅显示三个选项：</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image59.png" alt="image59">
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_程序选择器">程序选择器</a>
+  </li>
+  <li level="1">
+   <a href="#_速度倍率">速度倍率</a>
+  </li>
+  <li level="1">
+   <a href="#_显示">显示</a>
+  </li>
+  <li level="1">
+   <a href="#_状态">状态</a>
+  </li>
+  <li level="1">
+   <a href="#_程序控制">程序控制</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="offset.html">工作偏移</a></span>
+ <span class="next"><a href="reentry.html">重入</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

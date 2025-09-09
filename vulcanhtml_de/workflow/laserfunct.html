@@ -1,0 +1,453 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Lasertechnologie bearbeiten</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Willkommen bei Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Einführung</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">Bedienoberfläche</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Maschinenbedienung</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Bedienpult</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Produktions-Workflow</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="preparation.html">Vorbereitung</a></li>
+    <li><button class="tree blank"></button><a href="create.html">Anlegen</a></li>
+    <li><button class="tree blank"></button><a href="filemanager.html">Dateiverwaltung</a></li>
+    <li><button class="tree blank"></button><a href="programs.html">Programm wählen</a></li>
+    <li><button class="tree blank"></button><a href="edit.html">NC-Programm bearbeiten</a></li>
+    <li><button class="tree blank"></button><a class="active" href="laserfunct.html">Lasertechnologie bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="layout.html">Layout bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="simulation.html">Simulationslauf</a></li>
+    <li><button class="tree blank"></button><a href="offset.html">Arbeitsversatzmaße</a></li>
+    <li><button class="tree blank"></button><a href="run.html">Ausführen</a></li>
+    <li><button class="tree blank"></button><a href="reentry.html">Wiedereinstieg</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Lasertechnologietabellen (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminologie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Laserdatenelemente</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Mehrstufiges Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Schneiden</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Spezielle Prozesse</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Ändern von Laserdaten</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">LTT-Verwaltung</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Rampenzyklen</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Beschleunigungssteuerung (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Technologiefunktionen</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Tafel abdampfen</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine-Sensor</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Springen</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Schneidwerkzeuge</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Steuerelemente</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Schmierzyklus</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Schutzglasüberwachung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Schrottschnitt</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Tafelursprungspunkt anfahren</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Düsenzentrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Zielschuss</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Gasspülung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">Manueller Sollwert für Höhenregelung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">In Parkposition fahren</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">Düsenreinigung und Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Kantenerkennung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Fokuskamm</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Fokuslage</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Positionierung der Pilotdiode</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Produktionsplan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Aktivierung/Deaktivierung</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Änderung</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">Tafelanschlag</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">Maschineneinstellungen</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Quittierung des Materialstatus</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Fehlerbehebung</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Häufige Kollisionen</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Arbeitsversatz</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Extrem kleine Konturen</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Produktions-Workflow</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="laserfunct.html">Lasertechnologie bearbeiten</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Lasertechnologie bearbeiten</h1>
+<div class="sect1">
+<h2 id="_allgemeines">Allgemeines<a id="h000204"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Diese Option gibt dem Bediener die Möglichkeit, auf Probleme, die an der Maschine auftreten können, zu reagieren und sie zu lösen.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image19.png" alt="image19" width="960"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_laserseite">Laserseite<a id="h000205"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Der Bediener kann die Laserseite gemäß den Anforderungen in den Laserfunktionen auswählen.
+Im DIN-Textbefehl G253 kann sich auch manuell bearbeitet werden. Auf eine der beiden Arten vorgenommene Änderungen werden sowohl in DIN-Text- als auch in Laserfunktionen umgesetzt.</p>
+</div>
+<div id="h000206" class="ulist">
+<ul>
+<li>
+<p><strong>Material</strong>: Gibt die Art des Materials an.</p>
+</li>
+</ul>
+</div>
+<div id="h000207" class="ulist">
+<ul>
+<li>
+<p><strong>Dicke</strong>: Definiert die Dicke des Materials.</p>
+</li>
+</ul>
+</div>
+<div id="h000208" class="ulist">
+<ul>
+<li>
+<p><strong>Düsendurchmesser</strong>: Legt den Durchmesser der Düse fest, die zum Schneiden verwendet wird.</p>
+</li>
+</ul>
+</div>
+<div id="h000209" class="ulist">
+<ul>
+<li>
+<p><strong>Gasart</strong>: Bestimmt das Prozessgas, das beim Schneiden verwendet wird.</p>
+</li>
+</ul>
+</div>
+<div id="h000210" class="ulist">
+<ul>
+<li>
+<p><strong>Behandlung</strong>: Bezieht sich auf alle Vor- oder Nachbehandlungen, denen das Material unterzogen wird.</p>
+</li>
+</ul>
+</div>
+<div id="h000211" class="ulist">
+<ul>
+<li>
+<p><strong>Folie</strong>: Gibt an, ob die Materialoberfläche mit einer Schutzfolie versehen ist, was sich auf die Schneidparameter auswirken kann.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_einstechen">Einstechen<a id="h000212"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Der Bediener kann die seinen Präferenzen entsprechende Einstechart wählen.</p>
+</div>
+<div id="h000213" class="ulist">
+<ul>
+<li>
+<p><strong>Höhensteuerung:</strong> Sie steuert den Prozess der Abstandsregelung während des Einstechens. Im Allgemeinen wird nach dem Positionieren des Einstechabstands die Höhensteuerung abgeschaltet. Das verhindert das Jittern des Schneidkopfes durch Materialspritzer beim Einstechen und verbessert dadurch die Einstichqualität. Es ist möglich, die Höhensteuerung beim Dünnblecheinstich oder unter anderen besonderen Bedingungen eingeschaltet zu lassen, um die Prozesszeit zu verbessern.</p>
+</li>
+</ul>
+</div>
+<div id="h000214" class="ulist">
+<ul>
+<li>
+<p><strong>Strahl:</strong> Steuert das Ein- und Ausschalten des Strahls beim Umschalten von Einstich- auf Schnittparameter. Im Allgemeinen wird der Strahl nach Abschluss des Einstechens ausgeschaltet, und die Laserparameter werden auf Schneidwerte aktualisiert. Anschließend wird der Strahl wieder eingeschaltet und beginnt mit dem Schneiden.</p>
+</li>
+</ul>
+</div>
+<div id="h000215" class="ulist">
+<ul>
+<li>
+<p><strong>Abkühlzeit:</strong> Steuert den Parameter für das Ein/Aus während der Abkühlzeit beim Einstechen. Für das Ende jedes Schrittes/jeder Phase des Einstechens wird im Parameter eine Abkühlzeit definiert.
+Während dieser Zeit ist der Strahl ausgeschaltet, um das Material abzukühlen, und startet dann erneut. Dadurch wird eine Überhitzung des Materials beim Einstechen vermieden.</p>
+</li>
+</ul>
+</div>
+<div id="h000216" class="ulist">
+<ul>
+<li>
+<p><strong>Querblasen:</strong> Diese Option steuert das Ein- und Ausschalten des Magnetventils zum Querblasen für eine Dauer, die im Einstechparameter definiert ist. Zum Einstechen in dicke Materialien werden hohe Laserleistungen eingesetzt, und am Ende des Einstechens wird von den Seiten Hochdruckluft geblasen, um das Material zu kühlen, Spritzer zu entfernen usw., sodass das Schneiden nicht beeinträchtigt wird.</p>
+</li>
+</ul>
+</div>
+<div id="h000217" class="ulist">
+<ul>
+<li>
+<p><strong>Entgraten:</strong> Steuert den Aufruf des Unterprogramms Entgraten am Ende des Einstechens. Wenn das Einstechen abgeschlossen ist, hat sich bei bestimmten Materialien auf der Oberseite geschmolzene Lava wie ein Berg geformt. Um dieses geschmolzene Material zu beseitigen, wird ein Unterprogramm aufgerufen, das den Kopf mit hohem Druck über die Lava bewegt, um sie zu entfernen. Die Gasart und der Druck werden in den Maschinenparametern definiert.</p>
+</li>
+</ul>
+</div>
+<div id="h000218" class="ulist">
+<ul>
+<li>
+<p><strong>Frequenzhochlauf:</strong> Steuert den Frequenzhochlauf beim Einstechen. Wenn als Einstechmethode Einstechen mit Variieren von Leistung/Tastverhältnis/Spaltmaß (PM=22 bis 27),
+gewählt wurde, wird mit dem Aktivieren dieses Bits auch die Frequenz erhöht. Bei anderen Einstechmethoden ist es ungültig.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_schneiden">Schneiden<a id="h000219"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Der Bediener kann das seinen Präferenzen entsprechende Schneiden wählen (durch Ändern von Bearbeitung und Konturtyp).
+Ja nach Konturtyp wird die Zeichnung in der entsprechenden unten genannten Farbe wiedergegeben:</p>
+</div>
+<div class="paragraph">
+<p>Kleine Kontur = Orange<br>
+Mittlere Kontur = Rosa<br>
+Große Kontur = Grün<br>
+Markierung = Braun</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image20.jpeg" alt="Contour colour" width="350">
+</div>
+<div class="title">Figure 1. Konturschnitt</div>
+</div>
+<div id="h000220" class="ulist">
+<ul>
+<li>
+<p><strong>Zuführung:</strong> Steuert in der PLC das Ein- und Ausschalten der Zuführungsfunktion. Im NC-Programm wird die Zuführungslänge für jeden Schnitt der Kontur definiert und kann über <strong>Zuführungslänge anpassen</strong> in den Datenbankparametern justiert werden. Wenn diese Option aktiviert ist, verwendet sie die Startparameter einer bestimmten Kontur, und sobald der definierte Abstand erreicht ist, wird auf Konturparameter umgeschaltet.</p>
+</li>
+</ul>
+</div>
+<div id="h000221" class="ulist">
+<ul>
+<li>
+<p><strong>Pilotloch:</strong> Steuert den Aufruf Unterprogramms Pilotloch vor Beginn des eigentlichen Schnitts. Wenn diese Option aktiviert ist, werden die Pilotlochparameter verwendet, die in der Datenbank verfügbar sind. Sobald das Pilotloch abgeschlossen ist, werden die Parameter auf Konturwerte umgeschaltet.</p>
+</li>
+</ul>
+</div>
+<div id="h000222" class="ulist">
+<ul>
+<li>
+<p><strong>Flugregelung:</strong> Sie steuert die Maskierung der Ausgänge von PLC zur NC für den Flugprozess.</p>
+</li>
+</ul>
+</div>
+<div id="h000223" class="ulist">
+<ul>
+<li>
+<p><strong>Zuführung zurückverfolgen:</strong> Steuert die Rückverfolgungsfunktion des Zuführungsschnitts. Wenn das Zuführungs-Bit aktiv und der Zuführungsschnitt beendet ist, wird der Kopf mit abgeschaltetem Strahl, aber aktiver Höhenkontrolle wieder zur selben Zuführungsweglänge zurückgefahren. Wieder wird das Schneiden mit Konturparametern gestartet, wodurch die Zuführungslänge für eine bessere Schnittspaltbreite und besseres Entgraten durch zwei Parametersätze geschnitten wird.</p>
+</li>
+</ul>
+</div>
+<div id="h000224" class="ulist">
+<ul>
+<li>
+<p><strong>Restschnitt:</strong> Steuert den Restschnitt der Tafel an den Kanten. Wenn das Restschnitt-Bit aktiv ist, schaltet der Befehl M14 den Laserstrahl nicht ein, aber weitere Funktionen wie Höhenpositionierung, Gas ein etc. werden abgeschlossen.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_laserende">Laserende<a id="h000225"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Es basiert auf der Freifahrstrecke der Z-Achse zusammen mit dem Sprung, dem Einfrierabstand der Höhensteuerung, dem Endparameter usw. am Ende.</p>
+</div>
+<div id="h000226" class="ulist">
+<ul>
+<li>
+<p><strong>Z-Freifahren:</strong> Der Bediener kann den Freifahrabstand der Z-Achse am Schnittende festlegen.</p>
+</li>
+</ul>
+</div>
+<div id="h000227" class="ulist">
+<ul>
+<li>
+<p><strong>Sprung:</strong> Steuert das Ein- und Ausschalten der Sprungfunktion der Z-Achse. Im Allgemeinen wird nach Beendigung des Schneidens zuerst die Z-Achse zur Freifahrposition bewegt, und dann werden die X- und Y-Achse zum nächsten Arbeitspunkt gefahren. Wenn Springen aktiviert ist, beginnt sich die Z-Achse in die Freifahrposition zu bewegen, während sich gleichzeitig auch die X-Achse und die Y-Achse zu bewegen beginnen. Wenn die Z-Achse die Freifahrposition noch nicht erreicht hat, die X- und Y-Achse sich aber bereits an der Zielposition befinden, wird die Freifahrt der Z-Achse abgebrochen und die Abstandsposition aktiviert. Daher sind die Positionen der X-, Y- und Z-Achse für den nächsten Arbeitsgang bereit. Auf diese Weise wird die Prozesszeit verbessert.</p>
+</li>
+</ul>
+</div>
+<div id="h000228" class="ulist">
+<ul>
+<li>
+<p><strong>Einfrieren der Höhensteuerung:</strong> Steuert das Einfrieren der Höhensteuerung am Schnittende. Die Entfernung, vor der das Einfrieren aktiv sein soll, wird in den Datenbankparametern definiert. Wenn der Job während des Schneidens oder am Ende herunterfällt, kann das dazu führen, dass sich der Kopf nach unten bewegt. Um diese Situation zu vermeiden, wird die Kopfbewegung am Schnittende eingefroren.</p>
+</li>
+</ul>
+</div>
+<div id="h000229" class="ulist">
+<ul>
+<li>
+<p><strong>Endparameter:</strong> Steuert die Aktivierung/Deaktivierung der Verwendung der Endparameter am Schnittende. Die Entfernung, vor der die Endparameter aktiviert werden sollen, wird in den Datenbankparametern definiert. Am Schnittende kann on-the-fly zu verschiedenen Parametern gewechselt werden, um den Job angesichts des Auslaufens der Achsen besser abschließen zu können.</p>
+</li>
+</ul>
+</div>
+<div id="h000230" class="ulist">
+<ul>
+<li>
+<p><strong>Strahl:</strong> Schaltet den Strahl ein Stück vor Schnittende aus, um einen Microjoint zu ermöglichen.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_microjoint">Microjoint<a id="h000231"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kleiner ungeschnittener Abschnitt, damit Teile mit der Tafel verbunden bleiben und es nicht zu Bewegungen kommt.</p>
+</div>
+<div id="h000232" class="ulist">
+<ul>
+<li>
+<p><strong>Microjoint-Breite</strong>: Der Bediener kann durch Anwählen ähnliche Konturen wählen und einen Microjoint mit einem Wertebereich von 0 bis 3 ermöglichen. Der Standardwert ist +0,7 mm.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Kleiner ungeschnittener Abschnitt, damit Teile mit der Tafel verbunden bleiben und es nicht zu Bewegungen kommt.</p>
+</div>
+<div id="h000233" class="ulist">
+<ul>
+<li>
+<p><strong>Microjoint-Breite</strong>: Der Bediener kann durch Anwählen ähnliche Konturen wählen und einen Microjoint mit einem Wertebereich von 0 bis 3 ermöglichen. Der Standardwert ist +0,7 mm.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_allgemeines">Allgemeines</a>
+  </li>
+  <li level="1">
+   <a href="#_laserseite">Laserseite</a>
+  </li>
+  <li level="1">
+   <a href="#_einstechen">Einstechen</a>
+  </li>
+  <li level="1">
+   <a href="#_schneiden">Schneiden</a>
+  </li>
+  <li level="1">
+   <a href="#_laserende">Laserende</a>
+  </li>
+  <li level="1">
+   <a href="#_microjoint">Microjoint</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="edit.html">NC-Programm bearbeiten</a></span>
+ <span class="next"><a href="layout.html">Layout bearbeiten</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

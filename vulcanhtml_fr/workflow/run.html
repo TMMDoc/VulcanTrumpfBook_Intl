@@ -1,0 +1,390 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Exécuter</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Bienvenue dans Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">Interface utilisateur</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Flux de travail</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Utilisation de la machine</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Tableau de commande</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Flux de production</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="preparation.html">Préparation</a></li>
+    <li><button class="tree blank"></button><a href="create.html">Créer</a></li>
+    <li><button class="tree blank"></button><a href="filemanager.html">Gestion de fichiers</a></li>
+    <li><button class="tree blank"></button><a href="programs.html">Sélection du programme</a></li>
+    <li><button class="tree blank"></button><a href="edit.html">Modifier le programme CN</a></li>
+    <li><button class="tree blank"></button><a href="laserfunct.html">Editer la technologie laser</a></li>
+    <li><button class="tree blank"></button><a href="layout.html">Modifier le layout</a></li>
+    <li><button class="tree blank"></button><a href="simulation.html">Course de simulation</a></li>
+    <li><button class="tree blank"></button><a href="offset.html">Décalages de travail</a></li>
+    <li><button class="tree blank"></button><a class="active" href="run.html">Exécuter</a></li>
+    <li><button class="tree blank"></button><a href="reentry.html">Reprise</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Tableau technologique laser (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminologie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Éléments de paramètres laser</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Perçage</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Perçage en plusieurs étapes</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Découpe</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Processus spéciaux</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Modification des paramètres laser</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">Gestion de TTL</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Rampes de puissance</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Commande d'accélération (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Fonctions de technologie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Vaporiser la tôle</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojonctions</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">Capteur PierceLine</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Saut de grenouille</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Outils de coupe</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Commandes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Cycle de lubrification</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Surveillance du verre de protection</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Coupe de chutes</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Aller à l'origine de la tôle</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">Etalonnage du capteur de hauteur</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Centre de buse</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Tir cible</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Balayage au gaz</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">Commande de hauteur Valeur de consigne manuelle</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">Aller à la position parking</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">Nettoyage des buses et étalonnage du capteur de hauteur</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Détection des arêtes</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Peigne de focalisation</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Position focale</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Positionnement de diode pilote</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Plan de production</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Activation/Désactivation</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Modification</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">Arrêt sur la tôle</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">Réglages machine</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Validation du statut article</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Flux de travail</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Dépannage</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Collisions fréquentes</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Décalage de travail</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Petits contours extrêmes</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Flux de production</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="run.html">Exécuter</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Exécuter</h1>
+<div class="sect1">
+<h2 id="_sélecteur_de_programme">Sélecteur de programme<a id="h000244"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>En sélectionnant le programme et en appuyant sur la touche Exécuter, l&#8217;utilisateur accède à l&#8217;onglet d&#8217;exécution. Le nom du programme, la dimension, l&#8217;état NCR et les paramètres laser (détails des axes, vitesse, pression du gaz, puissance, type de gaz, hauteur de la buse, position focale, système de coordonnées de travail actuel, système de coordonnées d&#8217;outil, fonction M utilisée) sont indiqués en haut.</p>
+</div>
+<div id="h000245" class="ulist">
+<ul>
+<li>
+<p><strong>Démarrer :</strong> Démarre le programme.</p>
+</li>
+</ul>
+</div>
+<div id="h000246" class="ulist">
+<ul>
+<li>
+<p><strong>Pause :</strong> Met le programme en pause. Cette option n&#8217;est disponible que lorsque l&#8217;utilisateur démarre le programme.</p>
+</li>
+</ul>
+</div>
+<div id="h000247" class="ulist">
+<ul>
+<li>
+<p><strong>Continuer :</strong> Reprend le programme en pause.</p>
+</li>
+</ul>
+</div>
+<div id="h000248" class="ulist">
+<ul>
+<li>
+<p><strong>Arrêter ou Annuler :</strong> Arrête le programme.</p>
+</li>
+</ul>
+</div>
+<div id="h000249" class="ulist">
+<ul>
+<li>
+<p><strong>Modifier :</strong> Modifie le programme (accède à la page de modification du programme mentionnée précédemment).</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image51.jpeg" alt="Run page" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>Le programme LST/layout s&#8217;affiche comme suit :</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/mainlst.png" alt="mainLst"></span></p>
+</div>
+<div class="paragraph">
+<p>Le programme DIN s&#8217;affiche comme suit :</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/maindin.png" alt="mainDIN"></span></p>
+</div>
+<div class="paragraph">
+<p>La plupart des informations parlent d&#8217;elles-mêmes. Le paramètre sur le côté droit de l&#8217;écran affiche les informations suivantes :</p>
+</div>
+<div id="h000250" class="paragraph">
+<p><strong>S :</strong> Décalage de travail</p>
+</div>
+<div id="h000251" class="paragraph">
+<p><strong>T :</strong> Valeur de décalage de l&#8217;outil</p>
+</div>
+<div id="h000252" class="paragraph">
+<p><strong>M :</strong> Fonction M active</p>
+</div>
+<div class="paragraph">
+<p>Dans le cas où la programmation hors ligne génère un temps d&#8217;activation de programme, celui-ci s&#8217;affiche également à l&#8217;écran principal.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/main.png" alt="main" width="800"></span></p>
+</div>
+<div class="paragraph">
+<p>Temps d&#8217;exécution (temps d&#8217;exécution net).</p>
+</div>
+<div class="paragraph">
+<p>Estimation du temps (Reportez-vous aux données de la programmation hors ligne).</p>
+</div>
+<div class="paragraph">
+<p>Les informations de temps doivent être mises à jour pour le programme de signal actif actuel. Une fois qu&#8217;un programme démarre, le minutage commence, et il sera réinitialisé au démarrage d&#8217;un nouveau programme.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_asservissement_de_la_vitesse">Asservissement de la vitesse<a id="h000253"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>L&#8217;utilisateur peut utiliser les touches Asservissement + et Asservissement - pour influencer la vitesse des mouvements d&#8217;axe (en pourcentage).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image54.jpg" alt="Speed override window" width="200">
+</div>
+</div>
+<div id="h000254" class="ulist">
+<ul>
+<li>
+<p><strong>Asservissement + :</strong> Augmente le pourcentage d&#8217;asservissement pour l&#8217;axe ou la vitesse de trajectoire configuré/défini. Au-dessus de 10 %, la valeur est modifiée par incréments de 10 %, en dessous de 10 %, elle est modifiée par incréments de 1 %.</p>
+</li>
+</ul>
+</div>
+<div id="h000255" class="ulist">
+<ul>
+<li>
+<p><strong>Asservissement - :</strong> Réduit le pourcentage d&#8217;asservissement pour l&#8217;axe ou la vitesse de trajectoire configuré/défini. Au-dessus de 10 %, la valeur est modifiée par décréments de 10 %, en dessous de 10 %, elle est modifiée par décréments de 1 %. L&#8217;utilisateur peut également utiliser le curseur pour augmenter ou diminuer la vitesse.</p>
+</li>
+</ul>
+</div>
+<div id="h000256" class="paragraph">
+<p><strong>L&#8217;utilisateur peut naviguer entre différents onglets pendant le fonctionnement de la machine :</strong></p>
+</div>
+<div class="paragraph">
+<p>Il est possible pour l&#8217;utilisateur de sortir de la page <strong>Exécuter</strong> même lorsqu&#8217;une coupe est en cours. Ceci est nécessaire car, pendant qu&#8217;un programme est en cours d&#8217;exécution, l&#8217;opérateur peut vouloir se préparer avec le prochain ensemble de programmes (modifier le programme, modifier les paramètres laser, etc.) pour la production. De plus, lorsque l&#8217;utilisateur change d&#8217;onglet pendant que le programme est en cours d&#8217;exécution, un mini-lecteur est affiché pour pour connaître l&#8217;état actuel du programme en cours, sans repasser à l&#8217;onglet <strong>Exécuter</strong>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image55.jpeg" alt="Program running at the bottom" width="800">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_affichage">Affichage<a id="h000257"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>L&#8217;utilisateur peut activer ou désactiver l&#8217;affichage de la tôle, de la machine et de la traversée dans le dessin.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image56.jpeg" alt="Display window" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>Les messages statiques de l&#8217;API sont affichés dans le coin inférieur gauche de la page Exécuter.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_etat">Etat<a id="h000258"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>L&#8217;utilisateur peut vérifier les informations du programme et la version de machine (en lecture seule).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image57.jpeg" alt="Program information window" width="800">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_commandes_de_programme">Commandes de programme<a id="h000259"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>L&#8217;utilisateur peut contrôler le programme en choisissant l&#8217;option requise lorsque le programme est en état d&#8217;exécution. Les options choisies dans les commandes de programme seront affichées dans le coin inférieur gauche.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image58.jpeg" alt="program controls window" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>Toutes les options dans les commandes de programme seront affichées dans le programme DIN.</p>
+</div>
+<div class="paragraph">
+<p>Dans le programme LST/FXLYT, seules trois options sont affichées :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image59.png" alt="image59">
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_sélecteur_de_programme">Sélecteur de programme</a>
+  </li>
+  <li level="1">
+   <a href="#_asservissement_de_la_vitesse">Asservissement de la vitesse</a>
+  </li>
+  <li level="1">
+   <a href="#_affichage">Affichage</a>
+  </li>
+  <li level="1">
+   <a href="#_etat">Etat</a>
+  </li>
+  <li level="1">
+   <a href="#_commandes_de_programme">Commandes de programme</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="offset.html">Décalages de travail</a></span>
+ <span class="next"><a href="reentry.html">Reprise</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,557 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>控制面板</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">欢迎来到 Vulcan Control</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">介绍</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="home.html">用户界面</a></li>
+    <li><button class="tree blank"></button><a href="workflow.html">工作流程</a></li>
+    <li><button class="tree blank"></button><a href="jog.html">机床操作</a></li>
+    <li><button class="tree blank"></button><a class="active" href="controlpanel.html">控制面板</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../workflow/index.html">生产工作流程</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../workflow/preparation.html">准备</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/create.html">创建</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/filemanager.html">文件管理</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/programs.html">选择程序</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/edit.html">编辑NC代码</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/laserfunct.html">编辑激光工艺</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/layout.html">编辑布局</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/simulation.html">模拟运行</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/offset.html">工作偏移</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/run.html">运行</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/reentry.html">重入</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">激光工艺表（LTT）</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">术语</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">激光数据项目</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">穿刺</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">多级穿刺</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">切割</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">特殊流程</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">修改激光数据</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">LTT管理</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">斜坡循环</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">加速度控制（DCA）</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">工艺功能</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">蒸发板材</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">纳米连接</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine探针</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">蛙跳</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">切割工具</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">控制</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">润滑循环</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">玻璃保护片监控</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">废料切割</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">转到板材原点</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">高度探针校准</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">喷嘴中心</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">目标射击</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">冲刷气体</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">HC手动设定点</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">转到停机位置</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">喷嘴清洁和高度探针校准</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">边缘检测</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">焦点梳</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">焦距</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">引导二极管定位</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">生产计划</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">激活/停用</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">修改</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">停止在板材上</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">机床设置</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">材料状态确认</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">工作流程</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">故障排除</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">频繁碰撞</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">工作偏移</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">极小轮廓</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">版本说明</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">介绍</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="controlpanel.html">控制面板</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>控制面板</h1>
+<div class="paragraph">
+<p>控制面板是激光加工机床运行准备的必要组件。详情请参阅操作手册。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/import1.png" alt="import1" width="850"></span></p>
+</div>
+<div class="paragraph">
+<p>控制面板由以下控制开关组成：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>显示</p>
+</li>
+<li>
+<p>紧急停机</p>
+</li>
+<li>
+<p>激光测试模式</p>
+</li>
+<li>
+<p>驱动手握确认键</p>
+</li>
+<li>
+<p>激光启用</p>
+</li>
+<li>
+<p>门开关</p>
+</li>
+<li>
+<p>倍率</p>
+</li>
+<li>
+<p>USB端口</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 22.2222%;">
+<col style="width: 55.5556%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">名称</th>
+<th class="tableblock halign-left valign-top">控制元件</th>
+<th class="tableblock halign-left valign-top">要求</th>
+<th class="tableblock halign-left valign-top">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">紧急停机（按钮）</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w1.png" alt="w1"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="h000074" class="ulist">
+<ul>
+<li>
+<p>整个系统的电源断开（24 V控制电压保持不变）。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>所有轴运动停止。<br></p>
+</li>
+<li>
+<p>所有驱动都已电气关闭。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>加工中断：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>激光束被关闭。<br></p>
+</li>
+<li>
+<p>激光锁已关闭。<br></p>
+</li>
+<li>
+<p>切割气体的气体供应中断。<br></p>
+</li>
+<li>
+<p>激活的加工程序已中止，必要时需要重启。<br></p>
+</li>
+<li>
+<p>必须驶入机床的初始位置。<br></p>
+</li>
+<li>
+<p>轴的参考点被保留。<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>液压单元、紧凑型除尘器和长度方向
+和/或横移输送机分别关闭。</p>
+</li>
+<li>
+<p>所有气动运动都停止或转移到
+无危险状态。压缩空气供应不受影响。</p>
+</li>
+<li>
+<p>真空保留。</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">接通/关断机床</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w2.png" alt="w2"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">开启后，按钮闪烁。</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>开启机床：<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>当机床准备好运行时亮起。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>关闭机床：<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>机床关闭时熄灭。<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>以下因素也会触发机床关闭：<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>“紧急停机”按钮。<br></p>
+</li>
+<li>
+<p>触发“紧急停机”的错误</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激光测试</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w3.png" alt="w3"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>如果机床处于测试模式，则亮起。<br></p>
+</li>
+<li>
+<p>所选加工程序将在没有激光束被点燃的情况下运行。</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">激光开/关</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w4.png" alt="w4"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>启动激光器的自动开启循环：<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>在执行开启循环时闪烁。<br></p>
+</li>
+<li>
+<p>如果激光已准备好运行，则亮起。<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>启动激光的自动关闭循环：<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>在执行关闭循环时闪烁。<br></p>
+</li>
+<li>
+<p>机床关闭时熄灭。</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">门解锁</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w5.png" alt="w5"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">安全门已解锁，可以打开。</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">状态显示（安全光栅中断）</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w6.png" alt="w6"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">“紧急停机”未激活，“进给停止”未激活。</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="h000076" class="ulist">
+<ul>
+<li>
+<p>当屏蔽交换工作台的安全光栅被中断时闪烁。</p>
+</li>
+<li>
+<p>重新激活安全光栅：按下立式操作器上的“确认安全光栅”脚踏开关。然后按下控制面板上的“启动”按钮。继续暂停的交换工作台运动：按“启动”</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">进给速度</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w7.png" alt="w7"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="h000077" class="ulist">
+<ul>
+<li>
+<p>控制X和Y轴的移动速度在4到
+120%之间：<br></p>
+</li>
+<li>
+<p>在生产核心工作中，位移调节为4-100
+m/min。</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">导航键</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w8.png" alt="w8"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>沿()或(-)方向移动选定的NC轴。 +
+ ** 沿/-方向移动轴。<br>
+ *</strong> 加/减按钮可通过符号±增加/减少“手动功能”的值。<br></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">重置（停止）</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w9.png" alt="w9"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>删除活动故障消息。</p>
+</li>
+<li>
+<p>取消激活的程序。</p>
+</li>
+<li>
+<p>参考点被保留。</p>
+</li>
+<li>
+<p>原点位置可能会丢失。</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">进给停止（暂停）</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w10.png" alt="w10"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>如果触发“进给停止”，亮起。<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>所有轴运动停止。<br></p>
+</li>
+<li>
+<p>加工中断：<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>激光束被关闭。<br></p>
+</li>
+<li>
+<p>激光锁已关闭。<br></p>
+</li>
+<li>
+<p>切割气体的气体供应中断。<br></p>
+</li>
+<li>
+<p>激活的加工程序被暂停，可以通过确认继续执行。<br></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>液压单元、紧凑型除尘器和长度方向
+和/或横移输送机分别关闭。<br></p>
+</li>
+<li>
+<p>所有气动运动都停止或转移到
+无危险状态。压缩空气供应不受影响。<br></p>
+</li>
+<li>
+<p>真空保持，要确认任何“进给停止”，请按“确认进给停止”。</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">确认进给停止（进给启动）</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w11.png" alt="w11"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">不存在错误，已确认安全光栅。</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="h000079" class="ulist">
+<ul>
+<li>
+<p>如果存在错误或已触发“进给停止”，则闪烁</p>
+</li>
+<li>
+<p>例如，通过中断安全光栅，
+确认激活的错误，
+确认“进给停止”。</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">启动（程序启动）</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w12.png" alt="w12"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">不存在错误，机床已准备好操作。</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="h000081" class="ulist">
+<ul>
+<li>
+<p>“启动”按钮具有以下功能，具体取决于
+已选择的核心工作：<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>如果选择了设置核心工作：机床移动到
+初始位置，而不启动执行订单列表或
+所选的加工程序。<br></p>
+</li>
+<li>
+<p>在所有其他核心工作中：机床移动到初始位置并启动执行订单列表。<br></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jog.html">机床操作</a></span>
+ <span class="next"><a href="../workflow/index.html">生产工作流程</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

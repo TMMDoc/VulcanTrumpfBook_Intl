@@ -1,0 +1,559 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Panel de control</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Bienvenido a Vulcan Control</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Introducción</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="home.html">Interfaz de usuario</a></li>
+    <li><button class="tree blank"></button><a href="workflow.html">Flujo de trabajo</a></li>
+    <li><button class="tree blank"></button><a href="jog.html">Funcionamiento de la máquina</a></li>
+    <li><button class="tree blank"></button><a class="active" href="controlpanel.html">Panel de control</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../workflow/index.html">Flujo de trabajo de producción</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../workflow/preparation.html">Preparación</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/create.html">Crear</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/filemanager.html">Gestión de archivos</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/programs.html">Seleccionar programa</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/edit.html">Editar código CN</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/laserfunct.html">Editar tecnología láser</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/layout.html">Editar diseño</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/simulation.html">Ejecución de la simulación</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/offset.html">Offsets de trabajo</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/run.html">Ejecutar</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/reentry.html">Reentrada</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Tablas de tecnología láser (TTL)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminología</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Elementos de datos láser</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Penetración</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Penetración multietapa</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Corte</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Procesos especiales</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Modificación de los datos del láser</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">Gestión de TTL</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Ciclos de rampa</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Control de aceleración (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Funciones tecnológicas</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Evaporar chapa</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">Sensor PierceLine</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Frog Jumping</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Útiles de corte</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Controles</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Ciclo de lubricación</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Control del cristal de protección</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Corte de desperdicios</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Ir al origen de la chapa</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">Calibración del sensor de altura</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Centro de boquilla</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Disparo al objetivo</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Purga con gas</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">Punto de ajuste manual HC</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">Ir a la posición de aparcamiento</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">Calibración del sensor de altura y limpieza de boquilla</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Detección de bordes</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Peine de foco</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Posición focal</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Posicionamiento del diodo piloto</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Plan de producción</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Activación/Desactivación</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Modificación</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">StopOnSheet</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">Ajustes de máquina</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Confirmación del estado del material</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Flujo de trabajo</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Solución de problemas</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Colisiones frecuentes</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Offset de trabajo</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Contornos pequeños extremos</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Aviso legal</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Introducción</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="controlpanel.html">Panel de control</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Panel de control</h1>
+<div class="paragraph">
+<p>El panel de control es un componente esencial para preparar la máquina láser para funcionamiento. Consulte el manual de operaciones para obtener más detalles.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/import1.png" alt="import1" width="850"></span></p>
+</div>
+<div class="paragraph">
+<p>El panel de control consta de los siguientes interruptores de control:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Visualización</p>
+</li>
+<li>
+<p>Parada de emergencia</p>
+</li>
+<li>
+<p>Modo de prueba láser</p>
+</li>
+<li>
+<p>Tecla de desbloqueo del accionamiento</p>
+</li>
+<li>
+<p>Liberación del láser</p>
+</li>
+<li>
+<p>Interruptor de puerta</p>
+</li>
+<li>
+<p>Override</p>
+</li>
+<li>
+<p>Puerto USB</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 22.2222%;">
+<col style="width: 55.5556%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Nombre</th>
+<th class="tableblock halign-left valign-top">Elemento de manejo</th>
+<th class="tableblock halign-left valign-top">Requisitos</th>
+<th class="tableblock halign-left valign-top">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PARADA DE EMERGENCIA (pulsador)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w1.png" alt="w1"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="h000074" class="ulist">
+<ul>
+<li>
+<p>El suministro de tensión de todo el sistema está desconectado (se mantiene la tensión de mando de 24 V).</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Todos los movimientos del eje se detienen.<br></p>
+</li>
+<li>
+<p>Todos los accionamientos se desconectan eléctricamente.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>El procesamiento se interrumpe:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>El rayo láser se apaga.<br></p>
+</li>
+<li>
+<p>El bloqueo del rayo se cierra.<br></p>
+</li>
+<li>
+<p>El suministro de gas de corte se interrumpe.<br></p>
+</li>
+<li>
+<p>Un programa de procesamiento activo se cancela y debe ser reiniciado, si es necesario.<br></p>
+</li>
+<li>
+<p>Hay que realizar una aproximación a la posición inicial de la máquina.<br></p>
+</li>
+<li>
+<p>Se conservan los puntos de referencia de los ejes.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>La unidad hidráulica, el extractor de polvo compacto y los transportadores longitudinal y/o transversal, respectivamente, están desconectados.</p>
+</li>
+<li>
+<p>Todos los movimientos neumáticos se detienen o se transfieren a un estado libre de peligro. El suministro de aire comprimido no se ve afectado.</p>
+</li>
+<li>
+<p>El vacío permanece.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Encendido/apagado de la máquina</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w2.png" alt="w2"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Encendido, el botón parpadea.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Enciende la máquina:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Se ilumina cuando la máquina está lista para funcionar.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Apaga la máquina:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Se apaga cuando la máquina se desconecta.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>El apagado de la máquina también produce por medio de:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pulsador de "parada de emergencia".<br></p>
+</li>
+<li>
+<p>Errores que activan una "parada de emergencia"</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prueba láser</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w3.png" alt="w3"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Se ilumina si la máquina está en modo de prueba.<br></p>
+</li>
+<li>
+<p>El programa de procesamiento seleccionado se ejecutará sin que el rayo láser se encienda.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Láser encendido/apagado</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w4.png" alt="w4"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Inicia el ciclo de encendido automático del láser:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Parpadea mientras se está llevando a cabo el ciclo de encendido.<br></p>
+</li>
+<li>
+<p>Se ilumina si el láser está listo para funcionar.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Inicia el ciclo de apagado automático del láser:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Parpadea mientras se está llevando a cabo el ciclo de apagado.<br></p>
+</li>
+<li>
+<p>Se apaga cuando la máquina se desconecta.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Desbloqueo de la puerta</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w5.png" alt="w5"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">La puerta de seguridad está desbloqueada y se puede abrir.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicación de estado (barrera óptica de seguridad interrumpida)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w6.png" alt="w6"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"PARADA DE EMERGENCIA" no está activa, no hay "retención de alimentación" activa.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="h000076" class="ulist">
+<ul>
+<li>
+<p>Parpadea cuando la barrera óptica de seguridad que protege el
+cambiador de bandejas se interrumpe.</p>
+</li>
+<li>
+<p>Reactivar la barrera óptica de seguridad: pulse "Reconocer la barrera óptica de seguridad" pulsador de pedal en el poste de arranque. A continuación, pulse el botón "Inicio" en el panel de control. Continuar los movimientos pausados del cambiador de bandejas: pulse "Inicio"</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Velocidad de avance</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w7.png" alt="w7"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="h000077" class="ulist">
+<ul>
+<li>
+<p>Controla la velocidad de desplazamiento de los ejes X e Y entre 4 y 120%:<br></p>
+</li>
+<li>
+<p>En la actividad principal de producción, la regulación de avance es 4-100 m/min.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Teclas de navegación</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w8.png" alt="w8"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Mueve los ejes CN seleccionados en la dirección (+) o (-).<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Mueve los ejes en la dirección +/-.<br></p>
+</li>
+<li>
+<p>Los botones más/menos aumentan/reducen el valor de "Funciones manuales" con el símbolo ±.<br></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reset (parada)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w9.png" alt="w9"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Elimina los avisos de incidencia activos.</p>
+</li>
+<li>
+<p>Cancela un programa activo.</p>
+</li>
+<li>
+<p>Se mantienen los puntos de referencia.</p>
+</li>
+<li>
+<p>La posición inicial podría perderse.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parada de avance (pausa)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w10.png" alt="w10"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Se ilumina si se activa la "PARADA DE AVANCE".<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Todos los movimientos del eje se detienen.<br></p>
+</li>
+<li>
+<p>El procesamiento se interrumpe:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>El rayo láser se apaga.<br></p>
+</li>
+<li>
+<p>El bloqueo del rayo se cierra.<br></p>
+</li>
+<li>
+<p>El suministro de gas de corte se interrumpe.<br></p>
+</li>
+<li>
+<p>Un programa de procesamiento activo está en pausa y se puede ejecutar sucesivamente mediante confirmación.<br></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>La unidad hidráulica, el extractor de polvo compacto y los transportadores longitudinal y/o transversal, respectivamente, están desconectados.<br></p>
+</li>
+<li>
+<p>Todos los movimientos neumáticos se detienen o se transfieren a un estado libre de peligro. El suministro de aire comprimido no se ve afectado.<br></p>
+</li>
+<li>
+<p>El vacío se mantiene. Para confirmar cualquier "parada de avance", pulse "Confirmar parada de avance".</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Confirmación de parada de avance (inicio de avance)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w11.png" alt="w11"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No hay errores presentes. Se confirma la barrera óptica de seguridad.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="h000079" class="ulist">
+<ul>
+<li>
+<p>Parpadea si hay un error o se ha activado una "PARADA DE AVANCE"</p>
+</li>
+<li>
+<p>Por ejemplo, al interrumpir la barrera óptica de seguridad, confirma el error activo, Confirmar "PARADA DE AVANCE".</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inicio (inicio del programa)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w12.png" alt="w12"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No hay errores, la máquina está lista para funcionar.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="h000081" class="ulist">
+<ul>
+<li>
+<p>El botón “Inicio” tiene las siguientes funciones dependiendo de la actividad principal seleccionada:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Si se selecciona la actividad principal de configuración: la máquina se mueve a la posición inicial sin comenzar a ejecutar la lista de órdenes o el programa de procesamiento seleccionado.<br></p>
+</li>
+<li>
+<p>En todas las demás actividades principales: la máquina se traslada a la posición inicial y comienza a ejecutar la lista de órdenes.<br></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jog.html">Funcionamiento de la máquina</a></span>
+ <span class="next"><a href="../workflow/index.html">Flujo de trabajo de producción</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

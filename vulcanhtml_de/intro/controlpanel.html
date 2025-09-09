@@ -1,0 +1,560 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Bedienpult</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Willkommen bei Vulcan Control</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Einführung</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="home.html">Bedienoberfläche</a></li>
+    <li><button class="tree blank"></button><a href="workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="jog.html">Maschinenbedienung</a></li>
+    <li><button class="tree blank"></button><a class="active" href="controlpanel.html">Bedienpult</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../workflow/index.html">Produktions-Workflow</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../workflow/preparation.html">Vorbereitung</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/create.html">Anlegen</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/filemanager.html">Dateiverwaltung</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/programs.html">Programm wählen</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/edit.html">NC-Programm bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/laserfunct.html">Lasertechnologie bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/layout.html">Layout bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/simulation.html">Simulationslauf</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/offset.html">Arbeitsversatzmaße</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/run.html">Ausführen</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/reentry.html">Wiedereinstieg</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Lasertechnologietabellen (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminologie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Laserdatenelemente</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Mehrstufiges Einstechen</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Schneiden</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Spezielle Prozesse</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Ändern von Laserdaten</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">LTT-Verwaltung</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Rampenzyklen</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Beschleunigungssteuerung (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Technologiefunktionen</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Tafel abdampfen</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojoints</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine-Sensor</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Springen</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Schneidwerkzeuge</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Steuerelemente</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Schmierzyklus</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Schutzglasüberwachung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Schrottschnitt</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Tafelursprungspunkt anfahren</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Düsenzentrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Zielschuss</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Gasspülung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">Manueller Sollwert für Höhenregelung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">In Parkposition fahren</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">Düsenreinigung und Höhensensor-Kalibrierung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Kantenerkennung</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Fokuskamm</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Fokuslage</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Positionierung der Pilotdiode</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Produktionsplan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Aktivierung/Deaktivierung</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Änderung</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">Tafelanschlag</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">Maschineneinstellungen</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Quittierung des Materialstatus</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Fehlerbehebung</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Häufige Kollisionen</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Arbeitsversatz</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Extrem kleine Konturen</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Einführung</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="controlpanel.html">Bedienpult</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Bedienpult</h1>
+<div class="paragraph">
+<p>Das Bedienpult ist ein wesentlicher Bestandteil der Vorbereitung der Lasermaschine auf den Betrieb. Weitere Einzelheiten finden Sie in der Bedienungsanleitung der Maschine.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/import1.png" alt="import1" width="850"></span></p>
+</div>
+<div class="paragraph">
+<p>Das Bedienpult umfasst die folgenden Steuerschalter:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Anzeige</p>
+</li>
+<li>
+<p>Not-Halt</p>
+</li>
+<li>
+<p>Lasertestbetrieb</p>
+</li>
+<li>
+<p>Antriebsfreigabetaste</p>
+</li>
+<li>
+<p>Laserfreigabe</p>
+</li>
+<li>
+<p>Türschalter</p>
+</li>
+<li>
+<p>Override</p>
+</li>
+<li>
+<p>USB-Anschluss</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 22.2222%;">
+<col style="width: 55.5556%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Benennung</th>
+<th class="tableblock halign-left valign-top">Bedienelement</th>
+<th class="tableblock halign-left valign-top">Voraussetzungen</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not-Halt (Schlagtaster)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w1.png" alt="w1"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="h000074" class="ulist">
+<ul>
+<li>
+<p>Die Stromversorgung der kompletten Anlage wird unterbrochen (die 24 V Steuerspannung bleibt erhalten).</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Alle Achsbewegungen stoppen.<br></p>
+</li>
+<li>
+<p>Alle Antriebe werden elektrisch abgeschaltet.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Die Bearbeitung wird unterbrochen:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Der Laserstrahl wird abgeschaltet.<br></p>
+</li>
+<li>
+<p>Die Strahlsperre wird geschlossen.<br></p>
+</li>
+<li>
+<p>Die Schneidgasversorgung wird unterbrochen.<br></p>
+</li>
+<li>
+<p>Ein aktives Bearbeitungsprogramm wird abgebrochen und muss bei Bedarf neu gestartet werden.<br></p>
+</li>
+<li>
+<p>Die Grundstellung der Maschine muss angefahren werden.<br></p>
+</li>
+<li>
+<p>Die Referenzpunkte der Achsen bleiben erhalten.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Das Hydraulikaggregat, der Kompaktentstauber und der Längs- und/oder Querförderer werden abgeschaltet.</p>
+</li>
+<li>
+<p>Alle pneumatischen Bewegungen werden gestoppt bzw. in einen gefahrlosen Zustand überführt. Die Druckluftzufuhr bleibt erhalten.</p>
+</li>
+<li>
+<p>Ein anliegendes Vakuum bleibt erhalten.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maschine Ein/Aus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w2.png" alt="w2"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beim Einschalten blinkt die Taste.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Schaltet die Maschine ein:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Leuchtet auf, wenn die Maschine betriebsbereit ist.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Schaltet die Maschine aus:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Erlischt, wenn die Maschine ausgeschalteten wird.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Maschine aus wird außerdem getriggert durch:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Not-Halt-Schlagtaster.<br></p>
+</li>
+<li>
+<p>Fehler, die einen „Not-Halt“ triggern</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lasertest</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w3.png" alt="w3"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Leuchtet, wenn sich die Maschine im Testbetrieb befindet.<br></p>
+</li>
+<li>
+<p>Das angewählte Bearbeitungsprogramm wird ausgeführt, ohne dass der Laserstrahl gezündet wird.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser Ein/Aus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w4.png" alt="w4"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Startet den automatischen Einschaltzyklus des Lasers:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Blinkt, während der Einschaltzyklus ausgeführt wird.<br></p>
+</li>
+<li>
+<p>Leuchtet, wenn der Laser betriebsbereit ist.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Startet den automatischen Ausschaltzyklus des Lasers:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Blinkt, während der Ausschaltzyklus ausgeführt wird.<br></p>
+</li>
+<li>
+<p>Erlischt, wenn die Maschine ausgeschalteten wird.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Türentriegelung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w5.png" alt="w5"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die Schutztür ist entriegelt und kann geöffnet werden.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Statusanzeige (Sicherheitslichtschranke unterbrochen)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w6.png" alt="w6"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">„Not-Halt“ ist nicht aktiv, kein „Vorschub-Halt“ ist aktiv.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="h000076" class="ulist">
+<ul>
+<li>
+<p>Blinkt, wenn die Sicherheitslichtschranke, die den Palettenwechsler abschirmt, unterbrochen wird.</p>
+</li>
+<li>
+<p>Sicherheitslichtschranke reaktivieren: Drücken Sie den Fußtaster „Sicherheitslichtschranke quittieren“ am Startpfosten. Drücken Sie dann die Taste „Start“ auf dem Bedienpult. Angehaltene Bewegungen des Palettenwechslers fortsetzen: Drücken Sie „Start“</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vorschubgeschwindigkeit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w7.png" alt="w7"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="h000077" class="ulist">
+<ul>
+<li>
+<p>Steuert die Verfahrgeschwindigkeit der X-Achse und der Y-Achse zwischen 4 und
+120 %:<br></p>
+</li>
+<li>
+<p>In der Kerntätigkeit Produktion liegt die Verfahrregelung im Bereich 4-100 m/min.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Navigationstasten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w8.png" alt="w8"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Verfährt die angewählte NC-Achse in (+)- oder (-)-Richtung.<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Verfährt die Achsen in +/- Richtung.<br></p>
+</li>
+<li>
+<p>Die Plus-/Minustaster erhöhen/vermindern den Wert bei „Manuellen Funktionen“ mit dem Symbol ±.<br></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reset (Stopp)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w9.png" alt="w9"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Löscht aktive Störungsmeldungen.</p>
+</li>
+<li>
+<p>Bricht ein aktives Programm ab.</p>
+</li>
+<li>
+<p>Die Referenzpunkte bleiben erhalten.</p>
+</li>
+<li>
+<p>Die Grundstellung kann verloren gehen.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vorschub-Halt (Pause)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w10.png" alt="w10"></span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Leuchtet, wenn „Vorschub-Halt“ getriggert wird.<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Alle Achsbewegungen stoppen.<br></p>
+</li>
+<li>
+<p>Die Bearbeitung wird unterbrochen:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Der Laserstrahl wird abgeschaltet.<br></p>
+</li>
+<li>
+<p>Die Strahlsperre wird geschlossen.<br></p>
+</li>
+<li>
+<p>Die Schneidgasversorgung wird unterbrochen.<br></p>
+</li>
+<li>
+<p>Ein aktives Bearbeitungsprogramm wird pausiert und kann durch Quittieren weiter ausgeführt werden.<br></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Das Hydraulikaggregat, der Kompaktentstauber und der Längs- und/oder Querförderer werden abgeschaltet.<br></p>
+</li>
+<li>
+<p>Alle pneumatischen Bewegungen werden gestoppt bzw. in einen gefahrlosen Zustand überführt. Die Druckluftzufuhr bleibt erhalten.<br></p>
+</li>
+<li>
+<p>Ein anliegendes Vakuum bleibt erhalten. Um einen „Vorschubhalt“ zu quittieren, drücken Sie „Vorschubhalt quittieren“.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vorschub-Halt quittieren (Vorschub-Start)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w11.png" alt="w11"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keine Fehler vorhanden, die Sicherheitslichtschranke wird quittiert.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="h000079" class="ulist">
+<ul>
+<li>
+<p>Blinkt, wenn ein Fehler ansteht oder ein Vorschub-Halt getriggert wurde.</p>
+</li>
+<li>
+<p>Zum Beispiel durch Unterbrechen der Sicherheitslichtschranke.
+Quittiert einen aktiven Fehler, quittiert einen „Vorschub-Halt“.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Start (Programmstart)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/w12.png" alt="w12"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keine Fehler vorhanden, die Maschine ist betriebsbereit.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="h000081" class="ulist">
+<ul>
+<li>
+<p>Die Start-Taste hat je nach ausgewählter Kerntätigkeit die folgenden Funktionen:<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Wenn die Kerntätigkeit Einrichten ausgewählt ist: Die Maschine fährt in Grundstellung, ohne mit der Ausführung der Auftragsliste oder des ausgewählten Bearbeitungsprogramms zu beginnen.<br></p>
+</li>
+<li>
+<p>Bei allen anderen Kerntätigkeiten: Die Maschine fährt in Grundstellung und beginnt mit der Ausführung der Auftragsliste.<br></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jog.html">Maschinenbedienung</a></span>
+ <span class="next"><a href="../workflow/index.html">Produktions-Workflow</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

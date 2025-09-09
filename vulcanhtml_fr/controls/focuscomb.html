@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Peigne de focalisation</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Bienvenue dans Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Introduction</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">Interface utilisateur</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Flux de travail</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Utilisation de la machine</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Tableau de commande</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../workflow/index.html">Flux de production</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../workflow/preparation.html">Préparation</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/create.html">Créer</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/filemanager.html">Gestion de fichiers</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/programs.html">Sélection du programme</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/edit.html">Modifier le programme CN</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/laserfunct.html">Editer la technologie laser</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/layout.html">Modifier le layout</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/simulation.html">Course de simulation</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/offset.html">Décalages de travail</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/run.html">Exécuter</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/reentry.html">Reprise</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Tableau technologique laser (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminologie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Éléments de paramètres laser</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Perçage</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Perçage en plusieurs étapes</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Découpe</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Processus spéciaux</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Modification des paramètres laser</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">Gestion de TTL</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Rampes de puissance</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Commande d'accélération (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Fonctions de technologie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Vaporiser la tôle</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanojonctions</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">Capteur PierceLine</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Saut de grenouille</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Outils de coupe</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Commandes</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="lubricationcycle.html">Cycle de lubrification</a></li>
+    <li><button class="tree blank"></button><a href="protective.html">Surveillance du verre de protection</a></li>
+    <li><button class="tree blank"></button><a href="scrapcut.html">Coupe de chutes</a></li>
+    <li><button class="tree blank"></button><a href="sheetorigin.html">Aller à l'origine de la tôle</a></li>
+    <li><button class="tree blank"></button><a href="heightsensorcal.html">Etalonnage du capteur de hauteur</a></li>
+    <li><button class="tree blank"></button><a href="nozzlecentre.html">Centre de buse</a></li>
+    <li><button class="tree blank"></button><a href="targetshot.html">Tir cible</a></li>
+    <li><button class="tree blank"></button><a href="gaspurge.html">Balayage au gaz</a></li>
+    <li><button class="tree blank"></button><a href="hcmanualset.html">Commande de hauteur Valeur de consigne manuelle</a></li>
+    <li><button class="tree blank"></button><a href="parkposition.html">Aller à la position parking</a></li>
+    <li><button class="tree blank"></button><a href="nozzleclean.html">Nettoyage des buses et étalonnage du capteur de hauteur</a></li>
+    <li><button class="tree blank"></button><a href="edgedetection.html">Détection des arêtes</a></li>
+    <li><button class="tree blank"></button><a class="active" href="focuscomb.html">Peigne de focalisation</a></li>
+    <li><button class="tree blank"></button><a href="focaldistance.html">Position focale</a></li>
+    <li><button class="tree blank"></button><a href="pilotdiodepos.html">Positionnement de diode pilote</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Plan de production</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Activation/Désactivation</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Modification</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">Arrêt sur la tôle</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">Réglages machine</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Validation du statut article</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Flux de travail</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Dépannage</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Collisions fréquentes</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Décalage de travail</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Petits contours extrêmes</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Commandes</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="focuscomb.html">Peigne de focalisation</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Peigne de focalisation</h1>
+<div class="paragraph">
+<p>Afin de calibrer la position focale exactement en direction de la surface de la tôle, le peigne de focalisation est utilisé. Le peigne de focalisation est un programme qui fait varier la hauteur de point focal et ajuste le décalage causé par la tolérance des composants optiques. En activant ce programme, l&#8217;utilisateur peut vérifier la variation de la position focale en sélectionnant le tableau de technologie requis en fonction de l&#8217;utilisation de la tôle avec décalage de travail capturé. Le point focal minimum et maximum, le numéro de série, le diamètre focal et la valeur du déplacement peuvent être définis en fonction des exigences de l&#8217;utilisateur.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/focalcomb.png" alt="FocalComb" width="600">
+</div>
+</div>
+<div id="h000017" class="ulist">
+<ul>
+<li>
+<p>Le point focal minimum et maximum pour des diamètres de 150 um et 210 um est, respectivement, de -3 à +3.</p>
+</li>
+</ul>
+</div>
+<div id="h000018" class="ulist">
+<ul>
+<li>
+<p>La valeur de Décalage focal1 sert à déterminer la position focale.
+L&#8217;utilisateur peut ajuster la valeur en fonction de la progression, qui peut être vérifiée dans la jauge d&#8217;épaisseur.</p>
+</li>
+</ul>
+</div>
+<div id="h000019" class="ulist">
+<ul>
+<li>
+<p>Déterminer la plus petite fente de coupe « K » (= position focale) dans le peigne de focalisation.</p>
+</li>
+</ul>
+</div>
+<div id="h000020" class="ulist">
+<ul>
+<li>
+<p>Avec la jauge d&#8217;épaisseur appropriée (par exemple : 0,25 mm), en commençant par la gauche et la droite, respectivement, vérifier chaque fente de coupe individuelle.</p>
+</li>
+<li>
+<p>Marquer la fente de coupe à l&#8217;endroit où la jauge d&#8217;épaisseur colle des deux côtés, gauche et droit.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/focusshift.png" alt="FocusShift" width="300">
+</div>
+</div>
+<div id="h000022" class="ulist">
+<ul>
+<li>
+<p>Calculer le décalage focal et le saisir sous <strong>Décalage focal1</strong>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Exemple :</div>
+<p>Ancien décalage de point focal A en mm, plus petite fente de coupe K en mm.</p>
+</div>
+<div class="paragraph">
+<p>Décalage focal = A + K.</p>
+</div>
+<div id="h000023" class="ulist">
+<ul>
+<li>
+<p>L&#8217;utilisateur peut également surveiller le diamètre focal pendant le temps d&#8217;exécution du programme.</p>
+</li>
+</ul>
+</div>
+<div id="h000024" class="ulist">
+<ul>
+<li>
+<p>Le message de confirmation ci-dessous apparaît pour lancer le processus de coupe du peigne de focalisation ainsi que les saisies des données à graver</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/focusengrave.png" alt="FocusEngrave" width="300">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/engraveoutput.png" alt="EngraveOutput" width="500">
+</div>
+<div class="title">Figure 1. Échantillon de sortie</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Reportez-vous au manuel d&#8217;utilisation de la machine pour plus de détails.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="edgedetection.html">Détection des arêtes</a></span>
+ <span class="next"><a href="focaldistance.html">Position focale</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

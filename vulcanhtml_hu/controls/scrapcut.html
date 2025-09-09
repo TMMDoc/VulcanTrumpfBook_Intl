@@ -1,0 +1,270 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Hulladékvágás</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Üdvözöljük itt: Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Bevezetés</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">Kezelőfelület</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Munkafolyamat</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Gépüzemeltetés</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Kezelőpult</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../workflow/index.html">Gyártási munkafolyamat</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../workflow/preparation.html">Előkészületek</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/create.html">Létrehozás</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/filemanager.html">Fájlkezelés</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/programs.html">Program kiválasztása</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/edit.html">NC program szerkesztése</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/laserfunct.html">Lézertechnológia szerkesztése</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/layout.html">Elrendezés szerkesztése</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/simulation.html">Szimuláció futtatása</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/offset.html">Munka eltolások</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/run.html">Futtatás</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/reentry.html">Újbóli belépés</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Lézer-technológiatáblázatok(LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminológia</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Lézeradatelemek</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Beszúrás</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Többfokozatú beszúrás</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Vágás</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Speciális folyamatok</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Lézeradatok módosítása</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">Vágási táblázatok kezelése</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Rámpaciklusok</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">Flyline</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Gyorsulásszabályozás (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Technológiai funkciók</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Lemez gőzölése</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanoillesztések</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">PierceLine érzékelő</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Gyors átugrás</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Vágószerszámok</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Vezérlések</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="lubricationcycle.html">Kenési ciklus</a></li>
+    <li><button class="tree blank"></button><a href="protective.html">Védőüveg-felügyelet</a></li>
+    <li><button class="tree blank"></button><a class="active" href="scrapcut.html">Hulladékvágás</a></li>
+    <li><button class="tree blank"></button><a href="sheetorigin.html">Ugrás a lemez origójához</a></li>
+    <li><button class="tree blank"></button><a href="heightsensorcal.html">A magasságérzékelő kalibrálása</a></li>
+    <li><button class="tree blank"></button><a href="nozzlecentre.html">Fúvóka középpont</a></li>
+    <li><button class="tree blank"></button><a href="targetshot.html">Célra irányított lézerimpulzus</a></li>
+    <li><button class="tree blank"></button><a href="gaspurge.html">Gázöblítés</a></li>
+    <li><button class="tree blank"></button><a href="hcmanualset.html">HC Kézi beállítási pont</a></li>
+    <li><button class="tree blank"></button><a href="parkposition.html">Ugrás parkolóhelyzetbe</a></li>
+    <li><button class="tree blank"></button><a href="nozzleclean.html">A fúvóka tisztítása és magasságérzékelő kalibrálása</a></li>
+    <li><button class="tree blank"></button><a href="edgedetection.html">Élfelismerés</a></li>
+    <li><button class="tree blank"></button><a href="focuscomb.html">Fókuszfésű</a></li>
+    <li><button class="tree blank"></button><a href="focaldistance.html">Fókusztávolság</a></li>
+    <li><button class="tree blank"></button><a href="pilotdiodepos.html">Vezérlődióda pozícionálás</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Gyártási terv</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Aktiválás/deaktiválás</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Módosítás</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">Stop a lemezen (StopOnSheet)</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">A gép beállításai</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Anyagállapot nyugtázása</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Munkafolyamat</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Hibakezelés</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Gyakori ütközések</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Munkaeltolás</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Extrém kis kontúrok</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impresszum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Vezérlések</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="scrapcut.html">Hulladékvágás</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Hulladékvágás</h1>
+<div class="paragraph">
+<p>A hulladékvágás funkció a lemeztábla fennmaradó, fel nem használt részének kézi vágására szolgál. Ez a funkció hasznos vékonylemez maradékanyagának vágásához, hogy a téglalap alakú lemezt könnyebben lehessen kezelni.</p>
+</div>
+<div class="paragraph">
+<p>Ha aktiválták ezt a programot, akkor a felhasználónak meg kell adnia a vágási hosszat az X- vagy az Y-tengely mentén. A gép a vágófej aktuális pozíciójától kezdi a vágást és a kiválasztott tengely mentén halad a megadott hosszig.</p>
+</div>
+<div class="paragraph">
+<p>Ezenkívül a felhasználó kiválaszthatja a megfelelő technológiatáblázatot, valamint a művelethez használni kívánt eltolási üzemmódot.</p>
+</div>
+<div class="paragraph">
+<p>A Magasság befagyasztási távolság határozza meg, hogy a magasságszabályozás mikor hagyja abba a beállítást. 1-10 mm közötti értéket kell beállítani, amely azt jelzi, hogy a magasságszabályozás előre mennyivel fogja abbahagyni a beállítást. Célszerű ezt a 10 mm-es tartományon belül beállítani. A kezelő a vágási erőfeltételek alapján szükség szerint módosíthatja ezt az értéket.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/scrapcut.png" alt="ScrapCut" width="600">
+</div>
+</div>
+<div id="h000057" class="paragraph">
+<p><strong>Eljárás:</strong></p>
+</div>
+<div id="h000058" class="ulist">
+<ul>
+<li>
+<p>Használja a fúvóka közepét vagy a vezérlődiódát a munkapozíció rögzítéséhez
+  (Válassza ki a lemez sarkát 5 mm-es tűréssel).</p>
+</li>
+<li>
+<p>Futtathatja a programot.</p>
+</li>
+<li>
+<p>A 10 mm-es magasság befagyasztási távolságnak megfelelően a program a magasságszabályozást a munka eltolástól fogja befagyasztani, azaz 5 mm-es belső és 5 mm-es külső távolságtól, összesen 10 mm távolságban. Amint a 10 mm-es befagyasztási távolság teljesül, a lézer 5 mm-es külső részről sugároz, majd a lézeráramban behatol a munkadarabba, amíg a vágáshossz konfigurálása be nem fejeződik.</p>
+</li>
+</ul>
+</div>
+<div id="h000061" class="ulist">
+<ul>
+<li>
+<p>Hozzáadták az automatikus élfelismerés opciót, hogy a gép megkeresse a lemez pontos szélét, majd elindítsa a hulladékvágást:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/scrapcut1.png" alt="ScrapCut1" width="400">
+</div>
+</div>
+</li>
+<li>
+<p>A <strong>Nem</strong> opció kiválasztása esetén a program az aktuális pozícióval folytatódik.</p>
+</li>
+</ul>
+</div>
+<div id="h000063" class="ulist">
+<ul>
+<li>
+<p>Ha az <strong>Igen</strong> beállítást választja, akkor az élfelismerés az aktuális pozíciótól számított 20 mm-es ellentétes irányú mozgással történik.</p>
+</li>
+</ul>
+</div>
+<div id="h000064" class="ulist">
+<ul>
+<li>
+<p>Ha képes megtalálni az élt ezen a távolságon belül, akkor a program beállítja az aktuális pozíciót és elindítja a vágást.</p>
+</li>
+<li>
+<p>Ha nem sikerül megtalálni az élt ezen a távolságon belül, akkor a program a következő üzenettel megszakad:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/scrapcuterror.png" alt="ScrapCutError" width="500">
+</div>
+</div>
+<div id="h000066" class="ulist">
+<ul>
+<li>
+<p>A túlméretezett lemezt használó ügyfelek esetében (lemezméret-tűrés), a hulladékvágási folyamat során Y-határérték hiba léphet fel. Az ilyen esetek elkerülése érdekében fontolja meg a magasságkövetés befagyasztási távolságának csökkentését.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="protective.html">Védőüveg-felügyelet</a></span>
+ <span class="next"><a href="sheetorigin.html">Ugrás a lemez origójához</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Trumpf-Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>
