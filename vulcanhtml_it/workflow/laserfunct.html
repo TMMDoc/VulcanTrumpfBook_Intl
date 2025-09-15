@@ -1,0 +1,508 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Modifica tecnologia laser</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Benvenuto in Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../intro/index.html">Introduzione</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../intro/home.html">Interfaccia utente</a></li>
+    <li><button class="tree blank"></button><a href="../intro/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../intro/jog.html">Funzionamento della macchina</a></li>
+    <li><button class="tree blank"></button><a href="../intro/controlpanel.html">Pannello di comando</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Workflow di produzione</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="preparation.html">Preparazione</a></li>
+    <li><button class="tree blank"></button><a href="create.html">Crea</a></li>
+    <li><button class="tree blank"></button><a href="filemanager.html">Gestione file</a></li>
+    <li><button class="tree blank"></button><a href="programs.html">Seleziona programma</a></li>
+    <li><button class="tree blank"></button><a href="edit.html">Modifica programma NC</a></li>
+    <li><button class="tree blank"></button><a class="active" href="laserfunct.html">Modifica tecnologia laser</a></li>
+    <li><button class="tree blank"></button><a href="layout.html">Modifica layout</a></li>
+    <li><button class="tree blank"></button><a href="simulation.html">Esegui simulazione</a></li>
+    <li><button class="tree blank"></button><a href="offset.html">Offset di lavoro</a></li>
+    <li><button class="tree blank"></button><a href="run.html">Esegui</a></li>
+    <li><button class="tree blank"></button><a href="reentry.html">Ripresa</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Tabelle tecnologica laser (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminologia</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Dati laser</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Incisione preliminare</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Incisione preliminare multifase</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Taglio</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Processi speciali</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Modifica dei dati laser</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">Gestione LTT</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Cicli a rampa</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Controllo dell'accelerazione (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Funzioni tecnologiche</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Vaporizzazione lamiera</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanogiunzioni</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">Sensore PierceLine</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Salto</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Utensili da taglio</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Comandi</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Ciclo di lubrificazione</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Monitoraggio del vetro di protezione</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Taglio degli sfridi</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Vai al punto di origine lamiera</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">Calibratura sensore di altezza</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Centro dell'ugello</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Colpo target</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Lavaggio con gas</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">Impostazione punto manuale HC</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">Vai alla posizione di parcheggio</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">Pulizia ugelli e calibratura sensore di altezza</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Accertamento spigoli</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Calibratura del fuoco mediante struttura a pettine</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Distanza del fuoco</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Posizionamento diodo pilota</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Piano di produzione</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Attivazione/disattivazione</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Modifica</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">Arresto su lamiera</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">Impostazioni della macchina</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Conferma stato materiale</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Risoluzione dei problemi</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Collisioni frequenti</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Offset di lavoro</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Contorni estremamente piccoli</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Informazioni redazionali</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Workflow di produzione</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="laserfunct.html">Modifica tecnologia laser</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Modifica tecnologia laser</h1>
+<div class="sect1">
+<h2 id="_informazioni_generali">Informazioni generali<a id="h000204"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Questa opzione consente all&#8217;operatore di reagire e risolvere eventuali problemi che possono verificarsi sulla macchina.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image19.png" alt="image19" width="960"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pagina_laser">Pagina laser<a id="h000205"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>L&#8217;utente può selezionare la pagina laser in base alle esigenze nelle funzioni laser.
+Allo stesso modo, può essere modificata manualmente nel comando testo DIN G253. Le modifiche apportate
+saranno implementate sia nel testo DIN che nelle funzioni laser.</p>
+</div>
+<div id="h000206" class="ulist">
+<ul>
+<li>
+<p><strong>Materiale</strong>: specifica il tipo di materiale.</p>
+</li>
+</ul>
+</div>
+<div id="h000207" class="ulist">
+<ul>
+<li>
+<p><strong>Spessore</strong>: definisce lo spessore del materiale.</p>
+</li>
+</ul>
+</div>
+<div id="h000208" class="ulist">
+<ul>
+<li>
+<p><strong>Diametro ugello</strong>: imposta il diametro dell&#8217;ugello utilizzato per il taglio.</p>
+</li>
+</ul>
+</div>
+<div id="h000209" class="ulist">
+<ul>
+<li>
+<p><strong>Tipo di gas</strong>: determina il gas di processo utilizzato nel procedimento di taglio.</p>
+</li>
+</ul>
+</div>
+<div id="h000210" class="ulist">
+<ul>
+<li>
+<p><strong>Trattamento</strong>: si riferisce a qualsiasi trattamento di pre-lavorazione o post-lavorazione
+applicato al materiale.</p>
+</li>
+</ul>
+</div>
+<div id="h000211" class="ulist">
+<ul>
+<li>
+<p><strong>Pellicola</strong>: specifica se sulla superficie del materiale è presente una pellicola di protezione,
+cosa che può influire sui parametri di taglio.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_incisione_preliminare">Incisione preliminare<a id="h000212"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>L&#8217;utente può selezionare il tipo di incisione in base alle proprie preferenze.</p>
+</div>
+<div id="h000213" class="ulist">
+<ul>
+<li>
+<p><strong>Controllo altezza</strong>: controlla il processo di regolazione della distanza durante
+l&#8217;incisione preliminare. Generalmente, dopo il posizionamento alla distanza di stallo dell&#8217;incisione preliminare, il controllo
+altezza è spento. Questo evita il tremolio della testa di taglio a causa di
+schizzi di materiali durante l&#8217;incisione preliminare, migliorando al contempo la qualità
+dell&#8217;incisione preliminare. È possibile mantenere attivo il controllo altezza durante l&#8217;incisione preliminare della
+lamiera sottile o altre condizioni speciali per migliorare il tempo di processo.</p>
+</li>
+</ul>
+</div>
+<div id="h000214" class="ulist">
+<ul>
+<li>
+<p><strong>Raggio:</strong> controlla l&#8217;attivazione/disattivazione del raggio quando si passa dai parametri dell&#8217;incisione preliminare a quelli
+di taglio. Generalmente, dopo il completamento dell&#8217;incisione preliminare, il raggio viene
+spento e i parametri del laser vengono aggiornati ai valori di taglio. Quindi il raggio
+acceso e il taglio ha inizio.</p>
+</li>
+</ul>
+</div>
+<div id="h000215" class="ulist">
+<ul>
+<li>
+<p><strong>Tempo di raffreddamento</strong>: controlla il parametro di attivazione/disattivazione del tempo di raffreddamento nell&#8217;incisione preliminare. Al
+termine di ogni fase/stadio di incisione preliminare, nel parametro viene definito un tempo di raffreddamento.
+Durante questo periodo di tempo, il raggio è spento per raffreddare il materiale e poi riacceso,
+per evitare il surriscaldamento del materiale durante l&#8217;incisione preliminare.</p>
+</li>
+</ul>
+</div>
+<div id="h000216" class="ulist">
+<ul>
+<li>
+<p><strong>Soffiaggio aria laterale:</strong> comanda l&#8217;elettrovalvola di attivazione/disattivazione del soffiaggio aria laterale per una
+durata definita nel parametro di incisione preliminare. Vengono utilizzate potenze laser elevate
+per perforare i materiali spessi. Alla fine dell&#8217;incisione preliminare, aria ad alta pressione viene
+soffiata dai lati per raffreddare il materiale, rimuovere gli schizzi, ecc., in modo tale che
+il taglio non ne risenta.</p>
+</li>
+</ul>
+</div>
+<div id="h000217" class="ulist">
+<ul>
+<li>
+<p><strong>Pulizia bava:</strong> controlla il richiamo del sottoprogramma di pulizia bava alla fine
+dell&#8217;incisione preliminare. Dopo che l&#8217;incisione preliminare è stato completata, in alcuni materiali si forma lava fusa
+sulla sommità del materiale come una montagna. Al fine di eliminare questo materiale fuso
+materiale viene richiamato un sottoprogramma per spostare la testa con alta pressione sopra
+la lava per ripulirla. Il tipo di gas e la pressione sono definiti nei parametri macchina.</p>
+</li>
+</ul>
+</div>
+<div id="h000218" class="ulist">
+<ul>
+<li>
+<p><strong>Ramping frequenza</strong>: controlla il ramping frequenza nell&#8217;incisione preliminare. Se
+il metodo di incisione preliminare selezionato è l&#8217;incisione preliminare con variazione potenza/ciclo/misura dell&#8217;interstizio (PM= da 22 a 27),
+l&#8217;attivazione di questa attività aumenterà anche la frequenza. Non valido con altri
+tipo di metodi di incisione preliminare.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_taglio">Taglio<a id="h000219"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>L&#8217;utente può tagliare in base alle proprie preferenze (modificando il processo, contorno di lavorazione).
+In base al tipo di contorno, il disegno verrà reso nel colore
+corrispondente indicato di seguito:</p>
+</div>
+<div class="paragraph">
+<p>Contorno piccolo = arancione<br>
+Contorno medio = rosa<br>
+Contorno grande = verde<br>
+Marcatura = marrone</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image20.jpeg" alt="Contour colour" width="350">
+</div>
+<div class="title">Figure 1. Taglio contorno</div>
+</div>
+<div id="h000220" class="paragraph">
+<p>*
+<strong>Collegamento:</strong> controlla la funzione di attivazione/disattivazione del collegamento nel PLC. Nel programma NC,
+la lunghezza di collegamento è definita per ogni taglio del contorno e può essere
+regolata tramite il parametro <strong>Lunghezza regolazione collegamento</strong> nel database. Se attivato,
+utilizza i parametri iniziali del contorno specifico. Una volta
+raggiunta la distanza definita, passa ai parametri contorno.</p>
+</div>
+<div id="h000221" class="ulist">
+<ul>
+<li>
+<p><strong>Preforatura:</strong> controlla il richiamo del sottoprogramma Preforatura prima dell&#8217;inizio
+del taglio effettivo. Se attivato, utilizza i parametri di preforatura disponibili nel
+database. Una volta completata la preforatura, i parametri vengono commutati e portati sui valori
+del contorno.</p>
+</li>
+</ul>
+</div>
+<div id="h000222" class="ulist">
+<ul>
+<li>
+<p><strong>Controllo volo:</strong> controlla la mascheratura degli output dal PLC all&#8217;NC per il processo di
+volo.</p>
+</li>
+</ul>
+</div>
+<div id="h000223" class="ulist">
+<ul>
+<li>
+<p><strong>Riesamina collegamento:</strong> controlla la funzione di riesame del taglio collegamento. Se
+l&#8217;attività di collegamento è attiva e il taglio collegamento è terminato, la testa viene riesaminata
+alla stessa lunghezza della traiettoria di collegamento con il raggio spento, ma con il controllo altezza
+attivo. Ancora una volta, il taglio viene avviato con i parametri contorno, quindi
+la lunghezza di collegamento viene tagliata da due set di parametri per una migliore larghezza della fessura di taglio e una migliore
+pulizia delle bave.</p>
+</li>
+</ul>
+</div>
+<div id="h000224" class="ulist">
+<ul>
+<li>
+<p><strong>Taglio residuo:</strong> controlla il taglio residuo della lamiera ai bordi. Se
+il taglio residuo è attivo, il comando M14 non accende il raggio
+laser. A parte questo, altre funzioni come posizionamento in altezza, attivazione gas, ecc.,
+saranno completate.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_estremità_laser">Estremità laser<a id="h000225"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Si basano sulla distanza di disimpegno dell&#8217;asse Z insieme a salto, congelamento HC,
+parametro finale, ecc. alla fine.</p>
+</div>
+<div id="h000226" class="ulist">
+<ul>
+<li>
+<p><strong>Disimpegno Z:</strong> l&#8217;utente può specificare la distanza di disimpegno dell&#8217;asse Z in corrispondenza della
+fine del taglio.</p>
+</li>
+</ul>
+</div>
+<div id="h000227" class="ulist">
+<ul>
+<li>
+<p><strong>Salto:</strong> controlla la funzione di attivazione/disattivazione del salto dell&#8217;asse Z. Generalmente, al termine del taglio, l&#8217;asse Z viene prima spostato nella posizione
+di disimpegno; quindi gli assi X e Y sono posizionati nel punto d&#8217;intervento successivo. Con il salto abilitato, l&#8217;asse Z inizia a muoversi nella posizione di disimpegno; allo
+stesso tempo, anche gli assi X e Y iniziano a muoversi. Se l&#8217;asse Z non raggiunge la
+posizione di sblocco, ma gli assi X e Y completeranno la posizione di destinazione,
+il movimento di disimpegno dell&#8217;asse Z viene interrotto e viene attivata la posizione di stallo. Quindi le posizioni degli assi X, Y e Z sono pronte per l&#8217;operazione successiva. In questo modo, il
+il tempo di processo migliora.</p>
+</li>
+</ul>
+</div>
+<div id="h000228" class="ulist">
+<ul>
+<li>
+<p><strong>Blocca controllo altezza:</strong> controlla il blocco del controllo altezza (HC) alla fine
+del taglio. La distanza prima della quale il blocco deve essere attivo è definita
+nel parametro del database. Mentre il job di taglio è in corso e se, alla fine, il job
+rimane indietro, questo può causare uno spostamento indietro della testa. Per evitare questa situazione, il
+movimento della testa è bloccato alla fine del taglio.</p>
+</li>
+</ul>
+</div>
+<div id="h000229" class="ulist">
+<ul>
+<li>
+<p><strong>Parametro finale</strong>: controlla l&#8217;abilitazione/disabilitazione dell&#8217;utilizzo dei "Parametri finali" alla
+fine del taglio. La distanza prima della quale i parametri finali devono essere
+abilitati è definita nel parametro del database. Al termine del taglio, è
+possibile passare a diversi parametri al volo per una migliore finitura del
+job per effetto della decelerazione degli assi.</p>
+</li>
+</ul>
+</div>
+<div id="h000230" class="ulist">
+<ul>
+<li>
+<p><strong>Raggio:</strong> spegne il raggio prima di una certa distanza alla fine del taglio, per
+consentire una microgiunzione.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_microgiunzione">Microgiunzione<a id="h000231"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Piccola sezione non tagliata per mantenere i pezzi attaccati alla lamiera, impedendo il movimento.</p>
+</div>
+<div id="h000232" class="ulist">
+<ul>
+<li>
+<p><strong>Larghezza microgiunzione</strong>: l&#8217;utente può selezionare i contorni simili selezionando e
+abilitando una microgiunzione con il campo valori compreso tra 0 a 3. Il valore predefinito è +0,7 mm.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Piccola sezione non tagliata per mantenere i pezzi attaccati alla lamiera, impedendo il movimento.</p>
+</div>
+<div id="h000233" class="ulist">
+<ul>
+<li>
+<p><strong>Larghezza microgiunzione</strong>: l&#8217;utente può selezionare i contorni simili selezionando e
+abilitando una microgiunzione con il campo valori compreso tra 0 a 3. Il valore predefinito è +0,7 mm.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_informazioni_generali">Informazioni generali</a>
+  </li>
+  <li level="1">
+   <a href="#_pagina_laser">Pagina laser</a>
+  </li>
+  <li level="1">
+   <a href="#_incisione_preliminare">Incisione preliminare</a>
+  </li>
+  <li level="1">
+   <a href="#_taglio">Taglio</a>
+  </li>
+  <li level="1">
+   <a href="#_estremità_laser">Estremità laser</a>
+  </li>
+  <li level="1">
+   <a href="#_microgiunzione">Microgiunzione</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="edit.html">Modifica programma NC</a></span>
+ <span class="next"><a href="layout.html">Modifica layout</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

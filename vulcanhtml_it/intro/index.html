@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/flux-icon.png">
+  <title>Introduzione</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Benvenuto in Vulcan Control</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a class="active" href="index.html">Introduzione</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="home.html">Interfaccia utente</a></li>
+    <li><button class="tree blank"></button><a href="workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="jog.html">Funzionamento della macchina</a></li>
+    <li><button class="tree blank"></button><a href="controlpanel.html">Pannello di comando</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../workflow/index.html">Workflow di produzione</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../workflow/preparation.html">Preparazione</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/create.html">Crea</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/filemanager.html">Gestione file</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/programs.html">Seleziona programma</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/edit.html">Modifica programma NC</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/laserfunct.html">Modifica tecnologia laser</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/layout.html">Modifica layout</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/simulation.html">Esegui simulazione</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/offset.html">Offset di lavoro</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/run.html">Esegui</a></li>
+    <li><button class="tree blank"></button><a href="../workflow/reentry.html">Ripresa</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../ltt/index.html">Tabelle tecnologica laser (LTT)</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../ltt/general.html">Terminologia</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../ltt/laserdata/index.html">Dati laser</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/piercing.html">Incisione preliminare</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/multistage.html">Incisione preliminare multifase</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/cutting.html">Taglio</a></li>
+      <li><button class="tree blank"></button><a href="../ltt/laserdata/special.html">Processi speciali</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../ltt/selection.html">Modifica dei dati laser</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/export.html">Gestione LTT</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/rampcycles.html">Cicli a rampa</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../ltt/dca.html">Controllo dell'accelerazione (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../technology/index.html">Funzioni tecnologiche</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../technology/vaporize.html">Vaporizzazione lamiera</a></li>
+    <li><button class="tree blank"></button><a href="../technology/nano.html">Nanogiunzioni</a></li>
+    <li><button class="tree blank"></button><a href="../technology/pierceline.html">Sensore PierceLine</a></li>
+    <li><button class="tree blank"></button><a href="../technology/frog.html">Salto</a></li>
+    <li><button class="tree blank"></button><a href="../technology/cuttingtools.html">Utensili da taglio</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../controls/index.html">Comandi</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../controls/lubricationcycle.html">Ciclo di lubrificazione</a></li>
+    <li><button class="tree blank"></button><a href="../controls/protective.html">Monitoraggio del vetro di protezione</a></li>
+    <li><button class="tree blank"></button><a href="../controls/scrapcut.html">Taglio degli sfridi</a></li>
+    <li><button class="tree blank"></button><a href="../controls/sheetorigin.html">Vai al punto di origine lamiera</a></li>
+    <li><button class="tree blank"></button><a href="../controls/heightsensorcal.html">Calibratura sensore di altezza</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzlecentre.html">Centro dell'ugello</a></li>
+    <li><button class="tree blank"></button><a href="../controls/targetshot.html">Colpo target</a></li>
+    <li><button class="tree blank"></button><a href="../controls/gaspurge.html">Lavaggio con gas</a></li>
+    <li><button class="tree blank"></button><a href="../controls/hcmanualset.html">Impostazione punto manuale HC</a></li>
+    <li><button class="tree blank"></button><a href="../controls/parkposition.html">Vai alla posizione di parcheggio</a></li>
+    <li><button class="tree blank"></button><a href="../controls/nozzleclean.html">Pulizia ugelli e calibratura sensore di altezza</a></li>
+    <li><button class="tree blank"></button><a href="../controls/edgedetection.html">Accertamento spigoli</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focuscomb.html">Calibratura del fuoco mediante struttura a pettine</a></li>
+    <li><button class="tree blank"></button><a href="../controls/focaldistance.html">Distanza del fuoco</a></li>
+    <li><button class="tree blank"></button><a href="../controls/pilotdiodepos.html">Posizionamento diodo pilota</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../productionplan/index.html">Piano di produzione</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../productionplan/pp_activation.html">Attivazione/disattivazione</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_buttons.html">Modifica</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_stoponsheet.html">Arresto su lamiera</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_machinesettings.html">Impostazioni della macchina</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_materialstatusacknowledgement.html">Conferma stato materiale</a></li>
+    <li><button class="tree blank"></button><a href="../productionplan/pp_generalworkflow.html">Workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../troubleshooting/index.html">Risoluzione dei problemi</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../troubleshooting/collisions.html">Collisioni frequenti</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/workoffset.html">Offset di lavoro</a></li>
+    <li><button class="tree blank"></button><a href="../troubleshooting/extreme.html">Contorni estremamente piccoli</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Informazioni redazionali</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Introduzione</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Introduzione</h1>
+<div class="paragraph">
+<p>Questo capitolo introduce agli argomenti generali come:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="home.html">Elementi interfaccia utente</a></p>
+</li>
+<li>
+<p><a href="workflow.html">Panoramica del workflow</a></p>
+</li>
+<li>
+<p><a href="jog.html">Funzionamento della macchina con i soft button</a></p>
+</li>
+<li>
+<p><a href="controlpanel.html">Pannello di comando</a></p>
+</li>
+</ul>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="../index.html">Benvenuto in Vulcan Control</a></span>
+ <span class="next"><a href="home.html">Interfaccia utente</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/flux-icon.png">
+  <title>Taglio</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="200" height="78" /></div>
+        <div><p>Vulcan Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Benvenuto in Vulcan Control</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../intro/index.html">Introduzione</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../intro/home.html">Interfaccia utente</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/workflow.html">Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/jog.html">Funzionamento della macchina</a></li>
+    <li><button class="tree blank"></button><a href="../../intro/controlpanel.html">Pannello di comando</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../workflow/index.html">Workflow di produzione</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../workflow/preparation.html">Preparazione</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/create.html">Crea</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/filemanager.html">Gestione file</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/programs.html">Seleziona programma</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/edit.html">Modifica programma NC</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/laserfunct.html">Modifica tecnologia laser</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/layout.html">Modifica layout</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/simulation.html">Esegui simulazione</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/offset.html">Offset di lavoro</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/run.html">Esegui</a></li>
+    <li><button class="tree blank"></button><a href="../../workflow/reentry.html">Ripresa</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Tabelle tecnologica laser (LTT)</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../general.html">Terminologia</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Dati laser</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="piercing.html">Incisione preliminare</a></li>
+      <li><button class="tree blank"></button><a href="multistage.html">Incisione preliminare multifase</a></li>
+      <li><button class="tree blank"></button><a class="active" href="cutting.html">Taglio</a></li>
+      <li><button class="tree blank"></button><a href="special.html">Processi speciali</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../selection.html">Modifica dei dati laser</a></li>
+    <li><button class="tree blank"></button><a href="../export.html">Gestione LTT</a></li>
+    <li><button class="tree blank"></button><a href="../rampcycles.html">Cicli a rampa</a></li>
+    <li><button class="tree blank"></button><a href="../flyline.html">FlyLine</a></li>
+    <li><button class="tree blank"></button><a href="../dca.html">Controllo dell'accelerazione (DCA)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../technology/index.html">Funzioni tecnologiche</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../technology/vaporize.html">Vaporizzazione lamiera</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/nano.html">Nanogiunzioni</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/pierceline.html">Sensore PierceLine</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/frog.html">Salto</a></li>
+    <li><button class="tree blank"></button><a href="../../technology/cuttingtools.html">Utensili da taglio</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../controls/index.html">Comandi</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../controls/lubricationcycle.html">Ciclo di lubrificazione</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/protective.html">Monitoraggio del vetro di protezione</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/scrapcut.html">Taglio degli sfridi</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/sheetorigin.html">Vai al punto di origine lamiera</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/heightsensorcal.html">Calibratura sensore di altezza</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/nozzlecentre.html">Centro dell'ugello</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/targetshot.html">Colpo target</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/gaspurge.html">Lavaggio con gas</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/hcmanualset.html">Impostazione punto manuale HC</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/parkposition.html">Vai alla posizione di parcheggio</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/nozzleclean.html">Pulizia ugelli e calibratura sensore di altezza</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/edgedetection.html">Accertamento spigoli</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/focuscomb.html">Calibratura del fuoco mediante struttura a pettine</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/focaldistance.html">Distanza del fuoco</a></li>
+    <li><button class="tree blank"></button><a href="../../controls/pilotdiodepos.html">Posizionamento diodo pilota</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../productionplan/index.html">Piano di produzione</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../productionplan/pp_activation.html">Attivazione/disattivazione</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/pp_buttons.html">Modifica</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/pp_stoponsheet.html">Arresto su lamiera</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/pp_machinesettings.html">Impostazioni della macchina</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/pp_materialstatusacknowledgement.html">Conferma stato materiale</a></li>
+    <li><button class="tree blank"></button><a href="../../productionplan/pp_generalworkflow.html">Workflow</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../troubleshooting/index.html">Risoluzione dei problemi</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../troubleshooting/collisions.html">Collisioni frequenti</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshooting/workoffset.html">Offset di lavoro</a></li>
+    <li><button class="tree blank"></button><a href="../../troubleshooting/extreme.html">Contorni estremamente piccoli</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Informazioni redazionali</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Tabelle tecnologica laser (LTT)</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Dati laser</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="cutting.html">Taglio</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Taglio</h1>
+<div class="sect1">
+<h2 id="_strategie_di_accostamento">Strategie di accostamento<a id="h000109"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Al fine di evitare danni al contorno da incisione preliminare, il materiale viene inciso in via preliminare a
+pochi millimetri su un lato del contorno. Il contorno viene quindi accostato utilizzando
+varie strategie a seconda del materiale, dello spessore del materiale e della
+dimensione del contorno.</p>
+</div>
+<div class="sect2">
+<h3 id="_accostamento_normale">Accostamento normale<a id="h000110"></a></h3>
+<div class="paragraph">
+<p>Con un accostamento normale, il taglio avviene direttamente dal foro iniziale con
+i parametri di taglio dall&#8217;apposito piano di taglio.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_accostamento_ridotto">Accostamento ridotto<a id="h000111"></a></h3>
+<div class="paragraph">
+<p>Il contorno viene accostato a velocità ridotta. Potenza, frequenza, distanza ugello.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/app1.png" alt="app1"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_accostamento_con_pretaglio">Accostamento con pretaglio<a id="h000112"></a></h3>
+<div class="paragraph">
+<p>Dopo l&#8217;incisione preliminare, viene effettuato un taglio di pochi millimetri a velocità ridotta, a seconda
+dello spessore del materiale. La testa di taglio ritorna quindi al foro iniziale utilizzando
+l&#8217;ultima velocità di posizionamento attiva. Il contorno viene quindi accostato e tagliato con
+i parametri dall&#8217;apposito piano di taglio.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_raffreddamento_dopo_laccostamento">Raffreddamento dopo l&#8217;accostamento<a id="h000113"></a></h3>
+<div class="paragraph">
+<p>Per il raffreddamento dopo l&#8217;accostamento, il raggio laser viene spento brevemente dopo l&#8217;accostamento,
+prima che il contorno effettivo venga tagliato. Il gas di taglio, invece, continua
+a fluire e raffredda il punto di lavorazione.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_marcatura_e_lavorazione_di_bulinatura">Marcatura e lavorazione di bulinatura<a id="h000114"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le parti del materiale sono contrassegnate da un viraggio di colore sulla superficie del materiale. Normalmente la
+marcatura non può più essere avvertita dopo la smaltatura o la verniciatura poiché viene rimossa
+solo una minima quantità di materiale.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_processo_di_taglio">Processo di taglio<a id="h000115"></a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_taglio_con_contorno_grande_medio_e_piccolo">Taglio con contorno grande, medio e piccolo<a id="h000116"></a></h3>
+<div class="paragraph">
+<p>Nel contesto della programmazione CNC e del taglio laser di TRUMPF, i concetti di <strong>contorno grande,
+medio e piccolo</strong> si riferiscono alle dimensioni e alla complessità di diverse
+caratteristiche geometriche in un processo di taglio o lavorazione. Queste distinzioni aiutano
+ottimizzare il movimento dell&#8217;utensile, le strategie di taglio e la velocità di lavorazione.</p>
+</div>
+<div class="sect3">
+<h4 id="_1_contorni_grandi">1. Contorni grandi<a id="h000117"></a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>I contorni grandi si riferiscono a <strong>tagli lunghi e continui</strong> o a <strong>profili esterni</strong> di un pezzo.</p>
+</li>
+<li>
+<p>Si tratta di solito di traiettorie di taglio <strong>primarie</strong> che definiscono la forma esterna.</p>
+</li>
+</ul>
+</div>
+<div id="h000118" class="paragraph">
+<p><strong>Caratteristiche:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Dritto o con curva regolare.</p>
+</li>
+<li>
+<p>Meno interruzioni.</p>
+</li>
+<li>
+<p>Possono essere tagliati a <strong>velocità più elevate</strong> poiché c&#8217;è meno rischio di incremento termico
+o perdita di precisione.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_contorni_medi">2. Contorni medi<a id="h000119"></a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Caratteristiche legate alle dimensioni medie all&#8217;interno o lungo il pezzo, come
+<strong>grandi rientranze, fori o scanalature</strong>.</p>
+</li>
+<li>
+<p>Sono più complessi dei contorni grandi, ma non sono così intricati come i contorni piccoli.</p>
+</li>
+</ul>
+</div>
+<div id="h000121" class="paragraph">
+<p><strong>Caratteristiche:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Possono richiedere regolazioni della velocità di taglio per a presenza moderata di dettagli.</p>
+</li>
+<li>
+<p>Necessità di un certo livello di controllo di <strong>precisione</strong> per mantenere l&#8217;accuratezza.</p>
+</li>
+<li>
+<p>Può influenzare la dissipazione di calore e il comportamento dei materiali.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_contorni_piccoli">3. Contorni piccoli<a id="h000122"></a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Si riferiscono a tagli <strong>dettagliati e intricati</strong>, come
+<strong>piccoli fori, motivi fini o spigoli vivi</strong>.</p>
+</li>
+<li>
+<p>Il taglio di contorni piccoli richiede una <strong>maggiore precisione</strong> e
+<strong>velocità più basse</strong> per non perdere la precisione ed evitare difetti.</p>
+</li>
+</ul>
+</div>
+<div id="h000125" class="paragraph">
+<p><strong>Caratteristiche:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Spesso coinvolgono <strong>raggi stretti, forme intricate o aree di taglio densamente affollate</strong>.</p>
+</li>
+<li>
+<p>Inclini agli effetti <strong>termici</strong> (fusione, sbavature, distorsione del materiale).</p>
+</li>
+<li>
+<p>Possono richiedere <strong>strategie adattive</strong> come potenza ridotta, controllo fine degli ugelli,
+o tecniche di microgiunzione.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_curve_di_calibratura_analogica">Curve di calibratura analogica<a id="h000126"></a></h3>
+<div class="paragraph">
+<p>TRUMPF utilizza una curva di calibratura a 3 punti per il controllo laser analogico.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/3ptltt.png" alt="3ptLTT"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_flyline">FlyLine<a id="h000127"></a></h3>
+<div class="paragraph">
+<p>FlyLine è una strategia di lavorazione che può aiutare a risparmiare
+tempo durante la lavorazione di determinati tipi di lamiera. FlyLine è particolarmente efficace per
+griglie per fori.</p>
+</div>
+<div id="h000128" class="ulist">
+<ul>
+<li>
+<p>Il raggio laser viene acceso e spento al volo con un elevato grado di precisione di posizione.
+Gli assi non si fermano quando il raggio laser viene acceso e spento.</p>
+</li>
+<li>
+<p>I singoli contorni che non si trovano su una linea vengono suddivisi in segmenti di contorno
+paralleli agli assi. Questo permette di evitare lavorazioni degli spigoli.
+La velocità è ridotta solo per i pochi cambi di direzione.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_strategie_di_accostamento">Strategie di accostamento</a>
+  </li>
+  <li level="2">
+   <a href="#_accostamento_normale">Accostamento normale</a>
+  </li>
+  <li level="2">
+   <a href="#_accostamento_ridotto">Accostamento ridotto</a>
+  </li>
+  <li level="2">
+   <a href="#_accostamento_con_pretaglio">Accostamento con pretaglio</a>
+  </li>
+  <li level="2">
+   <a href="#_raffreddamento_dopo_laccostamento">Raffreddamento dopo l&#8217;accostamento</a>
+  </li>
+  <li level="1">
+   <a href="#_marcatura_e_lavorazione_di_bulinatura">Marcatura e lavorazione di bulinatura</a>
+  </li>
+  <li level="1">
+   <a href="#_processo_di_taglio">Processo di taglio</a>
+  </li>
+  <li level="2">
+   <a href="#_taglio_con_contorno_grande_medio_e_piccolo">Taglio con contorno grande, medio e piccolo</a>
+  </li>
+  <li level="2">
+   <a href="#_curve_di_calibratura_analogica">Curve di calibratura analogica</a>
+  </li>
+  <li level="2">
+   <a href="#_flyline">FlyLine</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="multistage.html">Incisione preliminare multifase</a></span>
+ <span class="next"><a href="special.html">Processi speciali</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>
