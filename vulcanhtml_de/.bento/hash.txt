@@ -1,9 +1,9 @@
 Version=58
 APPNAME=Vulcan Control
 BRAND=TRUMPF
-FLAVOR=VULCAN
+FLAVOR=TRUMPF
 LANGUAGE=EN
-VULCAN=
+TRUMPF=
 Folders=9
 Pages=64
 UIXlate=False, DebugUIXlate=False, Language=EN
@@ -11,7 +11,7 @@ UIXlate=False, DebugUIXlate=False, Language=EN
 contents.txt • 255901.025916
 impressum.adoc • Impressum
 Index.adoc • Willkommen bei {APPNAME}
-manifest.txt • 253603.053610
+manifest.txt • 253624.123620
 configure\contents.txt • 255909.065930
 configure\index.adoc • Maschinenkonfiguration
 configure\LaserDB.adoc • Laserdatenbestand

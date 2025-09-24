@@ -31,7 +31,7 @@
 }
 
 #site-header {
-  background-color: #444;  
+  background-color: #285172;  
   flex: 0 0 var(--header-height);
   overflow: hidden;
   align-content: center;
@@ -39,7 +39,7 @@
   display: flex;
 }
 #site-header p {
-  color: #ddd;
+  color: #fcfcfc;
   margin: 0;
   padding: 0;
   align-content: center;
@@ -72,7 +72,6 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - var(--header-height) - var(--footer-height)); /* Case 37500 */
 }
 
 #site-crumb {
@@ -112,7 +111,6 @@
 #site-crumb-below {
   display: flex;
   flex: 1;
-  height: calc(100vh - var(--header-height) - var(--footer-height) - var(--crumb-height) - var(--sibling-height));
 }
 
 #site-toc-left {
@@ -176,7 +174,7 @@
 }
 
 #site-footer {
-  background-color: #444;
+  background-color: #285172;
   flex: 0 0 var(--footer-height);
   display: flex;
   align-content: center;
